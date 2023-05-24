@@ -11,7 +11,7 @@ variáveis aleatórias (v.a.)
 
 <div align=center> 
 
-![](imgs\Modelo-BSC.png) 
+![](4th Semester/CD/Codificação de Canal/imgs/Modelo-BSC.png) 
 
 </div>
 

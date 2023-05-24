@@ -22,7 +22,7 @@ $$ = P(Y_0|X_1).P(X_1) + P(Y_1|X_0).P(X_0) $$
 $$ = \alpha.P(X_1) + \alpha.P(X_0) $$
 $$ = \alpha $$
 
-$ P_e $ -> __BER__
+$$$ P_e $$$ -> __BER__
 
 ## __Códigos de controlo de erros__
 

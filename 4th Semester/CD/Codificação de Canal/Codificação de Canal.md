@@ -78,7 +78,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
 
 * Deteta todos os padrões até __“I” erros__ -> $ l \leq dmin - 1 $
 
-* Corrige todos os padrões até __“t” erros__ -> $ t \leq \lfloor\frac{dmin - 1}{2}\rfloor $
+* Corrige todos os padrões até __“t” erros__ -> $ t \leq \lfloor \frac{dmin - 1}{2} \rfloor $
 
 * __Deteta “l” erros e corrige “t” erros__ -> $ dmin \geq l + t + 1, \ com \ l > t $
 

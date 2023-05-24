@@ -11,7 +11,7 @@ variáveis aleatórias (v.a.)
 
 <div align=center> 
 
-![](4th Semester/CD/Codificação de Canal/imgs/Modelo-BSC.png) 
+![]([4th Semester/CD/Codificação de Canal/imgs/Modelo-BSC.png](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Modelo-BSC.png)) 
 
 </div>
 

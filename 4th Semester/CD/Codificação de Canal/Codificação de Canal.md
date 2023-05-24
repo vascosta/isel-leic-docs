@@ -67,7 +67,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
     
 <div align=center> 
 
-![](imgs\Distância-de-Hamming.png) 
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Distância-de-Hamming.png) 
 
 </div>
 

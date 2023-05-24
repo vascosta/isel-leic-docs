@@ -50,7 +50,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
 
 <div align=center> 
 
-![](imgs\Códigos-de-Bloco.png) 
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Códigos-de-Bloco.png) 
 
 </div>
 
@@ -124,7 +124,7 @@ Eg.:
 
 <div align=center> 
 
-![](imgs\Egemplo-Código-de-Repetição.png) 
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Egemplo-Código-de-Repetição.png) 
 
 </div>
 
@@ -142,7 +142,7 @@ Descodificação realizada por __maioria__.
 
 <div align=center> 
 
-![](imgs\Egemplo-Código-de-Repetição-2.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Egemplo-Código-de-Repetição-2.png)
 
 </div>
 
@@ -174,7 +174,7 @@ m  | c
 
 <div align=center> 
 
-![](imgs\Egemplo-Código-Bit-de-Paridade.png) 
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Egemplo-Código-Bit-de-Paridade.png) 
 
 </div>
 
@@ -184,7 +184,7 @@ m  | c
 
 <div style=flEg align=center> 
 
-![](imgs\Egemplo-Palavras-de-Código-Vetores.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Egemplo-Palavras-de-Código-Vetores.png)
 
 </div>
 

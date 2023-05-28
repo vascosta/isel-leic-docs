@@ -42,7 +42,7 @@ Eg.:
 
 #
 
-### Discreto
+### __Discreto__
 
 É uma função real de variável inteira relativa -> $ x[n]: Z_0 \rightarrow R $
 
@@ -133,9 +133,20 @@ Eg.:
 
 __Potência Instantânea__ -> $ p(t) = x^2(t) $
 
-Energia:
-* Domínio __Contínuo__ -> $ Ex = \int ^ {+ \infty }_{- \infty } x^2(t) \ dt $
-
-* Domínio __Discreto__ -> $ Ex = \sum ^ {+ \infty }_{- \infty } x^2[n] $
-
-* $ 0 \leq E < + \infty $
+* Sinais __não periódicos__ -> Caracterizados pela __energia__:
+    * __Energia__ (J):
+        * $ E_x =  \int_{-T/2}^{T/2} x^2(t)dt $
+        * $ 0 \leq E < + \infty $
+        * Energia __finita__;
+    
+* Sinais __periódicos__ -> Caracterizados pela __potência__:
+    * __Energia__ (J):
+        * Energia __infinita__;
+    * __Potência__ (W):
+        * Domínio __Contínuo__ -> $ P_x = \frac{1}{T_0} . \int_{T_0} x^2(t)dt $
+        * Domínio __Discreto__ -> $ P_x = \frac{1}{N} . \sum_{N} x^2[n] $
+        * $ 0 \leq P < + \infty $
+        * Potência __finita__.
+    * Valor __Médio__ (V):
+        * Domínio __Contínuo__ -> $ m_x = \frac{1}{T_0} . \int_{T_0} x(t)dt $
+        * Domínio __Discreto__ -> $ m_x = \frac{1}{N} . \sum_{N} x[n] $    

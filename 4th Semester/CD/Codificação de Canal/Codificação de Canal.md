@@ -148,7 +148,7 @@ Descodificação realizada por __maioria__.
 
 Eg.:
 
-Com, por Egemplo $ \alpha = 10^{-15} $ 
+Com, por Exemplo $ \alpha = 10^{-15} $ 
 
 $ P(1,3) = C^{3}_{1} \ . \ \alpha^1(1 - \alpha)^2 $ 
 
@@ -180,7 +180,7 @@ m  | c
 
 #
 
-## __Palavras de Código: Vetores__
+### __Palavras de Código: Vetores__
 
 <div style=flEg align=center> 
 
@@ -195,7 +195,7 @@ m  | c
 
 #
 
-## __Peso de Hamming (w)__
+### __Peso de Hamming (w)__
 
 Número de dígitos não nulos numa palavra.
 
@@ -218,3 +218,25 @@ m  | c  | w(c)     dmin = 3             m  | c   | w(c)     dmin = 2
                                         10 | 101 | 2
                                         11 | 110 | 2          
 ```
+
+#
+
+### __Códigos de Hamming__
+
+$ (n, k) = (2^m - 1, 2^m -1 -m), \ com \ m \geq 2  $
+
+__Eg.:__
+
+* $ m = 3 => (7,4) $
+
+* $ c = [m_0 \ m_1 \ m_2 \ m_3 \ b_0 \ b_1 \ b_2] $
+
+* Equações de paridade:
+
+    * $ b_0 = m_1 \oplus m_2 \oplus m_3 $
+
+    * $ b_1 = m_0 \oplus m_1 \oplus m_3 $
+
+    * $ b_2 = m_0 \oplus m_2 \oplus m_3 $
+
+Code Rate -> $ R_c = \frac{1 - q}{2^q -1} $

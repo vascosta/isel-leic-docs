@@ -28,7 +28,7 @@ Em __termos físicos__, representa uma __corrente ou tensão elétrica__.
 
 <div align=center> 
 
-![](imgs\Sinal-Contínuo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Contínuo.png)
 
 </div>
 
@@ -36,7 +36,7 @@ Eg.:
 
 <div align=center> 
 
-![](imgs\Sinal-Contínuo-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Contínuo-Exemplo.png)
 
 </div>
 
@@ -55,7 +55,7 @@ Eg.:
 
 <div align=center> 
 
-![](imgs\Sinal-Discreto-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Discreto-Exemplo.png)
 
 </div>
 
@@ -72,7 +72,7 @@ Eg.:
 
 <div align=center> 
 
-![](imgs\Sinal-Digital-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Digital-Exemplo.png)
 
 </div>
 
@@ -88,14 +88,14 @@ Eg.:
 * Pulso Retangular;
 <div align=center> 
 
-![](imgs\Sinal-Retangular-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Retangular-Exemplo.png)
 
 </div>
 
 * Pulso Sinusoidal.
 <div align=center> 
 
-![](imgs\Sinal-Sinusoidal-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Sinusoidal-Exemplo.png)
 
 </div>
 
@@ -116,14 +116,14 @@ Eg.:
 * Sinusóide;
 <div align=center> 
 
-![](imgs\Sinal-Sinusóide-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Sinusóide-Exemplo.png)
 
 </div>
 
 * Onda Quadrada.
 <div align=center> 
 
-![](imgs\Sinal-Onda-Quadrada-Exemplo.png)
+![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png/imgs/Sinal-Onda-Quadrada-Exemplo.png)
 
 </div>
 

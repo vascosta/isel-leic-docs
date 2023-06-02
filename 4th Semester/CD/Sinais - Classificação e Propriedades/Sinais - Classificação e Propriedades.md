@@ -80,8 +80,6 @@ Eg.:
 
 ## __Sinais Não Periódicos e Periódicos__
 
-#
-
 ### __Não periódicos ou Aperiódicos__
 __Não se repetem__ ao longo do tempo.    
 Eg.:

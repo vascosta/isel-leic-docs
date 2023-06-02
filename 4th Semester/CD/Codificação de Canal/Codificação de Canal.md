@@ -67,7 +67,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
 </div>
 
 * __Distância mínima__ ($ dmin $):
-    * É a __menor__ $ dH $ entre __2__ quaisquer__ palavras do código__
+    * É a __menor__ $ dH $ entre __2__ quaisquer __palavras do código__
 
     * Majorante $ \rightarrow dmin \leq 1 + q, \ com \ q = n - k $
 
@@ -282,7 +282,7 @@ __Organização__ das palavras:
 
 </div>
 
-$ CRC = b(X) $ -> polinómio de grau __q-1__
+$ CRC = b(X) $ -> polinómio de grau $ q-1 $
 
 $ c(X) = m(X).X^q + resto [\frac{m(X).X^q}{g(x)}] $
 
@@ -303,8 +303,6 @@ __Eg__.:
 #
 
 ## __Descodificador de Canal__
-
-#
 
 ### __Características__
 

@@ -15,6 +15,8 @@ __Energia/Potência__:
 * Energia (sinal não periódico);
 * Potência (sinal periódico).
 
+#
+
 ## __Sinais Contínuos, Discretos e Digitais__
 Em termos gerais, um sinal é algo que __codifica informação__.
 

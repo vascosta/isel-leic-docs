@@ -56,7 +56,7 @@ __Melhor desempenho__ que NRZ Unipolar
 
 ### __NRZ - Absoluto (Unipolar e Bipolar)__
 
-Transmissão a curta distância com 100% de eficiência.
+Transmissão a curta distância com __100% de eficiência__.
 
 Sinal de relógio __em separado__
 
@@ -231,7 +231,6 @@ __Muda__ apenas __1 bit__ entre configurações __consecutivas__.
 #
 
 ## __Diagrama de Olho__
-
 __Ferramenta de diagnóstico__ sobre o funcionamento do sistema $ \rightarrow $ avalia as __perturbações existentes__ num SCD
 
 <div style=flEg align=center> 
@@ -242,15 +241,13 @@ __Ferramenta de diagnóstico__ sobre o funcionamento do sistema $ \rightarrow $ 
 
 #
 
-## __Emissor, Meio e Recetor__
-
-### __Emissor__
+## __Emissor__
 
 * Codificador de linha NRZ, RZ, Manchester, etc..
 
 #
 
-### __Meio de transmissão__
+## __Meio de transmissão__
 
 * Atenuação
 * Limitação da largura de banda
@@ -259,7 +256,7 @@ __Ferramenta de diagnóstico__ sobre o funcionamento do sistema $ \rightarrow $ 
 
 #
 
-### __Recetor__
+## __Recetor__
 
 * Filtro de receção
 * Regra(s) de decisão binária

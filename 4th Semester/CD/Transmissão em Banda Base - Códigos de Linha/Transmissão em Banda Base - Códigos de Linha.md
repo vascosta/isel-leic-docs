@@ -4,8 +4,9 @@ __Banda base__ $ \rightarrow $ o meio de transmissão admite componentes de freq
 
 Utilizada em __curta distância__.
 
-## __Códigos de Linha__
+#
 
+## __Códigos de Linha__
 __Pulsos elétricos__ para codificar os bits 1 e 0.
 
 #

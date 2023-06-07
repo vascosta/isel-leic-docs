@@ -190,3 +190,89 @@ Tem sempre uma transição __a meio do__ $ T_{bit} $ (__código bifásico__)
 </div>
 
 __Energia média por bit__ $ \rightarrow E_b = V^2.T_{bit} $
+
+#
+
+### __2B1Q - 4 níveis__
+
+$ T_{simb} \rightarrow 2T_{bit} $
+
+Os símbolos estão organizados em código de Gray $ \rightarrow $ __minimizar__ o $ BER $
+
+As __amplitudes__ são __simétricas__ entre si $ \rightarrow $ tendem para o __valor médio nulo__
+
+<div style=flEg align=center> 
+
+![](imgs/2B1Q.png)
+
+</div>
+
+$ k = 2 \ bit/simb $
+
+$ M = 2^k = 2^2 = 4 \ níveis $
+
+$ R_s \rightarrow $ nº de símbolos por segundo
+
+Ritmo binário $ \rightarrow R_b = R_s. \log_2(M) = R_s.k = 2R_s \ bit/s $
+
+#
+
+### Código de Gray
+
+Código binário __refletido__.
+
+__Muda__ apenas __1 bit__ entre configurações __consecutivas__.
+
+<div style=flEg align=center> 
+
+![](imgs/Gray.png)
+
+</div>
+
+#
+
+## __Diagrama de Olho__
+
+__Ferramenta de diagnóstico__ sobre o funcionamento do sistema $ \rightarrow $ avalia as __perturbações existentes__ num SCD
+
+<div style=flEg align=center> 
+
+![](imgs/Diagrama-de-Olho.png)
+
+</div>
+
+#
+
+## __Emissor, Meio e Recetor__
+
+### __Emissor__
+
+* Codificador de linha NRZ, RZ, Manchester, etc..
+
+#
+
+### __Meio de transmissão__
+
+* Atenuação
+* Limitação da largura de banda
+* Ruído
+* Interferência
+
+#
+
+### __Recetor__
+
+* Filtro de receção
+* Regra(s) de decisão binária
+
+Recetor baseado em __correlador__:
+
+* O recetor usa como __sinal de referência__ um __pulso conhecido__, designado por $ g(t) $ 
+* Por cada $ T_{bit} $, realiza-se a __correlação entre o pulso recebido e o pulso de referência__
+* Usando o valor desta semelhança, aplica-se uma __regra de decisão binária__, para decidir o __bit descodificado__ 
+
+<div style=flEg align=center> 
+
+![](imgs/Recetor-Correlador.png)
+
+</div>

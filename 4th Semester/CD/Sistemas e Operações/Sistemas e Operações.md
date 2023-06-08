@@ -70,8 +70,6 @@ Subtrai um conteúdo (sinal) sobre outro conteúdo .
 
 </div>
 
-* $ E_z = \int_{-\infty}^{+\infty} x^2(t)dt + \int_{-\infty}^{+\infty} y^2(t)dt - 2\int_{-\infty}^{+\infty} x(t).y(t)dt $
-
 #
 
 ### __Tempo__

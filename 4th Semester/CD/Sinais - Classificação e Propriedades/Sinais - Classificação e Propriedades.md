@@ -137,7 +137,7 @@ __Potência Instantânea__ $ \rightarrow p(t) = x^2(t) $
 
 * Sinais __não periódicos__ $ \rightarrow $ Caracterizados pela __energia__:
     * __Energia__ (J):
-        * $ E_x =  \int_{-T/2}^{T/2} x^2(t)dt $
+        * $ E_x = \int_{-T/2}^{T/2} x^2(t)dt $
         * $ 0 \leq E < + \infty $
         * Energia __finita__;
     

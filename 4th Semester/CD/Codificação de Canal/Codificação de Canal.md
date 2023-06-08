@@ -10,7 +10,7 @@ O canal é analisado através de modelo discreto usando __variáveis aleatórias
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Modelo-BSC.png)
+![](imgs/Modelo-BSC.png)
 
 </div>
 
@@ -45,7 +45,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Códigos-de-Bloco.png) 
+![](imgs/Códigos-de-Bloco.png) 
 
 </div>
 
@@ -62,7 +62,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
     
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Distância-de-Hamming.png) 
+![](imgs/Distância-de-Hamming.png) 
 
 </div>
 
@@ -116,7 +116,7 @@ __Eg__.:
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Código-de-Repetição.png) 
+![](imgs/Exemplo-Código-de-Repetição.png) 
 
 </div>
 
@@ -134,7 +134,7 @@ Descodificação realizada por __maioria__.
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Código-de-Repetição-2.png)
+![](imgs/Exemplo-Código-de-Repetição-2.png)
 
 </div>
 
@@ -166,7 +166,7 @@ m  | c
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Código-Bit-de-Paridade.png) 
+![](imgs/Exemplo-Código-Bit-de-Paridade.png) 
 
 </div>
 
@@ -176,7 +176,7 @@ m  | c
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Palavras-de-Código-Vetores.png)
+![](imgs/Exemplo-Palavras-de-Código-Vetores.png)
 
 </div>
 
@@ -234,7 +234,7 @@ __Eg.:__
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Código-de-Hamming.png)
+![](imgs/Exemplo-Código-de-Hamming.png)
 
 </div>
 
@@ -266,7 +266,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-Polinómio-Gerador.png)
+![](imgs/Exemplo-Polinómio-Gerador.png)
 
 </div>
 
@@ -278,7 +278,7 @@ __Organização__ das palavras:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/CRC.png)
+![](imgs/CRC.png)
 
 </div>
 
@@ -296,7 +296,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Exemplo-CRC.png)
+![](imgs/Exemplo-CRC.png)
 
 </div>
 
@@ -315,7 +315,7 @@ Se $ y \notin x $ então __houve erro(s)__.
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Descodificador-de-Canal.png)
+![](imgs/Descodificador-de-Canal.png)
 
 </div>
 
@@ -327,7 +327,7 @@ __Cálculo do Síndroma__ $ s \rightarrow $ __comparação bit a bit__ entre os 
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/ARQ.png)
+![](imgs/ARQ.png)
 
 </div>
 
@@ -337,7 +337,7 @@ __Cálculo do Síndroma__ $ s \rightarrow $ __comparação bit a bit__ entre os 
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/FEC.png)
+![](imgs/FEC.png)
 
 </div>
 
@@ -347,7 +347,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Síndroma-Hamming.png)
+![](imgs/Síndroma-Hamming.png)
 
 </div>
 
@@ -405,7 +405,7 @@ Quando $ dmin \geq 3 $ o código __também__ pode ser usado em modo __correção
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Comparação-de-Códigos.png)
+![](imgs/Comparação-de-Códigos.png)
 
 </div>
 
@@ -433,7 +433,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Matriz-Código-de-repetição.png)
+![](imgs/Matriz-Código-de-repetição.png)
 
 </div>
 
@@ -441,7 +441,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Matriz-Código-de-bit-de-paridade-par.png)
+![](imgs/Matriz-Código-de-bit-de-paridade-par.png)
 
 </div>
 
@@ -453,7 +453,7 @@ $ c = m.[I_4 | P] $
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Matriz-Código-de-Hamming.png)
+![](imgs/Matriz-Código-de-Hamming.png)
 
 </div>
 
@@ -480,6 +480,6 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Codifica%C3%A7%C3%A3o%20de%20Canal/imgs/Codificação-Matriz-Código-de-Hamming.png)
+![](imgs/Codificação-Matriz-Código-de-Hamming.png)
 
 </div>

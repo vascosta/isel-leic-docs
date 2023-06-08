@@ -30,7 +30,7 @@ Em __termos físicos__, representa uma __corrente ou tensão elétrica__.
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Contínuo.png)
 
 </div>
 
@@ -38,7 +38,7 @@ __Eg__.:
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Contínuo-Exemplo.png)
 
 </div>
 
@@ -57,7 +57,7 @@ __Eg__.:
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Discreto-Exemplo.png)
 
 </div>
 
@@ -74,7 +74,7 @@ Eg.:
 
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Digital-Exemplo.png)
 
 </div>
 
@@ -90,14 +90,14 @@ Eg.:
 * Pulso Retangular;
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Retangular-Exemplo.png)
 
 </div>
 
 * Pulso Sinusoidal.
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Sinusoidal-Exemplo.png)
 
 </div>
 
@@ -118,14 +118,14 @@ Eg.:
 * Sinusóide;
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Sinusóide-Exemplo.png)
 
 </div>
 
 * Onda Quadrada.
 <div align=center> 
 
-![](https://github.com/VascostaIsel/isel-leic-docs/blob/main/4th%20Semester/CD/Sinais%20-%20Classifica%C3%A7%C3%A3o%20e%20Propriedades/imgs/Sinal-Cont%C3%ADnuo.png)
+![](imgs/Sinal-Onda-Quadrada-Exemplo.png)
 
 </div>
 

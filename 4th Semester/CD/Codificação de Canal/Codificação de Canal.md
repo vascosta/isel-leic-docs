@@ -216,11 +216,11 @@ m  | c  | w(c)     dmin = 3             m  | c   | w(c)     dmin = 2
 
 ### __Códigos de Hamming__
 
-$ (n, k) = (2^m - 1, 2^m -1 -m), \ com \ m \geq 2  $
+$ (n, k) = (2^r - 1, 2^r -1 -r), \ com \ r \geq 2  $
 
 __Eg.:__
 
-* $ m = 3 \Rightarrow (7,4) $
+* $ r = 3 \Rightarrow (7,4) $
 
 * $ c = [m_0 \ m_1 \ m_2 \ m_3 \ b_0 \ b_1 \ b_2] $
 

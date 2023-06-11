@@ -148,6 +148,8 @@ $ sinc = \frac{sin(x)}{x} $ ou $ \frac{sin(\pi.x)}{\pi.x} $
 
 $ E = \frac{V^2}{2}.T_s $
 
+$ LB = \frac{2}{T_S} = 2R_s $
+
 ### __Espetro de Amplitude__
 
 <div align=center> 

@@ -424,7 +424,7 @@ As __palavras de código__ são obtidas através do produto do vetor __mensagem_
 * $ dim(G) = k \times n $
 
 Em códigos __sistemáticos__:
-* $ G = [I_k | P] $ ou $ G = [I_k | P] $
+* $ G = [I_k | P] $ ou $ G = [P | I_k] $
 * $ P \rightarrow $ matriz que estabelece as equações de paridade do código
 
 __Eg__.:

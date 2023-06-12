@@ -205,7 +205,7 @@ __Eg__.:
 ```
 Código (3,1)                            Código (3,2)
 
-m  | c  | w(c)     dmin = 3             m  | c   | w(c)     dmin = 2
+m |  c  | w(c)     dmin = 3             m  | c   | w(c)     dmin = 2
 0 | 000 | 0        l = 2                00 | 000 | 0        l = 1
 1 | 111 | 3        t = 1                01 | 011 | 2        t = 0
                                         10 | 101 | 2

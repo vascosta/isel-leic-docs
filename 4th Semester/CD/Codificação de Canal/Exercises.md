@@ -53,12 +53,6 @@
 
 </div>
 
-<div align=center> 
-
-![](imgs/Resposta-4-2.png)
-
-</div>
-
 #
 
 <div align=center> 
@@ -84,18 +78,6 @@
 <div align=center> 
 
 ![](imgs/Resposta-6.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Resposta-6-2.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Resposta-6-3.png)
 
 </div>
 

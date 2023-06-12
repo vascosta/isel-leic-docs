@@ -469,7 +469,7 @@ $ c = [m_0 \ m_1 \ ... \ m_{k-1} \ b_0 \ b_1 \ ... \ b_q-1] $
 
 __Matriz de controlo de paridade__ :
 * Permite verificar se existem erros na palavra recebida, através do cálculo do síndroma
-* $ H = [ P^T | I_{n-k}] $
+* $ H = [ P^T | I_{n-k}] $ ou $ [ \frac{P}{I_{n-k}}] $
 * $ s = e.H^T = [s_0 \ s_1 \ ... \ s_{q-1}] $ 
     * Se $ s = 0 \Rightarrow $ __não__ se __detetam erros__
     * Se $ s \ne 0 \Rightarrow $ existem __erros detetados__ 

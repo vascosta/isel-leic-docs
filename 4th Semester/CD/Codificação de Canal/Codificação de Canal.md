@@ -6,7 +6,7 @@ O canal é analisado através de modelo discreto usando __variáveis aleatórias
 
 #
 
-### __Modelo__ ___Binary Symmetric Channel - BSC__
+### __Modelo__ ___Binary Symmetric Channel___ - __BSC__
 
 <div align=center> 
 

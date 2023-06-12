@@ -433,7 +433,7 @@ __Eg__.:
 
 <div style=flEg align=center> 
 
-![](imgs/Matriz-Código-de-repetição.png)
+![](imgs/Matriz-Código-de-Repetição.png)
 
 </div>
 

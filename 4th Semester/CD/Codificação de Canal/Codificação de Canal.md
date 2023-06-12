@@ -53,7 +53,7 @@ Cada bloco de __k__ bits de mensagem origina uma palavra de código com __n__ bi
 
 ### __Propriedades__
 
-* ___Code rate___ ($ R $) $ \rightarrow R = \frac{k}{n} $, medida de eficiência;
+* ___Code rate___ $ \rightarrow R = \frac{k}{n} $, medida de eficiência;
 
 * __Distância de Hamming__ ($ dH $):
     * Nº de dígitos em que __diferem 2__ quaisquer __palavras do código__
@@ -238,7 +238,7 @@ __Eg.:__
 
 </div>
 
-__Code Rate__ -> $ R_c = \frac{1 - q}{2^q -1} $
+___Code Rate___ -> $ R_c = \frac{1 - q}{2^q -1} $
 
 #
 

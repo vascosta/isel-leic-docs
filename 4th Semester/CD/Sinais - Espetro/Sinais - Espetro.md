@@ -192,7 +192,7 @@ Definida a partir dos __zeros espetrais__.
 
 #
 
-### __Ocupação do Esspetro__
+### __Ocupação do Espetro__
 
 Sinais do tipo __passa-baixo__ $ \rightarrow $ apenas ocupam as __frequências baixas__
 

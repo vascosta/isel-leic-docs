@@ -120,6 +120,14 @@ __Equação de síntese__ $ \rightarrow x(t) = \int_{-\infty}^{+\infty}X(f).e^{(
 
 $ E = A^2.\tau $
 
+__Função retangular__ ($ rect $):
+
+<div align=center> 
+
+![](imgs/rect.png)
+
+</div>
+
 #
 
 ### __Espetro de Amplitude e de Fase__

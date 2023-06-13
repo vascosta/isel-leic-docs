@@ -37,3 +37,45 @@
 ![](imgs/Rp3.png)
 
 </div>
+
+#
+
+<div align=center> 
+
+![](imgs/Ex4.png)
+
+</div>
+
+<div align=center> 
+
+![](imgs/Rp4.png)
+
+</div>
+
+#
+
+<div align=center> 
+
+![](imgs/Ex5.png)
+
+</div>
+
+<div align=center> 
+
+![](imgs/Rp5.png)
+
+</div>
+
+#
+
+<div align=center> 
+
+![](imgs/Ex6.png)
+
+</div>
+
+<div align=center> 
+
+![](imgs/Rp6.png)
+
+</div>

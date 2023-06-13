@@ -90,7 +90,7 @@ __Espetro Bilateral__ $ \rightarrow P_x = \sum^{+\infty}_{k=-\infty}|c_k|^2 $
 
 __Valor médio__ $ (DC) \rightarrow A_0 $
 
-__Largura de Banda__ $ (LB) \rightarrow $ largura da faixa de frequências ocupadads pelo sinal
+__Largura de Banda__ $ (LB) \rightarrow $ largura da faixa de frequências ocupadas pelo sinal
 
 __Eg__:
 

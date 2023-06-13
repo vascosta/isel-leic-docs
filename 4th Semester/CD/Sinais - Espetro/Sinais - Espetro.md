@@ -84,7 +84,7 @@ __Espetro Bilateral__:
 
 ## __Cálculos de Indicadores__
 
-__Espetro Unilateral__ $ \rightarrow P_x = A_0^2 + \sum^{+\infty}_{k=1} \frac{A_K^2}{2} $
+__Espetro Unilateral__ $ \rightarrow P_x = A_0^2 + \sum^{+\infty}_{k=1} \frac{A_k^2}{2} $
 
 __Espetro Bilateral__ $ \rightarrow P_x = \sum^{+\infty}_{k=-\infty}|c_k|^2 $
 

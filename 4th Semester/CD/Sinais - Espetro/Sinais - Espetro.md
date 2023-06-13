@@ -106,7 +106,7 @@ $ LB = 60 \ Hz $
 
 ## __Transformada de Fourier__
 
-__Equação de síntese__ $ \rightarrow x(t) = \int_{-\infty}^{+\infty}X(f).exp(j.2.\pi.f.t) \ df $
+__Equação de síntese__ $ \rightarrow x(t) = \int_{-\infty}^{+\infty}X(f).e^{(j.2.\pi.f.t)} \ df $
 
 #
 

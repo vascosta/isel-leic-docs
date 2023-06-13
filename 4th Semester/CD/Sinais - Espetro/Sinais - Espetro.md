@@ -118,7 +118,7 @@ __Equação de síntese__ $ \rightarrow x(t) = \int_{-\infty}^{+\infty}X(f).e^{(
 
 </div>
 
-$ E = A^2.t $
+$ E = A^2.\tau $
 
 #
 

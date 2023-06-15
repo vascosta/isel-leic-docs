@@ -142,8 +142,6 @@ __Potência Instantânea__ $ \rightarrow p(t) = x^2(t) $
         * Energia __finita__;
     
 * Sinais __periódicos__ $ \rightarrow $ Caracterizados pela __potência__:
-    * __Energia__ (J):
-        * Energia __infinita__;
     * __Potência__ (W):
         * Domínio __Contínuo__ $ \rightarrow P_x = \frac{1}{T_0} . \int_{T_0} x^2(t)dt $
         * Domínio __Discreto__ $ \rightarrow P_x = \frac{1}{N} . \sum_{N} x^2[n] $

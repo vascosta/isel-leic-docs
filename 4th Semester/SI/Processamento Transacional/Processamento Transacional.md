@@ -65,7 +65,7 @@ ___Cascadeless___ $ \rightarrow $ __nenhuma__ das suas transações __lê um ite
 __E.g.__:
 
 __Não é__ _cascadeless_:
-$ S1 = \color{blue} <r(t1,x1), \color{red} w(t1,x1), \color{green} r(t2,x1), \color{blue} r(t1,x2),w(t2,x1),w(t1,x2),a(t1),a(t2) \rightarrow $ quando $ t1 $ __aborta__, $ t2 $ tem de __abortar também__ (efeito cascata)
+$ S1 = \color{blue} <r(t1,x1), \color{red} {w(t1,x1)}, \color{green} r(t2,x1), \color{blue} r(t1,x2),w(t2,x1),w(t1,x2),a(t1),a(t2) \rightarrow $ quando $ t1 $ __aborta__, $ t2 $ tem de __abortar também__ (efeito cascata)
 
 __É__ _cascadeless_:
 $ S2 = \ \color{yellow} <w(t2,x1),r(t2,x2),w(t2,x4), \color{green}r(t1,x1),w(t1,x2),r(t1,x3)> $

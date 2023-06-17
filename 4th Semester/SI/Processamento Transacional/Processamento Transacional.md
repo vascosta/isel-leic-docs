@@ -74,7 +74,7 @@ __E.g.__:
 
 __Recuperável__ $ \rightarrow $ __não existe__ nenhuma __transação__ que faça __commit__ tendo __lido um item depois__ de ele ter sido __escrito por outra transação__ ainda __não terminada com commit__. 
 
-`__Não__ ser __recuperável__ => __não__ ser ___cascadeless___`
+`NÃO ser RECUPERÁVEL` $ \Rightarrow $ `NÃO ser CASCADELESS` 
 
 __E.g.__:
 

@@ -39,7 +39,7 @@ uma __ordenação__ $ S $ das __operações__ em cada um dos $ T_i $,  tal que _
 
 __E.g.__:
 
-$ \color{green} T_1 = \ <r(x1),w(x2),r(x3)> $
+$ \begingroup \color{green} T_1 = \ <r(x1),w(x2),r(x3)> \endgroup $
 
 $ \color{yellow} T_2 = \ <w(x1),r(x2),w(x4)> $
 

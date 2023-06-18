@@ -175,59 +175,12 @@ __E.g.__:
 
 ## __Anomalias__
 
-### ___Dirty Write (W/W)___
-
-Escalonamentos não __estritos__, ainda que ___cascadeless___.
-
-`É consensual que NÃO deve ocorrer com a norma ISO SQL`
-
-__E.g.__:
-
-<div align=center> 
-
-![](imgs/16.png)
-
-</div>
-
----
-
-### ___Dirty Read (W/R)___
-
-Escalonamentos que __não__ são ___cascadeless___.
-
-__E.g.__:
-
-<div align=center> 
-
-![](imgs/17.png)
-
-</div>
-
----
-
-### ___Nonrepeatable Read (R/W)___
-
-Escalonamento ___cascadeless___ e __recuperável__ mas __não serializável__.
-
-__E.g.__:
-
-<div align=center> 
-
-![](imgs/18.png)
-
-</div>
-
----
-
-### ___Phanton Read (R/W)___
-
-__E.g.__:
-
-<div align=center> 
-
-![](imgs/19.png)
-
-</div>
+Nome | Tipo | Descrição
+| :---: | :---: | :---: |
+___Dirty Write___ | W/W | Escalonamentos não __estritos__, ainda que ___cascadeless___
+___Dirty Read___ | W/R | Escalonamentos __não__ ___cascadeless___
+___Nonrepeatable Read___ | R/W | Escalonamento ___cascadeless___ e __recuperável__ mas __não serializável__
+___Phanton Read___ | R/W | -
 
 ---
 

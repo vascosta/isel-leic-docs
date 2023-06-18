@@ -18,7 +18,7 @@
 * Protegidas
 * Reais
 
-__Ação atómica__ $ \rightarrow $ quando __executada num determinado nível de
+__Ação atómica__ $ \rightarrow $ __executada num determinado nível de
 abstração mais elevado__, ou __é executada completamente com sucesso__, (produzindo todos os seus efeitos), ou, então, __não produz quaisquer efeitos__ diretos ou laterais.
 
 ---
@@ -86,12 +86,6 @@ __E.g.__:
 
 </div>
 
-<div align=center> 
-
-![](imgs/6.png)
-
-</div>
-
 ---
 
 ### __Estrito__ 
@@ -108,7 +102,7 @@ __E.g.__:
 ---
 
 ### __Série__ 
-Para __toda a transação__ $ T $ as __operações__ de $ T $ são __executadas consecutivamente__, sem interposição de operações de outras transações $ \Rightarrow $ __limitam__ a __concorrência__.
+Para __toda a transação__ $ T $ as __operações__ de $ T $ são __executadas consecutivamente__, sem interposição de operações de outras transações $ \Rightarrow $ __limita__ a __concorrência__.
 
 `N transações` $ \Rightarrow $ `N! escalonamentos série possíveis` 
 
@@ -117,12 +111,6 @@ __E.g.__:
 <div align=center> 
 
 ![](imgs/8.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/9.png)
 
 </div>
 
@@ -142,19 +130,13 @@ __E.g.__:
 ---
 
 ### __Serializável__
-É __equivalente__ do __ponto de conflito__ a __1 dos escalonamentos série__ possíveis com as transações de $ S $.
+É __equivalente__ do __ponto de vista de conflito__ a __1 dos escalonamentos série__ possíveis com as transações de $ S $.
 
 __E.g.__:
 
 <div align=center> 
 
 ![](imgs/11.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/12Z.png)
 
 </div>
 
@@ -173,12 +155,6 @@ __E.g.__:
 <div align=center> 
 
 ![](imgs/13.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/14.png)
 
 </div>
 
@@ -217,7 +193,7 @@ __E.g.__:
 
 ### ___Dirty Read (W/R)___
 
-Escalonamentos que __não__ ___cascadeless___.
+Escalonamentos que __não__ são ___cascadeless___.
 
 __E.g.__:
 
@@ -245,8 +221,6 @@ __E.g.__:
 
 ### ___Phanton Read (R/W)___
 
-Escalonamento ___cascadeless___ e __recuperável__ mas __não serializável__.
-
 __E.g.__:
 
 <div align=center> 
@@ -267,26 +241,114 @@ __E.g.__:
 
 ---
 
-### __Activa__ 
-Estado após __início__ da __transação__ e __mantém-se__ enquanto se forem __realizando operações de leitura__ e __escrita__ sobre os __dados__.
+## __Níveis de Isolamento__
+
+<div align=center> 
+
+![](imgs/21.png)
+
+</div>
 
 ---
 
-### __Parcialmente__ ___Commited___ 
-Estado quando se indica que a __transação__ deve __terminar com sucesso__, onde é garantido que todos os __dados__ são __transferidos__ para __disco__ e só se isso acontecer é que a __transação__ atinge o ___commit point___.
+## __Protocolo__ ___Two Phase Lock___ __(2PL)__
+
+<div align=center> 
+
+![](imgs/22.png)
+
+</div>
+
+* __write(x)__ $ \rightarrow $ lock ___Shared___
+
+* __read(x)__ $ \rightarrow $ lock ___Exclusive___
+
+### __Tipos de Ação__
+
+* __Bem Formada__: protegida por um __par lock/unlock__ $ \Rightarrow $ __Transação bem formada__
+* __2 Fases__: __não__ executa __unlock__ antes de __locks__ de outras ações da __mesma transação__ $ \Rightarrow $ __Transação de duas fases__
+
+Nível de Isolamento | Leitura | Escrita
+| :---: | :---: | :---: |
+___Read Uncommitted___ | __NÃO é__ Bem Formada | Bem Formada e de 2 Fases
+___Read Committed___ | Bem Formada | Bem Formada e de 2 Fases
+___Repeatable Read___ | Bem Formada e de 2 Fases | Bem Formada e de 2 Fases
+___Serializable___ | Bem Formada e de 2 Fases | Bem Formada e de 2 Fases
 
 ---
 
-### ___Commited___
-A transação entra neste estado quando __atinge__ o ___commit point___.
+### ___Deadlocks___
+
+<div align=center> 
+
+![](imgs/23.png)
+
+</div>
+
+Formas de lidar com ___deadlocks___:
+* __Pessimista__ $ \rightarrow $ __não__ se permite o __início__ de 1 __transação__ até que se __garanta__ que ela consegue __adquirir__ todos os __locks__ de que __necessita__
+* __Otimista__ $ \rightarrow $ permitir que as __transações__ se __iniciem sem restrições__, mas, __quando existir 1__ ___deadlock___ __abortar__ 1 ou mais das __transações envolvidas__ no ___deadlock___
 
 ---
 
-### __Falhada__
-A transação vem para este estado se for __abortada__ no seu __estado activa__ ou se os __testes realizados__ no __estado parcialmente__ ___commited___ __falharem__.
+### ___Starvation___
+
+1 __transação__ ficar __indefinidamente__ à __espera__ de um __item__.
+
+Formas de lidar com ___starvation___:
+* Adotar uma disciplina __FIFO__ no __acesso__ aos __itens__
 
 ---
 
-### __Terminada__
-A __transação__ deixa de __existir__ no __sistema__.
+## ___PostgreSQL___
 
+Todas as __escritas__ são de __2 fazes__ e colocam 1 __lock__. 
+
+___Exclusive Locks___:
+* ___FOR UPDATE___:
+    * _SELECT FOR UPDATE_     
+    * _DELETE_
+    * UPDATE $ \rightarrow $ __colunas__ que pertençam a uma __restrição__ ___primary key___ ou ___unique___ que possam ser usadas numa __chave estrangeira__
+* ___FOR NO KEY UPDATE___:
+    * _SELECT FOR UPDATE_
+    * _UPDATE_ $ \rightarrow $ __colunas__ que não usem ___lock FOR UPDATE___
+
+___Shared Locks___:
+
+* ___FOR SHARE___:
+    * _SELECT FOR SHARE_
+* ___FOR KEY SHARE___:
+    * _SELECT FOR KEY SHARE_
+
+---
+
+## __Graus de Isolamento__
+
+Nível de Isoçamento | Grau |
+| :---: | :---: |
+___Chaos___ | 0 |
+___Read Uncommitted___ | 1 |
+___Read Committed___ | 2 |
+___Repeatable Read/Serializable___ | 3 |
+
+---
+
+## __Controlo de Concorrência com Protocolo__ ___Snapshot___
+
+### __First Commiter Wins__
+
+* As __escritas__ são feitas numa __cópia local__ da __transação__.
+* Existindo várias __transações__ a pretender realizar __commit__, a __1ª__ delas que verificar que o __timestamp__ da __versão atual__ é < ao seu __timestamp__ escreve a __nova versão__ $ \Rightarrow $ todas as outras irão abortar.
+
+### __First Updater Wins__
+
+* As __escritas__ são realizadas com ___exclusive lock___
+* Existindo várias __transações__ a pretender realizar __commit__, a __1ª__ delas que verificar que o __timestamp__ da __versão atual__ é < ao seu __timestamp__ escreve a __nova versão__ $ \Rightarrow $ todas as outras irão abortar.
+
+---
+
+## __Níveis de Isolamento no PostgreSQL__
+
+* Usa-se sempre o __protocolo snapshot__ como base $ \Rightarrow $ __nunca__ existem __dirty reads__ $ \Rightarrow $ __não existe__ o nível de isolamento ___read uncommitted___.
+* ___Read committed___ $ \rightarrow $ Cada __instrução__ vê os __dados estáveis__ imediatamente __antes__ da sua __execução__.
+* ___Repeatable read___ $ \rightarrow $ Vêm-se as __versões estáveis__ no momento do __início da 1ª instrução__ que __não__ seja de __controlo transacional__ dentro da transação.

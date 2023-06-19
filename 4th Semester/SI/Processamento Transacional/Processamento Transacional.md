@@ -95,7 +95,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/7.png)
+![](imgs/6.png)
 
 </div>
 
@@ -110,7 +110,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/8.png)
+![](imgs/7.png)
 
 </div>
 
@@ -123,7 +123,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/10.png)
+![](imgs/8.png)
 
 </div>
 
@@ -136,7 +136,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/11.png)
+![](imgs/9.png)
 
 </div>
 
@@ -154,7 +154,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/13.png)
+![](imgs/10.png)
 
 </div>
 
@@ -167,7 +167,7 @@ __E.g.__:
 
 <div align=center> 
 
-![](imgs/15.png)
+![](imgs/11.png)
 
 </div>
 
@@ -188,7 +188,7 @@ ___Phanton Read___ | R/W | -
 
 <div align=center> 
 
-![](imgs/20.png)
+![](imgs/12.png)
 
 </div>
 
@@ -198,7 +198,7 @@ ___Phanton Read___ | R/W | -
 
 <div align=center> 
 
-![](imgs/21.png)
+![](imgs/13.png)
 
 </div>
 
@@ -208,7 +208,7 @@ ___Phanton Read___ | R/W | -
 
 <div align=center> 
 
-![](imgs/22.png)
+![](imgs/14.png)
 
 </div>
 
@@ -234,7 +234,7 @@ ___Serializable___ | Bem Formada e de 2 Fases $ \rightarrow $ lock à __tabela__
 
 <div align=center> 
 
-![](imgs/23.png)
+![](imgs/15.png)
 
 </div>
 

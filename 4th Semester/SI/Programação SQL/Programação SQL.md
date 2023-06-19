@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS TABLE1 CASCADE;
 
 ```sql
 DECLARE
-    name TYPE := value (opcional);
+    name TIPO := valor (opcional);
 ```
 
 __E.g.__:
@@ -118,14 +118,83 @@ END CASE
 
 ## __Ciclos__
 
-* ``` EXIT [ label ] [ when boolean-expression ] ```
-* CONTINUE [ label ] [ when boolean-expression ];
+* ``` EXIT WHEN expressão booleana ```
+* ``` CONTINUE WHEN expressão booleana (opcional) ```
 
 ### ___WHILE___
+
+```sql
+WHILE expressão booleana LOOP
+    ...
+END LOOP
+```
+
+__E.g.__:
+```sql
+DECLARE
+    var1 INTEGER := 1;
+
+WHILE var1 < 10 LOOP
+    RAISE NOTICE 'var1 = %', var1;
+    var1 = var1 + 1;
+END LOOP;
+```
 
 ---
 
 ### ___FOR___
+
+```sql
+FOR target IN query LOOP
+    ...
+END LOOP
+```
+
+__E.g.__:
+```sql
+DECLARE var1 RECORD;
+
+FOR var1 IN SELECT * FROM TABLE1 LOOP
+    IF var.prop1 > 0 THEN
+        CONTINUE;
+    END IF;
+    EXIT WHEN var.prop1 = 0;
+END LOOP;
+```
+
+---
+
+## __Exceções__
+
+```sql
+RAISE NOTICE/EXCEPTION 'mensagem';
+RAISE NOTICE/EXCEPTION 'mensagem = %', variável;
+```
+
+__E.g.__:
+```sql
+DECLARE var1 INTEGER := 1;
+
+RAISE NOTICE 'var1';
+RAISE EXCEPTION 'var1 = %', var1;
+```
+
+---
+
+## __Procedimento__
+
+Parametros do tipo ``OUT`` são usados para retornar valores.
+
+```sql
+CREATE OR REPLACE PROCEDURE nome(OUT param1 tipo, param2 tipo)
+LANGUAGE plpgsql AS $$
+DECLARE
+	...
+BEGIN
+	...
+END;
+$$;
+```
 
 ---
 
@@ -133,9 +202,7 @@ END CASE
 
 ---
 
-## __Procedimento__
 
----
 
 
 

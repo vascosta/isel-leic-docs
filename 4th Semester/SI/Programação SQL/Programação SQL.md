@@ -117,3 +117,25 @@ END CASE
 ---
 
 ## __Ciclos__
+
+* ``` EXIT [ label ] [ when boolean-expression ] ```
+* CONTINUE [ label ] [ when boolean-expression ];
+
+### ___WHILE___
+
+---
+
+### ___FOR___
+
+---
+
+## __Funções__
+
+---
+
+## __Procedimento__
+
+---
+
+
+

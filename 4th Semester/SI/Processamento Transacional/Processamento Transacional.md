@@ -212,9 +212,9 @@ ___Phanton Read___ | R/W | -
 
 </div>
 
-* __write(x)__ $ \rightarrow $ lock ___Shared___
+* __read(x)__ $ \rightarrow $ lock ___Shared___
 
-* __read(x)__ $ \rightarrow $ lock ___Exclusive___
+* __write(x)__ $ \rightarrow $ lock ___Exclusive___
 
 ### __Tipos de Ação__
 
@@ -225,8 +225,8 @@ Nível de Isolamento | Leitura | Escrita
 | :---: | :---: | :---: |
 ___Read Uncommitted___ | __NÃO é__ Bem Formada | Bem Formada e de 2 Fases
 ___Read Committed___ | Bem Formada | Bem Formada e de 2 Fases
-___Repeatable Read___ | Bem Formada e de 2 Fases | Bem Formada e de 2 Fases
-___Serializable___ | Bem Formada e de 2 Fases | Bem Formada e de 2 Fases
+___Repeatable Read___ | Bem Formada e de 2 Fases $ \rightarrow $ lock ao __item__ (_row_) | Bem Formada e de 2 Fases
+___Serializable___ | Bem Formada e de 2 Fases $ \rightarrow $ lock à __tabela__ (_predicate locking_) | Bem Formada e de 2 Fases
 
 ---
 

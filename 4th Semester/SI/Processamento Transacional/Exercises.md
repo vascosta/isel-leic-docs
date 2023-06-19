@@ -6,7 +6,7 @@
 
 <div align=center> 
 
-![](imgs/Rp1.png)
+![](imgs/rp1.png)
 
 </div>
 
@@ -53,125 +53,57 @@
 ---
 <div align=center> 
 
-![](imgs/Ex5.png)
+![](imgs/ex5.png)
 
 </div>
 
 <div align=center> 
 
-![](imgs/Rp6.png)
+![](imgs/rp5.png)
 
 </div>
 
 ---
 <div align=center> 
 
-![](imgs/Ex7.png)
+![](imgs/ex6.png)
 
 </div>
 
 <div align=center> 
 
-![](imgs/Rp7.png)
+![](imgs/rp6.png)
 
 </div>
 
 ---
+
 <div align=center> 
 
-![](imgs/Ex8.png)
+![](imgs/ex7.1.png)
 
 </div>
 
 <div align=center> 
 
-![](imgs/Rp8.png)
-
-</div>
-
----
-<div align=center> 
-
-![](imgs/Ex9.1.png)
+![](imgs/ex7.2.png)
 
 </div>
 
 <div align=center> 
 
-![](imgs/Ex9.2.png)
+![](imgs/ex7.3.png)
 
 </div>
 
 <div align=center> 
 
-![](imgs/Ex9.3.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Rp9.png)
+![](imgs/rp7.png)
 
 </div>
 
 ---
-<div align=center> 
 
-![](imgs/Ex10.1.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Ex10.2.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Ex10.3.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Rp10.png)
-
-</div>
-
----
-<div align=center> 
-
-![](imgs/Ex11.1.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Ex11.2.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Rp11.png)
-
-</div>
-
----
-<div align=center> 
-
-![](imgs/Ex12.png)
-
-</div>
-
-<div align=center> 
-
-![](imgs/Rp12.png)
-
-</div>
-
----
 <div align=center> 
 
 ![](imgs/Ex13.png)
@@ -200,6 +132,7 @@
 </div>
 
 ---
+
 <div align=center> 
 
 ![](imgs/Ex15.png)
@@ -213,6 +146,7 @@
 </div>
 
 ---
+
 <div align=center> 
 
 ![](imgs/Ex16.png)
@@ -226,6 +160,7 @@
 </div>
 
 ---
+
 <div align=center> 
 
 ![](imgs/Ex17.png)
@@ -239,6 +174,7 @@
 </div>
 
 ---
+
 <div align=center> 
 
 ![](imgs/Ex18.1.png)
@@ -258,6 +194,7 @@
 </div>
 
 ---
+
 <div align=center> 
 
 ![](imgs/Ex19.png)

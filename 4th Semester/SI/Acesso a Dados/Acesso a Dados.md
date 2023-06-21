@@ -152,8 +152,8 @@ public class Hobby implements Serializable {
 Anotações:
 * ___@OneToOne___ $ \rightarrow $ 1-1
 * ___@OneToMany___ $ \rightarrow $ 1-M
-* ___@ManyToOne___ (não usado) $ \rightarrow $ M-1
-* ___@ManyToMany___ $ \rightarrow $ M-M
+* ___@ManyToOne___ $ \rightarrow $ M-1
+* ___@ManyToMany___ (não usado) $ \rightarrow $ M-M
 * ___@JoinColumn___ $ \rightarrow $ indica a coluna que é uma chave estrangeira
 
 

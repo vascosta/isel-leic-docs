@@ -82,6 +82,12 @@ __Anotações__:
 * ___@EmbeddedId___ $ \rightarrow $ __atributo__ é uma __chave primária composta__
 * ___@GeneratedValue___ $ \rightarrow $ __valor__ do __atributo__ é __gerado automaticamente__
 
+<div align=center> 
+
+![](imgs/1.png)
+
+</div>
+
 ```java
 @Entity
 @Table(name = "alunos")

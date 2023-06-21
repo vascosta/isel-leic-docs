@@ -232,7 +232,7 @@ $$
 BEGIN
     COMMIT; 
 	SET TRANSACTION ISOLATION LEVEL nível de isolamento;
-	call procedimentoLógica(param1, param2);			
+	CALL procedimentoLógica(param1, param2);			
 END;
 $$;
 ```
@@ -245,7 +245,7 @@ $$
 BEGIN
     COMMIT; 
 	SET TRANSACTION ISOLATION LEVEL REPETABLE READ;
-	call mudarProp2Lógica(p1, p2);			
+	CALL mudarProp2Lógica(p1, p2);			
 END;
 $$;
 ```

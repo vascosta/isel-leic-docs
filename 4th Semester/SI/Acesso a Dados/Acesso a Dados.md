@@ -85,7 +85,7 @@ __Anotações__:
 ```java
 @Entity
 @Table(name = "alunos")
-public class Aluno {
+public class Aluno implements Serializable {
     @Id
     private long numal;
 
@@ -106,7 +106,7 @@ public class Aluno {
 ```java
 @Entity
 @Table(name = "cacifos")
-public class Cacifo {
+public class Cacifo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // SERIAL
     private Integer numcac;
@@ -122,7 +122,7 @@ public class Cacifo {
 ```java
 @Entity
 @Table(name = "hobbies")
-public class Hobby {
+public class Hobby implements Serializable {
     @EmbeddedId // Chave primária composta
     private HobbyPK id;
 

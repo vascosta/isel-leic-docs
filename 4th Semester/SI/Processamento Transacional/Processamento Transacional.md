@@ -273,6 +273,12 @@ ___Shared Locks___:
 * ___FOR KEY SHARE___:
     * _SELECT FOR KEY SHARE_
 
+<div align=center> 
+
+![](imgs/16.png)
+
+</div>
+
 ---
 
 ## __Graus de Isolamento__

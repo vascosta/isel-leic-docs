@@ -324,8 +324,8 @@ SELECT * FROM tabela1Vista;
     * _UPDATE_
     * _DELETE_
 * __Tempo de Ação__:
-    * _BEFORE_
-    * _AFTER_
+    * _BEFORE_ $ \rightarrow $ ___OLD___
+    * _AFTER_ $ \rightarrow $ ___NEW___
     * _INSTEAD OF_ $ \rightarrow $ apenas para __vistas__
 * __Ação__:
     * _FOR EACH { ROW | STATEMENT }_ ...

@@ -110,7 +110,11 @@ inline fun <reified R> List<*>.weaklyCheckedAs() : List<R>
 ## __b)__
 
 ```
-O cast não é verificável, uma vez que os items da lista não estão a ser validados
+O compilador, em tempo de compilação tem conhecimento sobre os tipos utilizados, no entanto o Type Erasure remove a informação desses tipos em tempo de execução, neste caso, "R".
+
+Logo, quando é feito o cast "first() as R", o compilador não pode verificar em tempo de execução se o cast é seguro, devido ao Type Erasure.
+
+Resumindo, o cast não é verificável, uma vez que em tempo de execução os items da lista podem não ter sido convertidos para o tipo "R".
 ```
 
 ---

@@ -109,3 +109,62 @@ public static void showVars(Object obj) {
 ```
 
 ---
+
+## __3__
+
+```kotlin
+class X(bar: Int) {
+    val nr: Int
+        get() = foo
+    companion object {
+        val foo = 7657
+        val zaz = 1234
+        val qux = 9876
+    }
+}
+
+class Y(var bar: Int = 7657, qux: String = "ISEL-LEIC") {
+    val nr
+        get() = bar
+    val foo
+        get() = nr
+}
+class Z(
+    val bar: Int,
+    val foo: Int
+)
+```
+
+```
+Tipos primitivos (Boolean, Int, Float, ...) são guardados na stack.
+Tipos objetos (String, Classes, Companion Objects, ...) são guardados no heap.
+
+Propriedades ocupam mais espaço que parâmetros.
+
+class X:
+bar (stack) -> ()
+nr (stack) -> Companion Object (heap) -> foo (heap) -> 7657
+
+class Y:
+bar (stack) -> 7657
+qux (heap) -> "ISEL-LEIC"
+nr (stack) -> bar (stack) -> 7657
+foo (stack) -> nr (stack) -> bar (stack) -> 7657
+
+class Z:
+bar (stack) -> ()
+foo (stack) -> ()
+
+Ordem de ocupação de memória no Heap:
+Z, Y, X
+```
+
+---
+
+## __4__
+
+## __a)__
+
+```kotlin
+
+```

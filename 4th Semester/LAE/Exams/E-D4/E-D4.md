@@ -129,6 +129,7 @@ class Y(var bar: Int = 7657, qux: String = "ISEL-LEIC") {
     val foo
         get() = nr
 }
+
 class Z(
     val bar: Int,
     val foo: Int
@@ -140,20 +141,15 @@ Tipos primitivos (Boolean, Int, Float, ...) são guardados na stack.
 Tipos objetos (String, Classes, Companion Objects, ...) são guardados no heap.
 
 class X:
-bar (stack) -> ()
-nr (stack) -> Companion Object (heap) -> foo (heap) -> 7657
+1 propriedade (nr), mas como é um getter, não é guardada no heap.
 
 class Y:
-bar (stack) -> 7657
-qux (heap) -> "ISEL-LEIC"
-nr (stack) -> bar (stack) -> 7657
-foo (stack) -> nr (stack) -> bar (stack) -> 7657
+3 propriedades (bar, nr, foo), mas como nr e foo são getters, não são guardadas no heap.
 
 class Z:
-bar (stack) -> ()
-foo (stack) -> ()
+2 propriedades (bar, foo), mas como são val, são guardadas no heap.
 
-Ordem de ocupação de memória no Heap:
+Ordem de ocupação de memória no Heap, de maior para menor:
 Z, Y, X
 ```
 

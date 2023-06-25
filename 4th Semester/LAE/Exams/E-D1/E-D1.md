@@ -38,8 +38,7 @@ class Foo(a: Int, var b: String, val c: Int, d: Double) {
 ```
 
 ```kotlin
-// b, c, x, y -> propriedades (val, var)
-// a, d -> parâmetros
+// b, c, x, y -> propriedades (val, var), porque a, d -> parâmetros
 ```
 
 ---

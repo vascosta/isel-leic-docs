@@ -204,11 +204,11 @@ R.: TODO
 
 2 - Considere dois ficheiros: 1. O ficheiro .class produzido pelo gerador da esquerda; e 2. O ficheiro com o código fonte Kotlin do método de extensão. Bastam esses dois ficheiros, para que o compilador de Kotlin possa produzir o bytecode apresentado à direita.
 
-R.: TODO
+R.: Verdadeiro, uma vez que o ficheiro 1 (Valuer.class) contém a interface Valuer, a qual seria usada pela função de extensão no ficheiro 2 (Main.kt por exemplo).
 
 3 - Se um programa compilado para a JVM incluir o ficheiro .class com o bytecode indicado à direita, então o ficheiro .class produzido pelo gerador da esquerda não é necessário para a sua execução.
 
-R.: TODO
+R.: Falso, como já referido em 2, o Valuer.class é necessário para que o compilador de Kotlin possa produzir o bytecode apresentado à direita.
 
 4 - Se um programa compilado para a JVM incluir o ficheiro .class com o bytecode indicado à direita, então é inútil que o mesmo programa também inclua o gerador apresentado à esquerda.
 

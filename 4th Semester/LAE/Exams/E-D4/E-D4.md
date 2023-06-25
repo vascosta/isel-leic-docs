@@ -139,8 +139,6 @@ class Z(
 Tipos primitivos (Boolean, Int, Float, ...) são guardados na stack.
 Tipos objetos (String, Classes, Companion Objects, ...) são guardados no heap.
 
-Propriedades ocupam mais espaço que parâmetros.
-
 class X:
 bar (stack) -> ()
 nr (stack) -> Companion Object (heap) -> foo (heap) -> 7657

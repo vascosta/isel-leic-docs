@@ -143,7 +143,9 @@ fun <T : Any> Sequence<T?>.noNulls(): Sequence<T> = sequence {
 ## __7__
 
 ```
-explica o garbage collector, eden e afins (TODO)
+Ao longo da execução do programa, os objetos no heap vão sendo marcados como vivos, se ainda se encontrarem alcançáveis no programa (no scope), os objetos não marcados como vivos são considerados lixo e são limpos do heap.
+
+By Ricardo
 ```
 
 ---

@@ -187,8 +187,7 @@ public interface Valuer {
 ## __b)__
 
 ```kotlin
-// ERRADO, acho eu
-fun Valuer.func(a: Valuer) = (a.estimate("s") + 2) / 5
+fun Valuer.estimate(String s) = (str.length + 2) / 5
 ```
 
 ## __c)__
@@ -196,7 +195,7 @@ fun Valuer.func(a: Valuer) = (a.estimate("s") + 2) / 5
 ```
 1 - Se um programa Kotlin incluir o ficheiro .class com o bytecode indicado à direita, então o gerador de código apresentado à esquerda terá de ser executado, o mais tardar, logo antes da primeira execução do método de extensão.
 
-R.: TODO
+R.: V, By Ricardo
 
 2 - Considere dois ficheiros: 1. O ficheiro .class produzido pelo gerador da esquerda; e 2. O ficheiro com o código fonte Kotlin do método de extensão. Bastam esses dois ficheiros, para que o compilador de Kotlin possa produzir o bytecode apresentado à direita.
 
@@ -208,7 +207,7 @@ R.: Falso, como já referido em 2, o Valuer.class é necessário para que o comp
 
 4 - Se um programa compilado para a JVM incluir o ficheiro .class com o bytecode indicado à direita, então é inútil que o mesmo programa também inclua o gerador apresentado à esquerda.
 
-R.: TODO
+R.: V, By Ricardo
 ```
 
 ---
@@ -243,7 +242,8 @@ fun hot() {
 ```
 
 ```
-TODO
+other = n --> boxing de int para Integer
+val end = other + res as Int --> unboxing de Integer para int & checkcast de Boolean para int
 ```
 
 ---
@@ -273,7 +273,18 @@ abc def super 2
 ## __8__
 
 ```
-TODO
+* Generational -> tem gerações, quanto mais antigo um item é, menos provável é que seja considerado lixo
+
+* Incremental -> o algoritmo é dividido em várias etapas distribuídas ao longo do tempo, o que reduz o tempo necessário para parar o mundo
+
+* Parallel -> O algoritmo corre em paralelo com o programa em múltiplas threads
+
+* Mostly Concurrent -> suporta concorrência em threads
+mostly concurrent - supports concurrency in threads
+
+* Stop-the-world -> pára todos os programas para correr
+
+* Evacuating -> objectos vivos são movidos de um lugar na memória para outro, libertando espaço na localização original
 ```
 
 ---
@@ -291,5 +302,7 @@ class OutFile(path: String) : Closeable {
 ```
 
 ```
-TODO
+NullPointerException quando o close() ou o finalize() são chamados mais do que uma vez.
+
+By Ricardo
 ```

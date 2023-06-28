@@ -145,14 +145,6 @@ class NAryExchanger<T>(private val groupSize: Int) {
         var list: MutableList<R> = mutableListOf()
     )
 
-    /**
-     * Method that allows threads to exchange data with other threads in groups of [groupSize]
-     * The threads that exchange data are blocked until the group is complete
-     * If the group is not complete after the specified [timeout], the threads are unblocked and the method returns null
-     * If the group is complete, the threads are unblocked and the method returns the list of exchanged data
-     * @throws InterruptedException if the thread is interrupted while waiting for the group to be complete
-     * @throws IllegalArgumentException if the timeout is negative
-     */
     @Throws(InterruptedException::class)
     fun exchange(value: T, timeout: Duration): List<T>? {
         require(timeout >= Duration.ZERO) { "timeout must be greater or equal to 0" }

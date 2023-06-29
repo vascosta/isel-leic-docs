@@ -9,8 +9,8 @@ class MessageQueue<T>() {
     private class Request<T>(
         val nOfMessages: Int,
         val condition: Condition,
-        val messages: List<T>
-    ) { }
+        val messages: MutableList<T>
+    )
 
     private val lock = ReentrantLock()
     private val messageQueue = mutableListOf<T>()
@@ -19,6 +19,9 @@ class MessageQueue<T>() {
     fun enqueue(message: T): Unit {
         lock.withLock {
             messageQueue.add(message)
+            if (requestQueue.isNotEmpty() && messageQueue.size >= requestQueue.first().nOfMessages) {
+                requestQueue.first().condition.signal()
+            }
         }
     }
 
@@ -30,9 +33,7 @@ class MessageQueue<T>() {
 
             // fast path
             if (requestQueue.isEmpty() && messageQueue.size >= nOfMessages) {
-                repeat(nOfMessages) {
-                    messages.add(messageQueue.removeFirst())
-                }
+                repeat(nOfMessages) { messages.add(messageQueue.removeFirst()) }
                 return messages
             }
 
@@ -46,21 +47,17 @@ class MessageQueue<T>() {
                 } catch (e: InterruptedException) {
                     if (messageQueue.size >= localRequest.nOfMessages) {
                         Thread.currentThread().interrupt()
-                        repeat(nOfMessages) {
-                            messages.add(messageQueue.removeFirst())
-                        }
+                        repeat(nOfMessages) { localRequest.messages.add(messageQueue.removeFirst()) }
                         requestQueue.remove(localRequest)
-                        return messages
+                        return localRequest.messages
                     }
                     requestQueue.remove(localRequest)
                     throw e
                 }
                 if (messageQueue.size >= localRequest.nOfMessages) {
                     requestQueue.remove(localRequest)
-                    repeat(nOfMessages) {
-                        messages.add(messageQueue.removeFirst())
-                    }
-                    return messages
+                    repeat(nOfMessages) { localRequest.messages.add(messageQueue.removeFirst()) }
+                    return localRequest.messages
                 }
                 if (remainingNanos <= 0) {
                     // timeout
@@ -69,6 +66,5 @@ class MessageQueue<T>() {
                 }
             }
         }
-
     }
 }

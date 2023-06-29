@@ -6,7 +6,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 class Exchanger<T> {
-    data class Request<T>(val valueToExchange: T, val continuation: Continuation<T>)
+    class Request<T>(val valueToExchange: T, val continuation: Continuation<T>)
 
     private val lock = ReentrantLock()
     private val requestQueue = LinkedList<Request<T>>()

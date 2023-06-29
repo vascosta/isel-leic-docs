@@ -68,7 +68,6 @@ class Semaphore(private val initialUnits: Int) {
                 } catch (e: InterruptedException) {
                     if (shutdown && availableUnits == initialUnits) {
                         Thread.currentThread().interrupt()
-                        shutdown = false
                         return true
                     }
                     throw e

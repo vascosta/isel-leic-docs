@@ -20,7 +20,6 @@ class Semaphore(private val initialUnits: Int) {
         condition.signal()
     }
 
-
     @Throws(InterruptedException::class, RejectedExecutionException::class)
     fun acquire(timeout: Duration): Boolean = lock.withLock {
         var remainingNanos = timeout.inWholeNanoseconds
@@ -75,9 +74,7 @@ class Semaphore(private val initialUnits: Int) {
                     throw e
                 }
                 if (shutdown && availableUnits == initialUnits) return true
-                if (remainingNanos <= 0) {
-                    return false
-                }
+                if (remainingNanos <= 0) return false
             }
         }
     }

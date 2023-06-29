@@ -1,24 +1,28 @@
-import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import java.util.concurrent.atomic.AtomicReference
 
-suspend fun race(f0: suspend () -> Int, f1: suspend () -> Int): Int = coroutineScope {
-    var result: Int? = null
-    var job1: Job? = null
-    var job0: Job? = null
+suspend fun race(f0: suspend () -> Int, f1: suspend () -> Int): Int {
+    val result = AtomicReference<Int>(null)
 
-    job1 = launch {
-        result = f1()
-        if (result != null) job0!!.cancel()
+    try {
+        coroutineScope {
+            launch {
+                val res = f0()
+                result.compareAndSet(null, res)
+                cancel()
+            }
+            launch {
+                val res = f1()
+                result.compareAndSet(null, res)
+                cancel()
+            }
+        }
+    } catch (e: CancellationException) {
+        if (result.get() == null)
+            throw e
     }
 
-    job0 = launch {
-        result = f0()
-        if (result != null) job1!!.cancel()
-    }
-
-    job1.join()
-    job0.join()
-
-    return@coroutineScope result ?: throw IllegalStateException("No coroutine finished successfully.")
+    return result.get() ?: throw IllegalStateException()
 }

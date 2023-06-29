@@ -8,11 +8,28 @@ class ExecutorWithShutdown(private val executor: Executor) {
     private val lock = ReentrantLock()
     private val condition = lock.newCondition()
     private var shutdown = false
+    private var nOfPendingCommands = 0
 
     @Throws(RejectedExecutionException::class)
     fun execute(command: Runnable): Unit {
-        if (shutdown) throw RejectedExecutionException("Executor is shut down")
-        executor.execute(command)
+        lock.withLock{
+            if (shutdown) throw RejectedExecutionException("Executor is shut down")
+            nOfPendingCommands++
+            val r = {
+                try {
+                    command.run()
+                } finally {
+                    decrementeNOfPendingCommands()
+                }
+            }
+            executor.execute(r)
+        }
+    }
+
+    private fun decrementeNOfPendingCommands(): Unit {
+        lock.withLock {
+            nOfPendingCommands--
+        }
     }
 
     fun shutdown(): Unit {
@@ -23,20 +40,20 @@ class ExecutorWithShutdown(private val executor: Executor) {
     fun awaitTermination(timeout: Duration): Boolean {
         lock.withLock {
             // fast path
-            if (shutdown) return true
+            if (shutdown && nOfPendingCommands == 0) return true
 
             var remainingNanos = timeout.inWholeNanoseconds
             while (true) {
                 try {
                     remainingNanos = condition.awaitNanos(remainingNanos)
                 } catch (e: InterruptedException) {
-                    if (shutdown) {
+                    if (shutdown && nOfPendingCommands == 0) {
                         Thread.currentThread().interrupt()
                         return true
                     }
                     throw e
                 }
-                if (shutdown) return true
+                if (shutdown && nOfPendingCommands == 0) return true
                 if (remainingNanos <= 0) return false
             }
         }

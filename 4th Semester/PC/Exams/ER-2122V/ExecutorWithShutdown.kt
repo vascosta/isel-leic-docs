@@ -34,6 +34,7 @@ class ExecutorWithShutdown(private val executor: Executor) {
 
     fun shutdown(): Unit {
         shutdown = true
+        condition.signalAll()
     }
 
     @Throws(InterruptedException::class)

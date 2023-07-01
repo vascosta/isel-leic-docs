@@ -24,11 +24,11 @@
 
 </div>
 
-* __Detecção de teclas__ $ \rightarrow $ o sinal $ Kval $ é __ativado__ e disponibiliza-se o __código dessa tecla__ no barramento $ K_{0:3} $.
+* __Detecção de teclas__ $ \rightarrow $ o sinal $ Kval $ é __ativado__ e disponibiliza-se o __código dessa tecla__ no barramento $ K_{0:3} $
  
 * __Varrimento de teclas__: 
-    * Ativação do sinal $ Kscan $, que __inicia o ciclo de varrimento__ do teclado.
-    * Apenas é iniciado um __novo ciclo de varrimento ao teclado__ quando o sinal $ Kack $ for __ativado__ e a __tecla premida for libertada__.
+    * Ativação do sinal $ Kscan $, que __inicia o ciclo de varrimento__ do teclado
+    * Apenas é iniciado um __novo ciclo de varrimento ao teclado__ quando o sinal $ Kack $ for __ativado__ e a __tecla premida for libertada__
 
 
 ---
@@ -87,9 +87,9 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 
 * __Escrita de dados__: 
     * Ativação do sinal $ DAV $ (_Data Available_) pelo _Key Decode_, indicando que tem __dados para serem armazenados__
-    * Logo que tenha disponibilidade para armazenar informação, o _Ring Buffer_ escreve os dados $ D_{0:3} $ em memória.
-    * Concluída a escrita em memória ativa o sinal $ DAC $ (_Data Accepted_) para informar o sistema produtor que os dados foram aceites.
-        * O Keyboard Reader mantém o sinal $ DAV $ ($ Kval $) ativo até que $ DAC $ seja ativado.
+    * Logo que tenha disponibilidade para armazenar informação, o _Ring Buffer_ escreve os dados $ D_{0:3} $ em memória
+    * Concluída a escrita em memória ativa o sinal $ DAC $ (_Data Accepted_) para informar o sistema produtor que os dados foram aceites
+        * O Keyboard Reader mantém o sinal $ DAV $ ($ Kval $) ativo até que $ DAC $ seja ativado
         * O _Ring Buffer_ só desativa $ DAC $ depois de $ DAV $ ter sido desativado
 
 * __Entrega de dados__ $ \rightarrow $ o bloco Ring Buffer procede à entrega de dados ao _Output Buffer_, sempre que esta indique que está disponível para receber, através do sinal _Clear To Send_ ($ CTS $)
@@ -163,7 +163,7 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
     * O _Output Buffer_ indica que está disponível para armazenar dados através do sinal $ OBfree $ $ \Rightarrow $ o _Ring Buffer_ pode ativar o sinal $ Load $ para registar os dados
  
 * __Entrega de Dados__:
-    * O Control (entidade consumidora) quando pretende ler dados do _Output Buffer_, aguarda que o sinal $ Dval $ fique ativo, recolhe os dados e pulsa o sinal $ ACK $ indicando que estes já foram consumidos
+    * O _Control_ (entidade consumidora) quando pretende ler dados do _Output Buffer_, aguarda que o sinal $ Dval $ fique ativo, recolhe os dados e pulsa o sinal $ ACK $ indicando que estes já foram consumidos
     * O Output Buffer, logo que o sinal ACK pulse, deve invalidar os dados baixando o sinal $ Dval $ e sinalizar que está novamente disponível para entregar dados ao sistema consumidor, ativando o sinal $ OBfree $ 
     * O Output Buffer indica que já registou os dados desativando o sinal $ OBfree $
     
@@ -185,7 +185,7 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
     * Escrever os dados no _Shift Register_
     * Verificar se o _Ring Buffer_ já enviou os dados
 * __STATE_ACKNOWLEDGED__:
-    * Informar o Control que os dados estão prontos para serem lidos
-    * Verificar se o Control recebeu os dados
+    * Informar o _Control_ que os dados estão prontos para serem lidos
+    * Verificar se o _Control_ recebeu os dados
 * __STATE_END__:
-    * Verificar se o Control já leu os dados
+    * Verificar se o _Control_ já leu os dados

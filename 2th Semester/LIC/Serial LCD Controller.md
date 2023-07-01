@@ -1,7 +1,7 @@
 # ___Serial LCD Controller___
 
-* ___Serial Receiver___ $ \rightarrow $ receção de tramas do _Control_
-* ___LCD Dispatcher___ $ \rightarrow $ envio de tramas para o LCD
+* ___Serial Receiver___
+* ___LCD Dispatcher___
 
 <div align=center> 
 
@@ -49,13 +49,11 @@
 * __STATE_WAITING_ACCEPT__:
     * Verificar se o _Dispatcher_ já está pronto para receber uma nova trama ($ accept $)
 
-__NOTA__: ``No Serial LCD Controller não é necessário o sinal $ busy $ pois o _Dispatcher_ não precisa de esperar que o LCD execute os comandos recebidos``
+__NOTA__: ``No Serial LCD Controller não é necessário o sinal busy pois o Dispatcher não precisa de esperar que o LCD execute os comandos recebidos``
 
 ---
 
 ## ___LCD Dispatcher___
-
-__NOTA__: ``O _LCD_ processa as tramas recebidas de acordo com os comandos definidos pelo fabricante, __não sendo necessário esperar pela sua execução para libertar o canal de receção série__``
 
 <div align=center> 
 
@@ -69,3 +67,5 @@ __NOTA__: ``O _LCD_ processa as tramas recebidas de acordo com os comandos defin
     * Enviar a trama recebida para o LCD ($ WrL $)
 * __STATE_DONE__:
     * Verificar se o _Serial Receiver_ já percebeu que o _Dispatcher_ já enviou a trama ($ Dval $) 
+
+__NOTA__: ``O LCD processa as tramas recebidas de acordo com os comandos definidos pelo fabricante, não sendo necessário esperar pela sua execução para libertar o canal de receção série``

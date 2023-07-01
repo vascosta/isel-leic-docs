@@ -1,8 +1,8 @@
 # ___Keyboard Reader___
 
-* ___Key Decode___ $ \rightarrow $ descodificador de teclado
-* ___Ring Buffer___ $ \rightarrow $ bloco de armazenamento
-* ___Output Buffer___ $ \rightarrow $ bloco de entrega ao consumidor
+* ___Key Decode___
+* ___Ring Buffer___
+* ___Output Buffer___ 
 
 <div align=center> 
 
@@ -15,21 +15,14 @@
 ## ___Key Decode___
 
 * __Teclado 4x3__
-* ___Key Scan___ $ \rightarrow $ varrimento do teclado
-* ___Key Control___ $ \rightarrow $ controlo do varrimento e de fluxo
+* ___Key Scan___
+* ___Key Control___
 
 <div align=center> 
 
 ![](imgs/2.png)
 
 </div>
-
-* __Detecção de teclas__ $ \rightarrow $ o sinal $ Kval $ é __ativado__ e disponibiliza-se o __código dessa tecla__ no barramento $ K_{0:3} $
- 
-* __Varrimento de teclas__: 
-    * Ativação do sinal $ Kscan $, que __inicia o ciclo de varrimento__ do teclado
-    * Apenas é iniciado um __novo ciclo de varrimento ao teclado__ quando o sinal $ Kack $ for __ativado__ e a __tecla premida for libertada__
-
 
 ---
 
@@ -60,39 +53,29 @@ Vantagen de ter 2 __contadores__:
 </div>
 
 * __STATE_DETETAR_TECLA__:
-    * Informar que se iniciou um novo ciclo de varrimento 
+    * Informar que se iniciou um novo ciclo de varrimento ($ Kscan $)
+    * Verificar se foi premida alguma tecla ($ Kpress $)
     * Se não foi premida nenhuma tecla ativa-se o sinal $ Kscan $ de modo a que o contador se mantenha ativo de forma a permitir a constante deteção de teclas
 * __STATE_TECLA_PREMIDA__:
-    * Informar que foi premida uma tecla
-    * Verificar se a tecla premida foi recebida
-    * Verificar se a tecla premida foi libertada
+    * Informar que foi premida uma tecla ($ Kval $)
+    * Verificar se a tecla premida foi recebida pelo _Ring Buffer_ ($ Kack $)
+    * Verificar se a tecla premida foi libertada ($ Kpress $)
 * __STATE_ESPERAR_TECLA__:
-    * Esperar que a tecla premida seja tratada
+    * Esperar que a tecla premida seja tratada pelo _Ring Buffer_ ($ Kack $)
 
 ---
 
 ## ___Ring Buffer___
 
-* ___Ring Buffer Control___ $ \rightarrow $ controlo do buffer
+* ___Ring Buffer Control___
 * ___Memory Address Control___ $ \rightarrow $ manipulação de endereços de memória
-* ___RAM___ $ \rightarrow $ armazenamento de teclas
+* ___RAM___
 
 <div align=center> 
 
 ![](imgs/5.png)
 
 </div>
-
-Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capacidade de armazenar até 8 palavras (teclas) de 4 bits. 
-
-* __Escrita de dados__: 
-    * Ativação do sinal $ DAV $ (_Data Available_) pelo _Key Decode_, indicando que tem __dados para serem armazenados__
-    * Logo que tenha disponibilidade para armazenar informação, o _Ring Buffer_ escreve os dados $ D_{0:3} $ em memória
-    * Concluída a escrita em memória ativa o sinal $ DAC $ (_Data Accepted_) para informar o sistema produtor que os dados foram aceites
-        * O Keyboard Reader mantém o sinal $ DAV $ ($ Kval $) ativo até que $ DAC $ seja ativado
-        * O _Ring Buffer_ só desativa $ DAC $ depois de $ DAV $ ter sido desativado
-
-* __Entrega de dados__ $ \rightarrow $ o bloco Ring Buffer procede à entrega de dados ao _Output Buffer_, sempre que esta indique que está disponível para receber, através do sinal _Clear To Send_ ($ CTS $)
 
 ---
 
@@ -105,23 +88,23 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 </div>
 
 * __STATE_WAITING__:
-    * Verificar se o _Key Decode_ tem dados para serem armazenados
-    * Verificar se o ___buffer___ __está cheio__ $ \rightarrow $ verificar se é possível realizar uma leitura de dados
-    * Verificar se o ___buffer___ __está vazio__ $ \rightarrow $ verificar se é possível realizar uma leitura de dados
+    * Verificar se o _Key Decode_ tem dados para serem armazenados ($ DAV $)
+    * Verificar se o ___buffer___ __está cheio__ ( $ full $)
+    * Verificar se o ___buffer___ __está vazio__ ($ empty $) $ \rightarrow $ verificar se é possível realizar uma leitura de dados ($ CTS $)
 * __STATE_ACTIVATE_PUT__:
-    * Informar o _MAC_ que se trata de uma operação de escrita
+    * Informar o _MAC_ que se trata de uma operação de escrita ($ selPnG $)
 * __STATE_WRITE_KEY__:
-    * Informar a _RAM_ para escrever os dados no endereço respetivo (fornecido pelo _MAC_)
+    * Informar a _RAM_ para escrever os dados no endereço respetivo (fornecido pelo _MAC_) ($ selPnG \ e \ Wr $)
 * __STATE_INC_PUT__:
-    * Atualizar o endereço de escrita do _MAC_
+    * Atualizar o endereço de escrita do _MAC_ ($ incPut $)
 * __STATE_END_WRITE__:
-    * Informar o _Key Decode_ que os dados foram aceites
-    * Verificar se o _Key Decode_ já se apercebeu que os dados foram aceites
+    * Informar o _Key Decode_ que os dados foram aceites ($ DAC $)
+    * Verificar se o _Key Decode_ já se apercebeu que os dados foram aceites ($ DAV $)
 * __STATE_READ_KEY__:
-    * Informar o _Output Buffer_ que os dados estão prontos para serem lidos
-    * Verificar se o _Output Buffer_ já recebeu os dados
+    * Informar o _Output Buffer_ que os dados estão prontos para serem lidos ($ Wreg $)
+    * Verificar se o _Output Buffer_ já recebeu os dados ($ CTS $)
 * __STATE_INC_GET__:
-    * Atualizar o endereço de leitura do _MAC_
+    * Atualizar o endereço de leitura do _MAC_ ($ incGet $)
 
 ---
 
@@ -130,7 +113,7 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 * ___3 Contadores___:
     * Contador do endereco de escrita
     * Contador do endereco de leitura
-    * Ccontador de elementos no _buffer_
+    * Contador de elementos no _buffer_
 * ___Mux___ $ \rightarrow $ manipulação de endereços de memória
 
 <div align=center> 
@@ -158,14 +141,6 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 ![](imgs/8.png)
 
 </div>
-
-* __Armazenamento de Dados__:
-    * O _Output Buffer_ indica que está disponível para armazenar dados através do sinal $ OBfree $ $ \Rightarrow $ o _Ring Buffer_ pode ativar o sinal $ Load $ para registar os dados
- 
-* __Entrega de Dados__:
-    * O _Control_ (entidade consumidora) quando pretende ler dados do _Output Buffer_, aguarda que o sinal $ Dval $ fique ativo, recolhe os dados e pulsa o sinal $ ACK $ indicando que estes já foram consumidos
-    * O Output Buffer, logo que o sinal ACK pulse, deve invalidar os dados baixando o sinal $ Dval $ e sinalizar que está novamente disponível para entregar dados ao sistema consumidor, ativando o sinal $ OBfree $ 
-    * O Output Buffer indica que já registou os dados desativando o sinal $ OBfree $
     
 ---
 
@@ -178,14 +153,14 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 </div>
  
 * __STATE_WAITING__:
-    * Informar o _Ring Buffer_ que está disponível para armazenar dados
-    * Verificar se o _Ring Buffer_ quer armazenar dados
+    * Informar o _Ring Buffer_ que está disponível para armazenar dados ($ OBfree $)
+    * Verificar se o _Ring Buffer_ quer armazenar dados ($ Load $)
     * 
 * __STATE_RECEIVING__:
-    * Escrever os dados no _Shift Register_
-    * Verificar se o _Ring Buffer_ já enviou os dados
+    * Escrever os dados no _Shift Register_ ($ Wreg $)
+    * Verificar se o _Ring Buffer_ já acabou de enviar os dados ($ Load $)
 * __STATE_ACKNOWLEDGED__:
-    * Informar o _Control_ que os dados estão prontos para serem lidos
-    * Verificar se o _Control_ recebeu os dados
+    * Informar o _Control_ que os dados estão prontos para serem lidos ($ Dval $)
+    * Verificar se o _Control_ recebeu os dados ($ ACK $)
 * __STATE_END__:
-    * Verificar se o _Control_ já leu os dados
+    * Verificar se o _Control_ já leu os dados ($ ACK $)

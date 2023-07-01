@@ -51,5 +51,4 @@ Implementação igual à do ___Serial LCD Controller___.
     * Verificar se o _Serial Receiver_ já percebeu que o _Door Controller_ já enviou a trama ($ DXval $) 
  
 __NOTAS__: 
-* ``Numa situação de fecho onde se detetou a passagem de um indivíduo, deve-se permitir de forma automática o encerramento da porta, daí a verificação do OC(0) no estado __STATE_ABERTURA__``
-* ``O sinal $ Sclose $ é um sinal que indica que a porta já fechou, ou seja, que o motor já parou de rodar``
+* ``Numa situação de fecho onde se detetou a passagem de um indivíduo, deve-se permitir de forma automática o encerramento da porta, daí a verificação do OC(0) no estado STATE_ABERTURA``

@@ -140,7 +140,7 @@ Estrutura de dados para armazenamento de teclas com disciplina FIFO e com capaci
 </div>
 
 * Endereços:
-    * Selecionado por $ put\overline{get} $
+    * Selecionados por $ put\overline{get} $
     * __Endereço de escrita__ $ \rightarrow $ putIndex
     * __Endereço de leitura__ $ \rightarrow $ getIndex
     * ___Full___ $ \rightarrow $ _buffer_ cheio

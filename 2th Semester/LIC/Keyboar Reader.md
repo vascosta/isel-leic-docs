@@ -155,7 +155,6 @@ Vantagen de ter 2 __contadores__:
 * __STATE_WAITING__:
     * Informar o _Ring Buffer_ que está disponível para armazenar dados ($ OBfree $)
     * Verificar se o _Ring Buffer_ quer armazenar dados ($ Load $)
-    * 
 * __STATE_RECEIVING__:
     * Escrever os dados no _Shift Register_ ($ Wreg $)
     * Verificar se o _Ring Buffer_ já acabou de enviar os dados ($ Load $)

@@ -61,26 +61,6 @@ L = C / B = 2^20 / 2^6 = 2^14
 
 Ex.:
 ```
-Admita um sistema computacional com um nível de cache, formada por blocos de 64 bytes. 
-
-Considere um array de structs do tipo A. 
-
-Quantas posições desse array podem ser completamente armazenadas num bloco da cache?
-Justifique. 
-```
-
-```c
-struct A { short a; int b; char c };
-```
-
-```
-sizeof(A) = 2 + 4 + 1 = 7 bytes
-
-64 / 7 = 9,14 -> 9 posições
-```
-
-Ex.:
-```
 Quantas linhas de cache ocupa um array bidimensional de valores inteiros com as 
 dimensões 4 por 24, numa cache com 8 MBytes de capacidade, formada por blocos de 32 
 bytes.

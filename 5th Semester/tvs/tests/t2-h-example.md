@@ -43,7 +43,12 @@ Qual é o problema?
 ```
 
 ```
+O problema é que nem todos os processos têm os mesmos endereços virtuais para o 
+objeto.
 
+Logo um mesmo endereço virtual, para processos diferentes pode ser traduzido para 
+diferentes endereços físicos, o que resulta em segmentation fault quando estes 
+tentam aceder ao objeto.
 ```
 
 # 3
@@ -97,7 +102,9 @@ Qual é o propósito deste esquema de tradução com duas fases?
 ```
 O esquema de tradução com duas fases visa aumentar o isolamento entre máquinas virtuais e aumentar a segurança.
 
-Uma vez que haver duas fases de tradução de endereços mantém a ilusão de que a máquina virtual interage com o hardware real enquanto que o host controla com maior eficácia os recursos partilhados.
+Uma vez que haver duas fases de tradução de endereços mantém a ilusão de que a 
+máquina virtual interage com o hardware real enquanto que o host controla com 
+maior eficácia os recursos partilhados.
 ```
 
 # 6
@@ -112,7 +119,11 @@ Comente a seguinte afirmação:
 ```
 
 ```
+Esta afirmação está errada, visto que o Docker não precisa de uma máquina virtual 
+auxiliar para correr um kernel Linux.
 
+O Docker usa o kernel do host, e não um kernel Linux, para correr os contentores, 
+sendo assim possível correr contentores Docker em sistemas Windows, Mac ou Linux.
 ```
 
 # 7
@@ -144,7 +155,8 @@ CMD ["node", "app.js"]
 
 ## a
 ```
-O comando cp não funciona porque o WORKDIR não é a diretoria atual, mas sim a diretoria de trabalho do container.
+O comando cp não funciona porque o WORKDIR não é a diretoria atual, mas sim a 
+diretoria de trabalho do container.
 
 Para isso, é necessário alterar o comando cp para "COPY . /opt/isel/tp2/".
 ```
@@ -179,5 +191,9 @@ Como podem coexistir no mesmo sistema operativo processos com definições de re
 ```
 
 ```
-
+Apesar de os processos dos contentores estarem em execução com definições de rede 
+diferentes do sistema anfitrião, o docker cria uma interface de rede virtual para 
+cada contentor, que é associada a uma interface de rede física do sistema 
+anfitrião, sendo assim a coexistência de processos com definições de rede 
+diferentes possível.
 ```

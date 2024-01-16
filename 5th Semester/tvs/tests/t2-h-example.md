@@ -136,7 +136,6 @@ colocasse os ficheiros da aplicação Node.js na diretoria de destino.
 
 Indique porquê e corrija.
 
-
 b) Modifique ainda o Dockerfile para minimizar o número de reconstruções de 
 camadas quando algum dos ficheiros da aplicação Node.js é alterado e reduza o 
 número total de camadas.

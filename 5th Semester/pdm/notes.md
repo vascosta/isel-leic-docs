@@ -43,8 +43,8 @@ A passagem de dados entre __apps__ usando tipos definidos pela aplicação como 
 
 * __Recomposição__ -> __reconstrução__ da __UI__ de uma __activity__, quando algo dentro de uma função ___@Composable___ é __alterado__ (e.g. ``setContent``).
 * __Reconfiguração__ -> __reconstrução__ da __UI__ de uma __activity__, quando algo externo acontece (e.g. __rotação do ecrã__).
-* ``remember`` -> sobrevive a recomposições mas não a mudanças de configuração.
-* ``rememberSaveable`` -> sobrevive a recomposições e mudanças de configuração.
+* ``remember`` -> sobrevive a __recomposições__ mas não a mudanças de configuração.
+* ``rememberSaveable`` -> sobrevive a __recomposições__, __mudanças de configuração__ e caso o __processo da aplicação seja terminado__, também sobrevive.
 
 #
 

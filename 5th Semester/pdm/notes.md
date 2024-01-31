@@ -165,5 +165,5 @@ Forma de guardar dados assincronamente, consistentemente e transacionalmente, ul
 # ___Cloud Firestore___
 
 * As __funções__ são ___suspend___ __e não bloqueantes__.
-* __Não existem operações__ que exponham __diretamente__ ___LiveData___.
+* __Não existem operações__ que exponham __diretamente__ ___LiveData ou Flow___.
 * A __subscrição a notificações__ de atualizações dos dados retorna uma instância de ___ListenerRegistration___ que pode ser usada para cancelamento da subscrição.

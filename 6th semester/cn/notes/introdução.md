@@ -107,7 +107,7 @@ Como __antecipar/prever__ os custos mensais:
 
 <div align=center> 
 
-![](imgs/elasticidade-1.png)
+![](../imgs/elasticidade-1.png)
 
 </div>
 

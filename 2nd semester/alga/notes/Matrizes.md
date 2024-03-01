@@ -168,6 +168,7 @@ $ A_{2 \times 2} = \begin{bmatrix} 1 & 2 \\ 2 & 3 \end{bmatrix} $
 
 * __Matriz Anti-simétrica__ -> Matriz __oposta__ à sua __transposta__.
     * $ A = -A^T $.
+    * $ a_{ii} = 0, $ para todo $ i \in \{1, \dots, n\} $.
     * __E.g.__:
 
 <div align=center>

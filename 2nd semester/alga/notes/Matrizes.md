@@ -177,6 +177,49 @@ $ A_{2 \times 2} = \begin{bmatrix} 0 & 2 \\ -2 & 0 \end{bmatrix} $
 
 </div>
 
+* __Matriz Invertível__ -> Matriz __quadrada__ que possui uma matriz $ X $ tal que $ AX = I_n = XA $.
+    * __E.g.__:
+
+<div align=center>
+
+Se $ X $ e $ Y $ são matrizes de ordem $ n $ tais que $ AX = I_n = XA \ $ e $ \ AY = I_n = YA, \ \Rightarrow X = Y $.
+
+</div>
+
+* __Matriz Inversa__ ($ A^{-1} $) -> Matriz (única) que verifica $ AA^{-1} = I_n = A^{-1}A $.
+    * __Propriedades__:
+        * $ A^{-1} $ é invertível e $ (A^{-1})^{-1} = A $;
+        * $ A^T $ é invertível e $ (A^T)^{-1} = (A^{-1})^T $;
+        * $ \alpha A $ é invertível se $ \in \mathbb{R}\setminus\{0\} $ e $ (\alpha A)^{-1} = \frac{1}{\alpha} A^{-1} $;
+        * $ AB $ é invertível e $ (AB)^{-1} = B^{-1} A^{-1} $;
+        * $ A^k $ é invertível e $ (A^k)^{-1} = (A^{-1})^k $.
+    * __E.g.__:
+
+<div align=center>
+
+$ A_{2 \times 2} = \begin{bmatrix} 1 & 2 \\ 1 & 1 \end{bmatrix} $
+
+$ A^{-1} = \begin{bmatrix} -1 & 2 \\ 1 & -1 \end{bmatrix} $
+
+$ A \times A^{-1} = \begin{bmatrix} 1 & 2 \\ 1 & 1 \end{bmatrix} \times \begin{bmatrix} -1 & 2 \\ 1 & -1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I_2 $
+
+</div>
+
+* __Matriz Ortogonal__ -> Matriz __quadrada__, __invertível__ e que verifica $ A^T = A^{-1} $.
+    * $ AA^T = I_n $.
+    * __E.g.__:
+
+<div align=center>
+
+$ A_{2 \times 2} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} $
+
+$ A^T = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} $
+
+$ AA^T = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \times \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I_2 \Rightarrow A^T = A^{-1} $
+
+
+</div>
+
 #
 
 ## __Operaçõs com Matrizes__
@@ -234,5 +277,22 @@ $ A_{2 \times 2} = \begin{bmatrix} 1 & 3 \\ 5 & -3 \end{bmatrix}, \ B_{2 \times 
 $ AB = \begin{bmatrix} 1 \times 2 + 3 \times 0 & 1 \times 6 + 3 \times (-2) & 1 \times 4 + 3 \times 1 \\ 5 \times 2 + (-3) \times 0 & 5 \times 6 + (-3) \times (-2) & 5 \times 4 + (-3) \times 1 \end{bmatrix} = \begin{bmatrix} 2 & 0 & 7 \\ 10 & 36 & 17 \end{bmatrix} $
 
 $ BA $ não está definido.
+
+</div>
+
+* __Potência de Matrizes__ ($ A^k $) -> Matriz __produto__ de $ A $ por ela mesma $ k $ vezes.
+    * $ A^k = A^{k-1} A, \ k \in \mathbb{N} $.
+    * __Propriedades__:
+        * $ A^0 = I $;
+        * $ A^m A^n = A^{m+n} $;
+        * $ (A^m)^n = A^{mn} $;
+        * $ (AB)^n = A^n B^n $.
+    * __E.g.__:
+
+<div align=center>
+
+$ A_{2 \times 2} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}  $
+
+$ A^2 = A \times A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 7 & 10 \\ 15 & 22 \end{bmatrix} $
 
 </div>

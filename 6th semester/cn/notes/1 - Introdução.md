@@ -10,8 +10,6 @@ Ato de __armazenar__, __processar__ e __usar dados__ em computadores localizados
 
 * Virtualização -> facilidade de mudança de requisitos de hardware.
 
-* Economia -> possibilidade de pagar confirma a utilização (___pay-per-use___)
-
 #
 
 ## ___Cloud Computing___
@@ -115,7 +113,55 @@ Como __antecipar/prever__ os custos mensais:
 
 ## __Potencialidades e Oportunidades__
 
-* _Pay-per-use_;
+* _Pay-per-use_ (possibilidade de pagar conforme a utilização);
 * Recursos computacionais virtuais infinitos;
 * Interfaces _self-service_;
 * Evita a aquisição/instalação/manutenção de centros de processamento de dados.
+
+#
+
+## __Desafios na Cloud__
+
+* __Problemas__ de __segurança/privacidade__ dos dados;
+* __Evitar__ situações de __"Vendor Lock-in"__ (dependência de um fornecedor);
+* __Incerteza__ sobre o __controlo físico de Hardware, Software e Dados__;
+* __Incerteza__ sobre o __suporte__ para __investigar falhas__;
+* __Incerteza__ sobre __leis aplicáveis__;
+* __Dificuldade__ de __definir__ __SLAs__ (_Service Level Agreements_) __adequados__;
+* __Ausência__ de _standards_ e de __interoperabilidade__ entre __fornecedores__;
+* __Adaptar/migrar aplicações__ para Clouds públicas pode ser __complexo__;
+* _Multi-tenat_ vs _multi-instance_ (__dificuldade__ de __garantir isolamento__ entre __clientes__);
+
+<div align=center>
+
+![](../imgs/introdução-3.png)
+
+</div>
+
+#
+
+## __Partilha de Responsabilidades__
+
+<div align=center>
+
+![](../imgs/introdução-2.png)
+
+</div>
+
+#
+
+## __Serviços na Cloud__
+
+* __Armazenamento massivo de dados__ -> Amazon S3, Google Cloud Storage, etc.
+* __Armazenamento de dados NoSQL__ -> Amazon DynamoDB, Firestore, etc.
+* __Criação de VMs com múltiplas capacidades de processamento, memória RAM e de storage__ -> Amazon EC2, Google Compute Engine, etc.
+* __Mensagens__ -> Amazon Simple Notification Service, Google Cloud Pub/Sub (Publising/Subscribe), etc.
+* __Análise de Dados__ -> Amazon Elastic MapReduce, DataFlow, etc.
+
+#
+
+## __Ofertas Públicas de Cloud__
+
+* Amazon Web Services (AWS);
+* Google Cloud Platform (GCP);
+* Microsoft Azure;

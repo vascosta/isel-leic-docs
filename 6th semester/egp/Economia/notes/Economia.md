@@ -85,7 +85,7 @@ Representa as quantidades máximas de produção que podem ser obtidas por uma e
 
 <div align=center>
 
-![](./imgs/economia-1.png)
+![](../imgs/economia-1.png)
 
 </div>
 
@@ -93,7 +93,7 @@ As __escolhas__ e os __investimentos__ no __presente__ terão __consequências__
 
 <div align=center>
 
-![](./imgs/economia-2.png)
+![](../imgs/economia-2.png)
 
 </div>
 
@@ -101,6 +101,6 @@ As __escolhas__ e os __investimentos__ no __presente__ terão __consequências__
 
 <div align=center>
 
-![](./imgs/economia-3.png)
+![](../imgs/economia-3.png)
 
 </div>

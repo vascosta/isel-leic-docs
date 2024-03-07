@@ -116,3 +116,67 @@ Capacidade de __garantir__ que os __utilizadores__ têm __acesso__ às funcional
     * Tempos de execução e de resposta;
     * Variações de carga (_workloads_) vs alocação dinâmica de recursos;
     * Possibilidade de monitorizar e definir restrições que garantam os níveis de serviços SLA (_Service Level Agreement_) adequados.
+
+#
+
+## __Teorema CAP__
+
+Num sistema distribuído que partilhe dados só podemos ter 2 das 3 propriedades.
+
+<div align=center>
+
+![](../imgs/características-e-desafios-da-computação-distribuída-2.png)
+
+</div>
+
+* __Consistência__ -> Cada leitura observa a última escrita.
+    * E.g.:
+
+<div align=center>
+
+![](../imgs/características-e-desafios-da-computação-distribuída-3.png)
+
+</div>
+
+* __Disponibilidade__ -> O sistema continua a funcionar na presença de falhas ou falha de conectividade de alguns nós.
+    * $ \frac{Uptime}{Uptime + Downtime} $
+    * ___Five Nines___ -> 99.999% de disponibilidade.
+    * E.g.:
+
+<div align=center>
+
+![](../imgs/características-e-desafios-da-computação-distribuída-4.png)
+
+</div>
+
+* __Tolerância a Partições__ -> O sistema continua a funcionar apesar de haver atraso ou falha na entrega de mensagens.
+    * E.g.:
+
+<div align=center>
+
+![](../imgs/características-e-desafios-da-computação-distribuída-5.png)
+
+</div>
+
+`Semântica BASE -> (Basically Available, Soft state, Eventual consistency)`
+
+#
+
+## __Falácias dos Sistemas Distribuídos__
+
+* A __rede__ é __confiável__;
+* A __latência__ é __zero__;
+* A __largura de banda__ é __infinita__;
+* A __rede__ é __segura__;
+* A __topologia da rede não muda__;
+* Existe um __único administrador__;
+* O __custo de transporte__ é __zero__;
+* A __rede__ é __homogénea__.
+
+#
+
+## __Largura de Banda vs Latência__
+
+* __Largura de Banda__ -> Quantidade de dados que podem ser transmitidos por unidade de tempo.
+
+* __Latência__ -> Tempo que demora a enviar um pacote de dados de um ponto a outro.

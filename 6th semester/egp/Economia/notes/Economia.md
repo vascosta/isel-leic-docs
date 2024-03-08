@@ -104,3 +104,29 @@ As __escolhas__ e os __investimentos__ no __presente__ terão __consequências__
 ![](../imgs/economia-3.png)
 
 </div>
+
+#
+
+## __Mercado__
+
+Mecanismo através do qual os compradores e vendedores se encontram para determinar os preços e trocar bens e serviços.
+
+<div align=center>
+
+![](../imgs/economia-4.png)
+
+</div>
+
+* __Concorrência Perfeita__ -> Mercado onde nenhuma empresa ou consumidor é suficientemente forte para afectar o preço de mercado.
+
+#
+
+## __Papel Económico do Governo__
+
+Os mercados __não proporcionam__ necessariamente uma __repartição justa do rendimento__, para tal __os governos__ actuam com __medidas__ no sentido de __corrigir__ essas injustiças.
+
+<div align=center>
+
+![](../imgs/economia-5.png)
+
+</div>

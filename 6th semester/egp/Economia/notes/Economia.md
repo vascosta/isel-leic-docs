@@ -130,3 +130,83 @@ Os mercados __não proporcionam__ necessariamente uma __repartição justa do re
 ![](../imgs/economia-5.png)
 
 </div>
+
+#
+
+## __Função da Procura__
+
+Relação entre o __preço__ e a __quantidade comprada__ de um bem.
+
+<div align=center>
+
+![](../imgs/economia-6.png)
+
+</div>
+
+* Lei da __Procura__:
+    * __Preço__
+    * Níveis médios de rendimento
+    * Preços dos bens relacionados
+    * Dimensão da população
+    * Gostos e preferências dos consumidores
+
+#
+
+## __Variação da Procura__
+
+A __variação__ do preço de um bem pode levar a uma variação da procura, fazendo com que a curva sofra um deslocamento.
+
+
+* __E.g.__:
+
+<div align=center>
+
+![](../imgs/economia-7.png)
+
+</div>
+
+#
+
+## __Função da Oferta__
+
+Relação entre o __preço__ e a __quantidade produzida__ de um bem.
+
+<div align=center>
+
+![](../imgs/economia-8.png)
+
+</div>
+
+* Lei da __Oferta__:
+    * __Lucro__
+    * Custo de produção
+    * Tecnologia
+
+#
+
+## __Variação da Oferta__
+
+A __variação__ do preço de um bem pode levar a uma variação da oferta, fazendo com que a curva sofra um deslocamento.
+
+* __E.g.__:
+<div align=center>
+
+![](../imgs/economia-9.png)
+
+</div>
+
+#
+
+## __Equilíbrio de Mercado__
+
+As __forças da procura e da oferta__ operam através do mercado para produzir um __equilíbrio de preço e quantidade__.
+
+<div align=center>
+
+![](../imgs/economia-10.png)
+
+</div>
+
+* Se o preço for $ P_1  \Rightarrow $ há excassez.
+
+* Se o preço for $ P_2  \Rightarrow $ há excedente.

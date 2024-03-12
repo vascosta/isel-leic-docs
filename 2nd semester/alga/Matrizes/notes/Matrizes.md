@@ -280,7 +280,8 @@ $ BA $ não está definido.
 
 </div>
 
-* __Potência de Matrizes__ ($ A^k $) -> Matriz __produto__ de $ A $ por ela mesma $ k $ vezes.
+* __Potência de Matrizes__ ($ A^k $) 
+    > Matriz __produto__ de $ A $ por ela mesma $ k $ vezes.
     * $ A^k = A^{k-1} A, \ k \in \mathbb{N} $.
     * __Propriedades__:
         * $ A^0 = I $;

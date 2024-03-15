@@ -210,3 +210,189 @@ As __forças da procura e da oferta__ operam através do mercado para produzir u
 * Se o preço for $ P_1  \Rightarrow $ há excassez.
 
 * Se o preço for $ P_2  \Rightarrow $ há excedente.
+
+#
+
+## __Elasticidade da Procura__
+
+> $ E_d = - (\frac{\Delta Q}{\Delta P} \times \frac{P}{Q}) $
+
+* __Procura rígida__:
+    > A __variação do preço__ é __maior__ do que a __variação na quantidade procurada__.
+    * $ E_d < 1 $
+    * __E.g.__: Bens essenciais.
+
+* __Procura elástica__:
+    > A __variação do preço__ é __menor__ do que a __variação na quantidade procurada__.
+    * $ E_d > 1 $
+    * __E.g.__: Bens de luxo.
+
+* __Procura unitária__ -> $ E_d = 1 $
+
+* __Procura perfeitamente elástica__ -> $ E_d = \infty $
+
+* __Procura perfeitamente rígida__ -> $ E_d = 0 $
+
+* __Receita__:
+    * Quando a procura é __rígida__, a __receita diminui__ com a __redução do preço__.
+    * Quando a procura é __elástica__, a __receita aumenta__ com a __redução do preço__.
+
+#
+
+## __Elasticidade da Oferta__
+
+> $ E_s = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q} $
+
+* __Oferta rígida__:    
+    * Capacidade de produção fortemente limitada.
+    * $ E_s < 1 $
+
+* __Oferta elástica__:
+    * Capacidade de produção é facilmente aumentada.
+    * $ E_s > 1 $
+
+* __Oferta unitária__ -> $ E_s = 1 $
+
+* __Oferta perfeitamente elástica__ -> $ E_s = \infty $
+
+* __Oferta perfeitamente rígida__ -> $ E_s = 0 $
+
+#
+
+## __Noção de Utilidade__
+
+> Serve para explicar como os __consumidores racionais__ dividem os seus __recursos limitados__ entre os __bens finais__ que lhes __proporiconam satisfação__.
+
+* __Utilidade Total__:
+    * __E.g.__:
+
+<div align=center>
+
+![](../imgs/economia-11.png)
+
+
+</div>
+
+* __Utilidade Marginal Decrescente__:
+    * __E.g.__: 
+
+<div align=center>
+
+![](../imgs/economia-12.png)
+
+</div>
+
+* __Condição de Equilíbrio__:
+    > Quando a utilidade marginal por unidade monetária dispendida é igual para todos os bens.
+    * $ \frac{UM_{bem1}}{P_1} = \frac{UM_{bem2}}{P_2} = \frac{UM_{bemi}}{P_i} $
+
+Se o __preço__ de um bem __aumentar__, o __consumo__ desse bem irá __diminuir__ -> $ \frac{UM_{bem1}}{P_1} < \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
+
+Se o __preço__ de um bem __diminuir__, o __consumo__ desse bem irá __aumentar__ -> $ \frac{UM_{bem1}}{P_1} > \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
+
+#
+
+## __Elasticidade de Rendimento__
+
+> $ E_r = \frac{\Delta Q}{\Delta R} \times \frac{R}{Q} $
+
+#
+
+## __Produto__
+
+* __Produto Interno Bruto (PIB)__:
+    > Quantificação do valor de mercado de todos os bens e serviços finais produzidos num país no __período de um ano__.
+    * __Nominal__ -> Medido com __preços correntes__ de mercado.
+    * __Real__ -> Medido com __preços constantes__ de mercado (e.g. ano base).
+
+#
+
+## __Emprego__
+
+* __Taxa de desemprego__
+    > Percentagem da população activa desempregada.
+    * __População activa__ -> __Pessoas empregadas__ e todas as que estão __desempregadas mas à procura de emprego__.
+
+#
+
+## __Establidade de Preços__
+
+> Os preços não devem se alterar ou então crescer muito lentamente.
+
+* __Índice de Preços ao Consumidor (IPC)__ -> Quantifica o __preço médio__ de um conjunto de bens e serviços (__cabaz__) comprados pelos __consumidores__.
+
+* __Taxa de Inflação__ -> Variação percentual do __IPC__ de um ano para o outro.
+
+#
+
+## __Comércio Internacional__
+
+Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __taxas de câmbio estáveis__.
+
+#
+
+## __Política Orçamental__
+
+> Gestão da moeda, crédito e do sistema bancário.
+
+* __Despesa Pública__ -> __Compras do Estado__ (estradas, tanques, salários, etc.) e as __transferências do Estado__ que __ampliam os rendimentos__ de determinados grupos (desempregados, reformados, etc.).
+
+* __Impostos__ -> __Receitas do Estado__.
+
+#
+
+## __Política Monetária__
+
+* __Oferta de Moeda__ -> __Influencia__ várias __variáveis financeiras e económicas__, como taxas de juro, preço das acções, etc.
+
+* __Restrição da Oferta de Moeda__ -> __Aumento__ das __taxas de juro__ e à __reduçao do investimento e do consumo__.
+
+* __Expansão da Oferta de Moeda__ -> __Redução__ das __taxas de juro__ e ao __aumento do investimento e do consumo__.
+
+#
+
+## __Oferta Agregada__
+> __Quantidade total de bens e serviços__ que as __empresas__ de um país que estão dispostas a __produzir e vender__ num dado __período de tempo__.	
+
+* __Depende__:
+    * __Nível de preços__;
+    * __Capacidade produtiva__;
+    * __Custos de produção__.
+
+#
+
+## __Procura Agregada__
+> __Montante total__ que os __diferentes sectores da economia__ estão dispostos a __gastar__ num dado __período de tempo__.
+
+* __Depende__:
+    * __Soma da despesa dos consumidores, empresas e governo__;
+    * __Nível de preços__;
+    * __Política orçamental e monetária__.
+
+#
+
+## __Oferta e Procura Agregada__
+
+<div align=center>
+
+![](../imgs/economia-13.png)
+
+</div>
+
+#
+
+## __Óptica da Produção__
+
+* __Produto Nacional Bruto (PNB)__:
+    > __PNB = PIB + REX__
+    * __REX__ -> Rendimentos Recebidos do Resto do Mundo (__RRRM__) - Rendimentos Pagos ao Resto do Mundo (__RPRM__).
+
+* __Produto Interno Líquido (PIL)__ -> __PIB__ - Amortizações (__A__).
+
+* __Produto Nacional Líquido (PNL)__ -> __PNL = PNB - A__.    
+
+* __PIB a preços de mercado (PIBpm)__ -> PIB a custos de fatores (__PIBcf__) + Impostos indiretos (__Ti__) - subsídios à produção (__Z__).
+
+#
+
+## __Óptioca da Despesa__

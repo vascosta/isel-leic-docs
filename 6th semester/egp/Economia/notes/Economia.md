@@ -411,7 +411,7 @@ Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __
         * __PG__ - Importações (__Im__);
         * __PIBpm__.
 
-* __Despesa Nacional (DN)__ -> __PNB__.
+* __Despesa Nacional (DN)__ -> __PNBpm__.
     
 
 

@@ -302,8 +302,8 @@ As __forças da procura e da oferta__ operam através do mercado para produzir u
 
 * __Produto Interno Bruto (PIB)__:
     > Quantificação do valor de mercado de todos os bens e serviços finais produzidos num país no __período de um ano__.
-    * __Nominal__ -> Medido com __preços correntes__ de mercado.
-    * __Real__ -> Medido com __preços constantes__ de mercado (e.g. ano base).
+    * __Nominal (PQ)__ -> Medido com __preços correntes__ de mercado.
+    * __Real (Q)__ -> Medido com __preços constantes__ de mercado (e.g. ano base).
 
 #
 
@@ -321,7 +321,9 @@ As __forças da procura e da oferta__ operam através do mercado para produzir u
 
 * __Índice de Preços ao Consumidor (IPC)__ -> Quantifica o __preço médio__ de um conjunto de bens e serviços (__cabaz__) comprados pelos __consumidores__.
 
-* __Taxa de Inflação__ -> Variação percentual do __IPC__ de um ano para o outro.
+* __Taxa de Inflação__
+    > Variação percentual do __IPC__ de um ano para o outro.
+    * $ \frac{IPC_{ano2} - IPC_{ano1}}{IPC_{ano1}} \times 100 $
 
 #
 
@@ -403,7 +405,7 @@ Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __
 
 * __Procura Externa (PE)__ -> Exportações (__Ex__).
 
-* __Procura Global (PG)__ -> __PI__ + __PE__
+* __Procura Global (PG)__ -> __PI__ + __PE__.
 
 * __Despesa Interna (DI)__
     > Despesa feita em bens e serviços finais produzidos internamente num país.
@@ -413,5 +415,42 @@ Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __
 
 * __Despesa Nacional (DN)__ -> __PNBpm__.
     
+#
 
+## __Óptica do Rendimento__
 
+* __Valor Acrescentado Bruto (VAB)__
+    > __Diferença__ entre as __vendas__ e os __consumos intermédios__ de um __produtor__.
+    * Salários (__S__) + Juros (__J__) + Rendas (__R__) + Lucros (__L__) + __A__;
+    * __PIBcf__.
+
+* __PIL a custos de fatores (PILcf)__ -> $ \sum $ __VAB - A__.
+
+* __Rendimento Nacional (RN)__
+    * __PNLcf__ 
+    * __PILcf__ + __REX__.
+
+#
+
+## __Medição do Produto__
+
+* __Rendimento Disponível (RD)__ -> __Rendimento Nacional (RN)__ - __Impostos Directos (T)__ + Transferências do Estado para as Famílias (__TR__) + Transferências Externas para Particulares (__RE__).
+
+* __Poupança (P)__ -> __RD__ - __C__.
+
+#
+
+## __Balança de Transações Correntes__
+
+* __BTC__ -> __Ex__ - __Im__ + __REX__ + __RE__.
+
+* __Saldo Orçamental (SO)__ -> __T__ + __Ti__ + __Seg. Social__ - __G__ - __TR__ - Juros Dívida Pública - Subsídios à Produção (__Z__).
+
+#
+
+## __Deflator do PIB__
+> Preço de todos os bens e serviços produzidos no país.
+
+* __Deflator do PIB__ -> $ \frac{PQ}{Q} $
+
+* __Variação do Deflator do PIB__ -> $ \frac{Def_{ano2} - Def_{ano1}}{Def_{ano1}} \times 100 $

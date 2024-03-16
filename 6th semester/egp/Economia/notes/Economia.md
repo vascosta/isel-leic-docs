@@ -286,9 +286,9 @@ As __forças da procura e da oferta__ operam através do mercado para produzir u
     > Quando a utilidade marginal por unidade monetária dispendida é igual para todos os bens.
     * $ \frac{UM_{bem1}}{P_1} = \frac{UM_{bem2}}{P_2} = \frac{UM_{bemi}}{P_i} $
 
-Se o __preço__ de um bem __aumentar__, o __consumo__ desse bem irá __diminuir__ -> $ \frac{UM_{bem1}}{P_1} < \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
+* Se o __preço__ de um bem __aumentar__, o __consumo__ desse bem irá __diminuir__ -> $ \frac{UM_{bem1}}{P_1} < \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
 
-Se o __preço__ de um bem __diminuir__, o __consumo__ desse bem irá __aumentar__ -> $ \frac{UM_{bem1}}{P_1} > \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
+* Se o __preço__ de um bem __diminuir__, o __consumo__ desse bem irá __aumentar__ -> $ \frac{UM_{bem1}}{P_1} > \frac{UM_{bem2}}{P_2} = \dots = \frac{UM_{bemi}}{P_i}  = \dots $
 
 #
 
@@ -389,10 +389,29 @@ Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __
 
 * __Produto Interno Líquido (PIL)__ -> __PIB__ - Amortizações (__A__).
 
-* __Produto Nacional Líquido (PNL)__ -> __PNL = PNB - A__.    
+* __Produto Nacional Líquido (PNL)__ -> __PNB__ - __A__.    
 
-* __PIB a preços de mercado (PIBpm)__ -> PIB a custos de fatores (__PIBcf__) + Impostos indiretos (__Ti__) - subsídios à produção (__Z__).
+* __PIB a preços de mercado (PIBpm)__ -> PIB a custos de fatores (__PIBcf__) + Impostos indiretos (__Ti__) - Subsídios à produção (__Z__).
 
 #
 
 ## __Óptioca da Despesa__
+
+* __Procura Interna (PI)__ 
+    > Consumo privado (__C__) + Consumo público (__G__) + Investimento (__I__).
+    * __I__ -> Formação Bruta de Capital Fixo (__FBCF__) + Variação de Existências (__VE__)
+
+* __Procura Externa (PE)__ -> Exportações (__Ex__).
+
+* __Procura Global (PG)__ -> __PI__ + __PE__
+
+* __Despesa Interna (DI)__
+    > Despesa feita em bens e serviços finais produzidos internamente num país.
+    * __DI__:
+        * __PG__ - Importações (__Im__);
+        * __PIBpm__.
+
+* __Despesa Nacional (DN)__ -> __PNB__.
+    
+
+

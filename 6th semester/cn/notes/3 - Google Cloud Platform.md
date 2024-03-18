@@ -87,12 +87,42 @@ Execução de código em resposta a eventos.
 
 ## __Contas e Projetos__
 
-* Qualquer utilizador com uma conta Google pode aceder aos serviços GCP.
-* Um utilizador de serviços GCP pode ter N projetos.
-* Um utilizador pode gerir N contas de facturação.
-* 1 projeto consome recursos monetários de 1 conta de facturação.
-* 1 conta de facturação pode ser associada a N projetos.
+* __Qualquer utilizador__ com uma __conta Google__ pode aceder aos __serviços GCP__.
+* __1 utilizador__ de serviços GCP pode ter __N projetos__.
+* __1 utilizador__ pode gerir __N contas de facturação__.
+* __1 projeto__ consome recursos monetários de __1 conta de facturação__.
+* __1 conta de facturação__ pode ser associada a __N projetos__.
 
 #
 
-## __Tipos de Virtualização__
+## ___Virtual Desktop Infrastructure___ __(VDI)__
+
+<div align="center">
+
+![](../imgs/google-cloud-platform-3.png)
+
+</div>
+
+#
+
+## __Porquê a Virtualização?__
+
+* __Consolidação e sistemas legados__;
+
+* __Isolamento__;
+
+* __Ambientes de desenvolvimento/investigação__;
+
+* __Rapidez de provisionamento e escalabilidade__;
+
+* __Migração e balanceamento de carga__;
+
+* ___Backups___ __e recuperação de desastres__;
+
+#
+
+## __Hipervisores__
+
+* __Tipo 1__ -> Interage __diretamente com o hardware__ e não necessita de um sistema operativo, introduzindo menos ___overhead___;
+
+* __Tipo 2__ -> Corre __sobre um sistema operativo__, tirando partido da transparência que o sistema tem a diferentes hardwares.

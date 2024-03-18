@@ -54,7 +54,7 @@ $$
 
 ## __Sistemas com Parâmetros__
 
-Analisar os ___pivot___ da matriz escalonada para os diferentes valores dos parâmetros.
+* Analisar os ___pivot___ da matriz escalonada para os diferentes valores dos parâmetros.
 
 * __E.g.__:
 
@@ -76,9 +76,9 @@ Analisar os ___pivot___ da matriz escalonada para os diferentes valores dos par�
 
 ## __Sistemas Homogéneos__
 
-Sistemas __possíveis da forma__ $ AX = 0 $ com $ r(A) = r(A|0) $.
+* Sistemas __possíveis da forma__ $ AX = 0 $ com $ r(A) = r(A|0) $.
 
-Têm sempre a __solução nula__ -> $ X = 0 $.
+* Têm sempre a __solução nula__ -> $ X = 0 $.
 
 * __SPD__:
     * A __única__ solução é a __solução nula__;
@@ -116,3 +116,65 @@ Para $ z = 0 \land t = 0 \Rightarrow C.S = {(0, 0, 0, 0)} $
 ## __Núcleo de uma Matriz__
 
 __Conjunto das soluções ($N(A)$)__ de um sistema homogéneo.
+
+#
+
+## __Solução Geral de um SP__
+
+* Se $ AX = B $ é um __SP__ e $ s_p $ é uma solução (__particular__) então o __conjunto solução__ é $ s_p + N(A) = \{s_p + n: n \in N(A)\} $.
+
+* __E.g.__:
+
+<div align=center>
+
+Determine matrizes $ A_{3×3} $ e $ B_{3×1} $ tais que a soma das linhas de $ A $ seja uma solução (particular) do sistema $ AX = B $ e
+
+$ N(A) =  {(3z, −z, z): y, z \in \mathbb{R}} $
+
+$ \begin{cases} x = 3z \\ y = -z \\ z = z \end{cases} \Rightarrow \begin{cases} x - 3z = 0 \\ y + z = 0 \\ 0 = 0 \end{cases} $
+
+$ A = \begin{bmatrix} 1 & 0 & -3 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix} $ (e.g.)
+
+$ (-2, 2, 0) $ é solução do sistema $ AX = B $, logo
+
+$ \begin{bmatrix} 1 & 0 & -3 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} -2 \\ 2 \\ 0 \end{bmatrix} = \begin{bmatrix} -2 \\ 2 \\ 0 \end{bmatrix} $
+
+</div>
+
+#
+
+## __Interpretação Geométrica dos SEL com 3 Incógnitas__
+
+|__Interseção dos Planos__|__Classificação__|
+|---|---|
+|Não se intersetam|__SI__|
+|1 único ponto|__SPD__|
+|1 reta|__SPI__, $ GI = 1 $|
+|1 plano|__SPI__, $ GI = 2 $|
+
+* __E.g.__:
+
+$$ \begin{cases} y - z = 0 \\ y + z = 0 \\ z = 0 \end{cases} \Rightarrow \begin{cases} y = z \\ y = -z \\ z = 0 \end{cases} \Rightarrow \begin{cases} y = 0 \\ z = 0 \end{cases} $$
+
+$$ C.S = \{(x, 0, 0)\}: x \in \mathbb{R} $$
+
+#
+
+## __Cálculo da Matriz Inversa__
+
+* Se $ A $ é uma matriz __quadrada__ de ordem $ n $, então $ A $ é __invertível__ se, e só se, $ r(A) = n $.
+
+* __Não Singular__ 
+    > $ A $ é __invertível__.
+    * $ A^{-1} $ pode ser calculada pela eliminação de _Gauss_ ($ [A|I_n] \rightarrow [I_n|A^{-1}] $).
+* __Singular__ -> $ r(A) < n $.
+
+* _E.g._:
+
+<div align=center>
+
+Prove que $ A = \begin{bmatrix} 1 & 2  & 4 \\ 1 & 1 & 2 \\ 2 & 1 & 1 \end{bmatrix} $ é invertível e calcule a sua inversa.
+
+![](../imgs/sistemas-de-equações-lineares-6.png)
+
+</div>

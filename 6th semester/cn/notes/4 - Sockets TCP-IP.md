@@ -1,6 +1,6 @@
-# __Evolução dos Mecanismos para Chamadas Remotas - RMI__
+# __Sockets TCP/IP__
 
-## ___Sockets TCP/IP___
+## __Definição__
 
 * ___TCP___ -> Protoccolo "conection oriented" que permite __estabelecer conexões__ para __comunicar dados__ entre dois pontos, em que um ponto é o __cliente__ e o outro é o __servidor__.
 
@@ -8,37 +8,36 @@
 
 #
 
-## ___Sockets TCP/IP___ __em__ ___Java___
+## __Sockets TCP/IP em Java__
 
 * __Classe__ ___ServerSocket___:
-    * ``bind()`` -> Associação do _socket_ a um par (_IP_, porto _TCP_);
+    * ``bind()`` -> Associação do socket a um par (IP, porto TCP);
     * ``accept()`` -> Bloqueia até receber uma conexão.
 
 * __Classe__ ___Socket___:
-    * ``bind()`` -> Associação do _socket_ a um par (_IP_, porto _TCP_);
-    * ``connect()`` -> Conecta o _socket_ a um _endpoint_ (_IP_, porto _TCP_);
-    * ``getInputStream()`` -> Retorna um _InputStream_ para ler dados do __socket__;
-    * ``getOutputStream()`` -> Retorna um _OutputStream_ para escrever dados no __socket__.
-    * ``close()`` -> Fecha o _socket_.
+    * ``bind()`` -> Associação do socket a um par (_IP_, porto _TCP_);
+    * ``connect()`` -> Conecta o socket a um endpoint (IP, porto TCP);
+    * ``getInputStream()`` -> Retorna um InputStream para ler dados do __socket__;
+    * ``getOutputStream()`` -> Retorna um OutputStream para escrever dados no __socket__.
+    * ``close()`` -> Fecha o socket.
 
 * __Classes Úteis__:
-    * ___InetSocketAddress___ -> Permite criar associações (_IP_, porto _TCP_);
-    * ___BufferedReader___ -> Ler caracteres de uma _InputStream_;
-    * ___InputStreamReader___ -> Uma ponte entre um _byte stream_ e um _char stream_;
+    * ___InetSocketAddress___ -> Permite criar associações (IP, porto TCP);
+    * ___BufferedReader___ -> Ler caracteres de uma InputStream;
+    * ___InputStreamReader___ -> Uma ponte entre um byte stream e um char stream;
     * ___PrintWriter___ -> Escreve objetos num output stream de texto.
 
 <div align="center">
 
-![](../imgs/evolução-dos-mecanismos-para-chamadas-remotas-rmi-1.png)
+![](../imgs/sockets-tcp-ip-1.png)
 
 </div>
 
 #
 
-# ___Sockets TCP/IP___ __- Servidor__
+# __Servidor__
 
 ```java
-
 ServerSocket svcSocket = new ServerSocket(svcPort);
 for (;;) {
     try {
@@ -58,7 +57,7 @@ for (;;) {
 
 #
 
-# ___Sockets TCP/IP___ __- Cliente__
+# __Cliente__
 
 ```java
 public static void main(String[] args) throws Exception {
@@ -79,11 +78,11 @@ public static void main(String[] args) throws Exception {
 
 #
 
-# ___Sockets TCP/IP___ __- Servidor concorrente__
+# __Servidor concorrente__
 
 <div align="center">
 
-![](../imgs/evolução-dos-mecanismos-para-chamadas-remotas-rmi-2.png)
+![](../imgs/sockets-tcp-ip-2.png)
 
 </div>
 

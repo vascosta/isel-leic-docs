@@ -80,3 +80,39 @@ $$ 3(4 - 30 + 16 - 8 - 20 - 12) - 2(4 + 2 + 12 - 6 - 4 + 4) = 3(-34) - 2(4) = -1
 * Se $ A $ é __invertível__ ($ det(A) \neq 0 $), então $ det(A^{-1}) = \frac{1}{det(A)} $;
 
 ## __Matriz Adjunta__
+> $ adj(A) = [â_{ij}]^T = [(-1)^{i+j}det(A_{i|j})] $
+
+* __E.g.__:
+
+<div align=center>
+
+![](../imgs/determinantes-2.png)
+
+</div>
+
+## __Matriz Inversa__
+> Se $ A $ for invertível ($ det(A) \neq 0) \Rightarrow A^{-1} = \frac{1}{det(A)}adj(A) $
+
+## __Regra de Cramer__
+
+> Se $ A $ é uma matriz __invertível__ então o sistema $ AX = B $ é __SPD__ e tem-se que $ X = A^{-1}B = \frac{1}{det(A)}adj(A)B $
+
+* __Coordenada $ k $ da única solução do sistema__ $ AX = B $ é dada por $ s_k = \frac{det(C_k)}{det(A)} $, onde $ C_k $ é a matriz que se obtém __substituíndo a coluna__ $ k $ por $ B $.
+
+* __E.g.__:
+
+<div align=center>
+
+Prove que o sistema seguinte tem uma única solução e calcule-a:
+
+$ \begin{cases} 2x + y = 1 \\ -3x + 2y - 2z = -5 \end{cases} $
+
+$ det(A) = \begin{vmatrix} 2 & 1 \\ -3 & 2 \end{vmatrix} = 4 + 3 = 7 \neq 0 \Rightarrow $ SPD
+
+$ x = \frac{\begin{vmatrix} 1 & 1 \\ -5 & 2 \end{vmatrix}}{7} = \frac{2 + 5}{7} = 1 $
+
+$ y = \frac{\begin{vmatrix} 2 & 1 \\ -3 & -5 \end{vmatrix}}{7} = \frac{-10 + 3}{7} = -1 $
+
+$ C.S. = (1, -1) $
+
+</div>

@@ -54,11 +54,66 @@ $ u = a_1u_1 \Rightarrow (2, 3) = a_1(-4, -6) \Rightarrow (2, 3) = (-4a_1, -6a_1
 ## __Combinação Linear Nula__
 > O __vetor nulo__ é __combinação linear de qualquer__ conjunto de vetores: $ v_0 = 0v_1 + 0v_2 + \dots + 0v_n $.
 
-## __Dependência Linear__
+## __Dependência e Independência Linear__
 
+Seja $ \{v_1, \ v_2, \ \dots, \ v_n\} \in V $:
 
-## __Independência Linear__
+* Os vetores são __linearmente dependentes__ se existirem escalares $ \{a_1, \ a_2, \ \dots, \ a_n\} \in \mathbb{R} $, não todos nulos, tal que $ a_1v_1 + a_2v_2 + \dots + a_nv_n = 0 $.
+
+    * Neste caso, pelo menos um dos vetores é __combinação linear__ dos restantes.
+
+* Os vetores são __linearmente independentes__ se a equação $ a_1v_1 + a_2v_2 + \dots + a_nv_n = 0 $ só tiver a solução nula.
+
+### __Propriedades__
+
+* Os vetores de um sistema __SPI__ são sempre __linearmente dependentes__;
+
+* O vetor nulo é __linearmente dependente__;
+
+* $ u $ é __linearmente dependente__ se e só se $ u \neq 0 $;
+
+* $ u_1, \ \dots, \ u_n $ são __linearmente dependentes__ se e só se pelo menos um deles for __combinação linear__ dos restantes.
+
+* Se algum dos vetores $ u_1, \dots, \ u_n $ for o vetor nulo, então os vetores são __linearmente dependentes__.
+
+* Se $ u_1, \dots, \ u_n $ são __linearmente independentes__ então $ u_1, \dots, \ u_{n+1} $ são linearmente dependentes se e só se $ u_{n+1} $ for __combinação linear__ dos restantes.
+
+* Se $ u_1, \ \dots, \ u_n $ são __linearmente dependentes__ então $ u_1, \dots, \ u_{n+1}, \ \dots, \ u_m $ são __linearmente dependentes__.
+
+* Se $ u_1, \ \dots, \ u_n $ são __linearmente independentes__ então os vetores de qualquer seu subconjunto são __linearmente independentes__.
 
 
 ## __Subespaço Gerado__
 > Conjunto de __todas as combinações lineares__ de um conjunto de vetores $ \{v_1, \ v_2, \ \dots, \ v_n\} \in V: \ <v_1, \ \dots \ , v_n> \ = \{a_1v_1 + a_2v_2 + \dots + a_nv_n: a_1, \ \dots \ , a_n \in \mathbb{R}\} $.
+
+## __Intersecção e Soma de Subespaços Vetoriais__
+
+### __Propriedades__
+
+Se $ S_1, \ S_2 $ são __subespaços vetoriais__ de V então:
+
+* $ S_1 \cap S_2 $ é um __subespaço vetorial__ de V;
+
+* $ S_1 + S_2 = \{s_1 + s_2: s_1 \in S_1 \land s_2 \in S_2\} $ é um __subespaço vetorial__ de V.
+
+## __Base e Dimensão__
+
+O conjunto $ \{v_1, \ v_2, \ \dots, \ v_n\} \in V $ diz-se uma __base__ de V se:
+
+* Os vetores são __linearmente independentes__;
+
+* Os vetores forem __geradores__ de V, ou seja, $ V = \ <v_1, \ \dots \ , v_n> $.
+
+__Base Canónica__ -> $ \{(1,0,\dots,0), \ (0,1,\dots,0), \ \dots, \ (0,0,\dots,1)\} $.
+
+__Dimensão ($ dim(V) $)__ 
+
+> Número de vetores da base.
+
+* $ dim(\mathbb{R}^n) = n $;
+
+* $ dim(\mathbb{R}^{m \ * \ n}) = m \ * \ n $;
+
+* $ dim(\mathbb{P}_n(x)) = n + 1 $;
+
+Para mostrar que um __conjunto de vetores são geradores de um espaço vetorial__, basta mostrar que $ r([u_1, \ \dots \ , u_n]) = k = dim({R^k}) $.

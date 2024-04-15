@@ -24,7 +24,7 @@
 __Satisfazendo__ as propriedades de um espaço vetorial, S é um __subespaço vetorial__ de V então:
 
 * $ v_0 \in S $;
-* $ \forall \ u \in S, \Rightarrow \ a.u \in S $;
+* $ \forall \ u \in S, \Rightarrow \ a_1.u_1 + a_2.u_2 + \dots + a_n.u_n \in S $.
 
 __Núcleo__ de uma matriz A $ N(A) = \{(x_1, \ x_2, \ \dots, \ x_n) \in \mathbb{R}^n: A\begin{bmatrix} x_1 \ x_2 \ \dots \ x_n \end{bmatrix}^T = \begin{bmatrix} 0 \end{bmatrix}\} $ é um __subespaço vetorial__ de $ \mathbb{R}^n $.
 

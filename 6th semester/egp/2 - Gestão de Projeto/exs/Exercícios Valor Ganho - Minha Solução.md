@@ -1,0 +1,35 @@
+# 1
+````
+AC = 400 000
+EV = 300 000
+PV = 230 000
+BAC = 1 000 000
+
+CV = 300 000 - 400 000 = -100 000
+SV = 300 000 - 230 000 = 70 000
+
+CPI = EV / AC = 0,75
+SPI = EV / PV = 130,43%
+
+EAC = BAC / CPI = 1 333 333
+VAC = BAC - EAC = -333 333
+ETC = EAC - AC = 933 333
+````
+
+# 2
+````
+PV = 3000
+EV = 2500
+AC = 2800
+BAC = 4000
+
+CV = EV - AC = -300
+SV = EV - PV = -500
+
+CPI = EV / AC = 0,89
+SPI = EV / PV = 0,83 = 83 %
+
+EAC = BAC / CPI = 4494
+VAC = BAC - EAC = -494
+ETC = EAC - AC = 1694
+````

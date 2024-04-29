@@ -275,6 +275,10 @@ Acl createAcl(Acl acl)
 ### __Exemplos__
 
 ````java
+/*
+* Listar os buckets de um projeto
+*/
+
 public void listBuckets(String projID) {
     System.out.println("Buckets in Project=" + projID + ":");
 
@@ -285,6 +289,10 @@ public void listBuckets(String projID) {
         }
     }
 }
+
+/*
+* Criar um bucket
+*/
 
 public Bucket CreateBucket(String bucketName, StorageClass storageClass,
 String location) {
@@ -298,10 +306,18 @@ String location) {
     return bucket;
 }
 
+/*
+* Apagar um bucket
+*/
+
 public void deleteBucket(String bucketName) {
     Bucket bucket = storage.get(bucketName);
     bucket.delete();
 }
+
+/*
+* Upload de um blob
+*/
 
 public BlobId uploadBlobToBucket(String bucketName, String blobName,
 String absFileName) throws Exception {
@@ -335,6 +351,10 @@ String absFileName) throws Exception {
     return blobId;
 }
 
+/*
+* Download de um blob
+*/
+
 public void downloadBlobFromBucket(String bucketName, String blobName,
 String absFileName) throws Exception {
 Path downloadTo = Paths.get(absFileName);
@@ -360,7 +380,10 @@ Path downloadTo = Paths.get(absFileName);
     writeTo.close(); 
 }
 
-// Alterar permissoes de um blob
+/*
+* Alterar permissoes de um blob
+*/
+ 
 BlobId blobId = BlobId.of(bucketName, blobName);
 Blob blob = storage.get(blobId);
 
@@ -371,7 +394,10 @@ Acl acl = Acl.newBuilder(aclEnt, role).build();
 
 blob.createAcl(acl);
 
-// Operações em batch com notificação
+/*
+* Operações em batch com notificação
+*/
+
 StorageBatch batch = storage.batch();
 for (Blob blob : bucket.list().iterateAll()) {
     final String blobName = blob.getName();

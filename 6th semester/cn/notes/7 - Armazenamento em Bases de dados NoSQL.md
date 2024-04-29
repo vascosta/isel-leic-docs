@@ -130,3 +130,227 @@ Permite estruturar o agregado em __famílias de colunas__ permitindo à base de 
 * __Um documento__ pode conter __novas coleções__ com até um __máximo de 100 níveis de profundidade__;
 
 * __Documentos devem ser pequenos__ com máximo 1 MiB (mebibyte = 1024*1024 bytes).
+
+## __API Java__
+
+### __Autenticação no Acesso ao Serviço__
+
+```java
+/* Variável de ambiente com chave
+* GOOGLE_APPLICATION_CREDENTIALS=<pathname do ficheiro json com chave>
+*/
+
+GoogleCredentials credentials = GoogleCredentials.getApplicationDefault();
+
+// ou
+
+InputStream serviceAccount = new FileInputStream(KEY_JSON);
+GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
+
+FirestoreOptions options = FirestoreOptions
+    .newBuilder()
+    .setDatabaseId("db-name")
+    .setCredentials(credentials)
+    .build();
+Firestore db = options.getService();
+```
+
+### __Exemplos__
+
+````java
+/*
+* Inserir/Atualizar com map
+*/
+
+CollectionReference colRef = db.collection("Users");
+DocumentReference docRef = colRef.document("Bill-Gates");
+
+HashMap<String, Object> map = new HashMap<String, Object>();
+map.put("first", "Bill");
+map.put("last", "Grates"); // Grates ? Teremos de atualizar depois
+map.put("born", 1955);
+
+ApiFuture<WriteResult> result = docRef.create(map); // Create new document
+result.get();
+
+// ou
+
+ApiFuture<WriteResult> result = docRef.set(map); // Overwrites a document
+result.get(); // criado se não existir documento
+
+// update 1 or more fields
+map.put("last", "Gates");
+result = docRef.update(map); // gera erro se documento não existir
+result.get();
+
+// update a specific field
+result = docRef.update("last", "Gates"); 
+result.get();
+
+/*
+* Inserir documentos a partir de objetos
+*/
+
+import com.google.cloud.firestore.GeoPoint;
+
+public class OcupacaoTemporaria {
+    public int ID;
+    public Localizacao location;
+    public Evento event;
+}
+
+public class Localizacao {
+    public GeoPoint point;
+    public Coordenadas coord;
+    public String freguesia;
+    public String local;
+}
+public class Coordenadas {
+    public Double X;
+    public Double Y;
+}
+
+public class Evento {
+    public int evtID;
+    public String nome;
+    public String tipo;
+    public Date dtInicio;
+    public Date dtFinal;
+    public Licenciamento licenciamento;
+    public Map<String, String> details;
+}
+public class Licenciamento {
+    public String code;
+    public Date dtLicenc;
+}
+
+CollectionReference colRef = db.collection("ocupa-espacos");
+OcupacaoTemporaria ocup = new OcupacaoTemporaria();
+
+ocup.ID = 1111;
+
+ocup.location = new Localizacao();
+ocup.location.point = new GeoPoint(-9.143645, 38.753404);
+ocup.location.freguesia = "Alvalade";
+ocup.location.local = "Praça de Alvalade";
+
+ocup.event = new Evento(); ocup.event.evtID = 1017;
+ocup.event.nome = "Programa do Indie Junior";
+ocup.event.tipo = "Publicitário";
+
+DocumentReference docRef = colRef.document("DocID-" + ocup.ID);
+
+// asynchronously overwrite data using Futures
+ApiFuture<WriteResult> result = docRef.set(ocup);
+System.out.println("Update time:" + result.get().getUpdateTime());
+
+/*
+* Listagem de documentos de uma coleção
+*/
+
+CollectionReference cref = db.collection("ocupa-espacos");
+Iterable<DocumentReference> allDocs = cref.listDocuments();
+
+for (DocumentReference docref : allDocs) {
+    ApiFuture<DocumentSnapshot> docfut = docref.get();
+    DocumentSnapshot doc = docfut.get();
+
+    // Time at which this document was last updated
+    Timestamp updateTime = doc.getUpdateTime();
+    System.out.println(updateTime + “:doc: “ + doc.getData());
+}
+
+/*
+* Ler campo ou objeto a partir de um documento
+*/
+
+String ID="DocID-1111";
+DocumentReference docRef = db.collection("ocupa-espacos").document(ID);
+ApiFuture<DocumentSnapshot> future = docRef.get();
+DocumentSnapshot document = future.get();
+
+// ler campo do documento
+GeoPoint coord = document.getGeoPoint("location.point");
+System.out.println(coord.toString());
+
+// ler objeto: obtém campos do documento para campos com o mesmo nome na classe
+OcupacaoTemporaria ocup = document.toObject(OcupacaoTemporaria.class);
+System.out.println(ocup.location.point.toString());
+
+/*
+* Apagar campos e documentos
+*/
+
+DocumentReference docRef = db.document("ocupa-espacos/DocID-1111");
+
+// apagar campo
+Map<String, Object> updates = new HashMap<>();
+updates.put("location.coord", FieldValue.delete());
+ApiFuture<WriteResult> writeResult = docRef.update(updates);
+System.out.println("Update time : " + writeResult.get());
+
+// apagar documento
+ApiFuture<WriteResult> resFuture = docRef.delete();
+WriteResult res = resFuture.get();
+
+/*
+* Query simples
+*/
+
+// Single query
+Query query = db.collection("ocupa-espacos").whereGreaterThan("ID", 2030);
+
+// retrieve query results asynchronously using query.get()
+ApiFuture<QuerySnapshot> querySnapshot = query.get();
+
+for (DocumentSnapshot doc: querySnapshot.get().getDocuments()) {
+    System.out.print("DocID: " + doc.getId());
+    System.out.println(" Freguesia: " + doc.get("location.freguesia"));
+}
+
+/*
+* Interrogações simples de campos complexos
+*/
+
+FieldPath fp = FieldPath.of("location", "freguesia");
+Query query = db.collection("ocupa-espacos").whereEqualTo(fp, "Alvalade");
+ApiFuture<QuerySnapshot> querySnapshot = query.get();
+
+for (DocumentSnapshot doc: querySnapshot.get().getDocuments()) {
+    System.out.print("DocID: " + doc.getId() + " @ "+ doc.get("location"));
+}
+
+fp = FieldPath.of("location","coord");
+HashMap<String,Double> cor = new HashMap<String, Double>() {
+    { put("X",-9.143645364765742); put("Y",38.75340432875235); }
+};
+
+query = db.collection("ocupa-espacos").whereEqualTo(fp, cor);
+querySnapshot = query.get();
+
+for (DocumentSnapshot doc: querySnapshot.get().getDocuments()) {
+    System.out.print("DocID: " + doc.getId() + " @ "+ doc.get("location"));
+}
+
+/*
+* Interrogações compostas com índice composto
+*/
+
+// Composed query
+FieldPath fpath = FieldPath.of("location","freguesia");
+
+Query query = db.collection("ocupa-espacos")
+    .whereEqualTo(fpath, "Misericórdia")
+    .whereLessThan("ID", 2100);
+
+ApiFuture<QuerySnapshot> querySnapshot = query.get();
+for (DocumentSnapshot doc: querySnapshot.get().getDocuments()) {
+    System.out.println(doc.getId()+":Doc:"+doc.getData());
+}
+````
+
+### __Limitações em__ ___Queries___ __no__ ___Firestore___
+
+* Numa query __não é possível usar os operadores de desigualdade__ (e.g. o operador _whereGreaterThan_) __em campos diferentes__;
+
+O resumo das limitações das interrogações no Firestore pode ser visto [aqui](https://firebase.google.com/docs/firestore/query-data/queries#query_limitations).

@@ -171,3 +171,223 @@ Regula se os __objetos__ são mantidos em __cache__ nos __nós__ da Google mais 
 * O __ritmo de escritas__ pode __variar ao longo do tempo__;
 
 * Distribuição dos ___Blobs___ por múltiplos __servidores__.
+
+## __API Java__
+
+### __Autenticação no Acesso ao Serviço__
+
+```java
+/* Variável de ambiente com chave
+* GOOGLE_APPLICATION_CREDENTIALS=<pathname do ficheiro json com chave>
+*/
+
+static void authWithEnvironmentalVariable() {
+    StorageOptions options = StorageOptions.getDefaultInstance();
+
+    String projID = options.getProjectId();
+    Storage storage = options.getService();
+    
+    // operations with storage object
+    // - create bucket
+    // - create blob
+    // ...
+}
+```
+
+### __Classes e Localização de__ ___Storage___
+    
+```java
+// classe StorageClass existente na API Java
+StorageClass[] CLASSES =
+    new StorageClass[]{
+    StorageClass.STANDARD,
+    StorageClass.NEARLINE,
+    StorageClass.COLDLINE,
+    StorageClass.ARCHIVE
+};
+```
+
+### __Principais Classes__
+
+````java
+BucketInfo
+    .newBuilder("bucket-name")
+    .setStorageClass(StorageClass.STANDARD)
+    .setLocation("EUROPE-WEST1")
+    .build();
+
+BlobId blobId = BlobId.of(bucketName, blobName);
+
+String contentType = Files.probeContentType(pathnameFile);
+
+BlobInfo blobInfo = BlobInfo
+    .newBuilder(blobId)
+    .setContentType(contentType)
+    .build();
+````
+
+### __Interface__ ___Storage___
+
+````java
+Bucket create(BucketInfo bucketInfo)
+
+Blob create(BlobInfo blobInfo, byte[] data)
+
+Bucket get(String bucketName)
+
+Blob get(BlobId blobId)
+
+boolean delete(BlobId blobId)
+
+// retorna a lista de buckets
+Iterable<Bucket> list()
+
+// retorna canal para download de um stream de bytes
+ReadChannel reader(BlobId blobId)
+
+// retorna canal para upload de um stream de bytes
+WriteChannel writer(BlobInfo blobInfo)
+````
+
+### __Classe__ ___Blob___
+
+````java
+boolean delete()
+
+void downloadTo(Path path)
+
+// retorna canal para download de um stream de bytes
+ReadChannel reader()
+
+// atualiza o metadado cache-control para não ter cache
+blob.toBuilder().setCacheControl("no-cahe").build().update()
+
+// atualiza os metadados do blob com pares <key, value>
+Map<String, String> newMetadata = new HashMap<String, String>()
+    {{ put("key1", "value1"); put("key2", "value2"); }};
+
+blob.toBuilder().setMetadata(newMetadata).build().update()
+
+// atualiza a Access Control List (ACL) do blob
+Acl createAcl(Acl acl)
+````
+
+### __Exemplos__
+
+````java
+public void listBuckets(String projID) {
+    System.out.println("Buckets in Project=" + projID + ":");
+
+    for (Bucket bucket : storage.list().iterateAll()) {
+        System.out.println(" " + bucket.toString());
+        for (Blob blob : bucket.list().iterateAll()) {
+            System.out.println(" "+blob.toString());
+        }
+    }
+}
+
+public Bucket CreateBucket(String bucketName, StorageClass storageClass,
+String location) {
+    Bucket bucket = storage.create(
+        BucketInfo
+            .newBuilder(bucketName)
+            .setStorageClass(storageClass)
+            .setLocation(location)
+        .build()
+    );
+    return bucket;
+}
+
+public void deleteBucket(String bucketName) {
+    Bucket bucket = storage.get(bucketName);
+    bucket.delete();
+}
+
+public BlobId uploadBlobToBucket(String bucketName, String blobName,
+String absFileName) throws Exception {
+    Path uploadFrom=Paths.get(absFileName);
+    String contentType=Files.probeContentType(uploadFrom);
+
+    BlobId blobId = BlobId.of(bucketName, blobName);
+    BlobInfo blobInfo = BlobInfo
+        .newBuilder(blobId)
+        .setContentType(contentType)
+        .build();
+
+    if (Files.size(uploadFrom) < 1_000_000) {
+        byte[] bytes = Files.readAllBytes(uploadFrom);
+        storage.create(blobInfo, bytes);
+    } else {
+        try (WriteChannel writer = storage.writer(blobInfo)) {
+            byte[] buffer = new byte[1024];
+            try (InputStream input=Files.newInputStream(uploadFrom)) {
+                int limit;
+                while ((limit = input.read(buffer)) >= 0) {
+                    try {
+                        writer.write(ByteBuffer.wrap(buffer, 0, limit));
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+    return blobId;
+}
+
+public void downloadBlobFromBucket(String bucketName, String blobName,
+String absFileName) throws Exception {
+Path downloadTo = Paths.get(absFileName);
+    BlobId blobId = BlobId.of(bucketName, blobName);
+    Blob blob = storage.get(blobId);
+
+    PrintStream writeTo = new PrintStream(Files.newOutputStream(downloadTo));
+
+    if (blob.getSize() < 1_000_000) {
+        byte[] content = blob.getContent();
+        writeTo.write(content);
+    } else {
+        try (ReadChannel reader = blob.reader()) {
+            WritableByteChannel channel = Channels.newChannel(writeTo);
+            ByteBuffer bytes = ByteBuffer.allocate(64 * 1024);
+            while (reader.read(bytes) > 0) {
+                bytes.flip();
+                channel.write(bytes);
+                bytes.clear();
+            }
+        }
+    }
+    writeTo.close(); 
+}
+
+// Alterar permissoes de um blob
+BlobId blobId = BlobId.of(bucketName, blobName);
+Blob blob = storage.get(blobId);
+
+Acl.Entity aclEnt = Acl.User.ofAllUsers();
+Acl.Role[] roles = Acl.Role.values();
+Acl.Role role = Acl.Role.READER;
+Acl acl = Acl.newBuilder(aclEnt, role).build();
+
+blob.createAcl(acl);
+
+// Operações em batch com notificação
+StorageBatch batch = storage.batch();
+for (Blob blob : bucket.list().iterateAll()) {
+    final String blobName = blob.getName();
+
+    batch.delete(blob.getBlobId()).notify(
+        new BatchResult.Callback<Boolean, StorageException>() {
+            @Override
+            public void success(Boolean aBoolean) {
+            System.out.println(blobName+" was deleted");
+            }
+
+            @Override
+            public void error(StorageException e) {
+                System.out.println(blobName+" Error!!!");
+            }
+        }
+    );
+}
+batch.submit();

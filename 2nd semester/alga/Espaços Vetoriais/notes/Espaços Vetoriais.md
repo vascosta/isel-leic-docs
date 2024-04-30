@@ -117,3 +117,29 @@ __Dimensão ($ dim(V) $)__
 * $ dim(\mathbb{P}_n(x)) = n + 1 $;
 
 Para mostrar que um __conjunto de vetores são geradores de um espaço vetorial__, basta mostrar que $ r([u_1, \ \dots \ , u_n]) = k = dim({R^k}) $.
+
+### __Subespaços ($ \mathbb{R}^n $)__
+
+Seja $ S = <v_1, \ \dots \ , v_n> $ um subespaço de $ \mathbb{R}^n $:
+
+* $ dim(S) = r[v_1, \ \dots \ , v_n] $;
+
+* __O conjuntos dos vetores geradores correspondentes às colunas dos pivots__ da matriz em escada a partir da matriz $ [v_1, \ \dots \ , v_n] $ __é uma base de S__.
+
+Se o sistema $ AX = 0 $ é:
+
+* __SPD__: 
+    * $ dim(S) = 0 $
+    * $ S = \{0\} $
+
+* __SPI__:
+    * $ dim(S) = GI $
+    * $ S = $ __conjunto das soluções geradoras__ obtidas ao substituir as variáveis livres por 1 e as restaantes por 0.
+
+__Nulidade de__ $ A $ -> $ dim(N(A)) = n - r(A) $.
+
+## __Coordenadas__
+
+Seja $ B =  \{v_1, \ \dots \ , v_n\} $ uma base de V, então para cada vetor $ u \in V $ existe um __único conjunto de escalares__ $ \{a_1, \ \dots \ , a_n\} $ tal que $ u = a_1v_1 + \dots + a_nv_n $.
+
+Estes escalares são as __coordenadas__ do vetor $ u $ na base $ B $: $ u = (a_1, \ \dots \ , a_n)B $.

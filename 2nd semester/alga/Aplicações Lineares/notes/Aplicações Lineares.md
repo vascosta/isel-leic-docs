@@ -95,3 +95,67 @@ Uma __aplicação linear__ $ f: U \rightarrow U $ diz-se um:
 * __Endomorfismo__ se $ U = V $.
 
 * __Automorfismo__ se é um __endomorfismo__ e __isomorfismo__.
+
+## __Matriz Canónica de uma Aplicação Linear__
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__.
+
+A __matriz canónica__ de $ f $ é a matriz __cujas colunas são as imagens dos vetores da base canónica__ de $ \mathbb{R}^n $:
+
+* $ M_f = \begin{bmatrix} f(e_1) & f(e_2) & \dots & f(e_n) \end{bmatrix} $.
+
+* $ [f(u)] = M_f  \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} $.
+
+### __Imagem__
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__.
+
+A __imagem__ de $ f $ é o __espaço gerado pelas colunas da matriz canónica__ de $ f $:
+
+* $ Im(f) = <f(e_1), \ f(e_2), \ \dots, \ f(e_n)> $.
+
+* $ dim(Im(f)) = r[M_f] $.
+
+### __Núcleo__
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__.
+
+O __núcleo__ de $ f $ é o __espaço nulo da matriz canónica__ de $ f $:
+
+* $ N(f) = \{ (x1, \ x2, \ \dots, \ x_n) \in \mathbb{R}^n: \ M_f [u]^T = 0 \} $.
+
+* $ dim(N(f)) = n - r[M_f] $.
+
+### __Teorema da Dimensão__
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__.
+
+* $ c_f = r(M_f) $.
+
+* $ n_f = n - r(M_f) $.
+
+* $ c_f + n_f = n = dim(\mathbb{R}^n) $.
+
+* Se $ n > m \Rightarrow $ __não é injetiva__.
+
+* Se $ n < m \Rightarrow $ __não é sobrejetiva__.
+
+* Se $ n = m \Rightarrow $ __é bijetiva__.
+
+## __Matriz de uma Aplicação Linear__
+
+> Seja $ f: U \rightarrow V $ uma __aplicação linear__ e $ B_U = \{ u_1, \ u_2, \ \dots, \ u_n \} $ e $ B_V = \{ v_1, \ v_2, \ \dots, \ v_m \} $ bases de $ U $ e $ V $, respetivamente.
+
+Chama-se __matriz de $ f $ nas bases__ $ B_U $ e $ B_V $ à matriz do tipo m x n:
+
+* $ M(f, B_U, B_V) = \begin{bmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{bmatrix} $.
+
+* $ f(u_1) = a_{11}v_1 + a_{21}v_2 + \dots + a_{m1}v_m $.
+
+* $ f(u_n) = a_{1n}v_1 + a_{2n}v_2 + \dots + a_{mn}v_m $.
+
+* $ M(f, C_{\mathbb{R}^n}, C_{\mathbb{R}^m}) = M_f $.
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__ e $ B = \{ u_1, \ u_2, \ \dots, \ u_n \} $ e $ B' = \{ v_1, \ v_2, \ \dots, \ v_m \} $ bases de $ \mathbb{R}^n $ e $ \mathbb{R}^m $, respetivamente.
+
+* $ M(f, B, B') = [B']^{-1}M_f[B] $.

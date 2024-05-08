@@ -158,4 +158,6 @@ Chama-se __matriz de $ f $ nas bases__ $ B_U $ e $ B_V $ à matriz do tipo m x n
 
 > Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear__ e $ B = \{ u_1, \ u_2, \ \dots, \ u_n \} $ e $ B' = \{ v_1, \ v_2, \ \dots, \ v_m \} $ bases de $ \mathbb{R}^n $ e $ \mathbb{R}^m $, respetivamente.
 
+* $ M_f = [B']M(f, B, B')[B]^{-1} $.
+
 * $ M(f, B, B') = [B']^{-1}M_f[B] $.

@@ -94,7 +94,9 @@ Uma __aplicação linear__ $ f: U \rightarrow U $ diz-se um:
 
 * __Endomorfismo__ se $ U = V $.
 
-* __Automorfismo__ se é um __endomorfismo__ e __isomorfismo__.
+* __Automorfismo__:
+    * Se é um __endomorfismo__ e __isomorfismo__.
+    * Se a matriz canónica de $ f $ for __invertível__ ($ r(M_f) = n $).
 
 ## __Matriz Canónica de uma Aplicação Linear__
 
@@ -141,6 +143,44 @@ O __núcleo__ de $ f $ é o __espaço nulo da matriz canónica__ de $ f $:
 * Se $ n < m \Rightarrow $ __não é sobrejetiva__.
 
 * Se $ n = m \Rightarrow $ __é bijetiva__.
+
+## __Operações com Aplicações Lineares__
+
+> Sejam $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ e $ g: \mathbb{R}^m \rightarrow \mathbb{R}^p $ duas __aplicações lineares__.
+
+### __Soma de Aplicações Lineares__
+
+A __soma__ de $ f $ com $ g $:
+
+* $ f + g: \mathbb{R}^n \rightarrow \mathbb{R}^m $ tal que $ (f + g)(u) = f(u) + g(u) $ é uma __aplicação linear__.
+
+* $ M_{f + g} = M_f + M_g $.
+
+### __Multiplicação por um Escalar__
+
+A __multiplicação__ de $ f $ por $ \alpha $:
+
+* $ \alpha f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ tal que $ (\alpha f)(u) = \alpha f(u) $ é uma __aplicação linear__.
+
+* $ M_{\alpha f} = \alpha M_f $.
+
+## __Composição de Aplicações Lineares__
+
+> Sejam $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ e $ g: \mathbb{R}^m \rightarrow \mathbb{R}^p $ duas __aplicações lineares__.
+
+* $ g \circ f: \mathbb{R}^n \rightarrow \mathbb{R}^p $ tal que $ (g \circ f)(u) = g(f(u)) $ é uma __aplicação linear__.
+
+* $ M_{g \circ f} = M_gM_f $.
+
+## __Inversa de uma Aplicação Linear__
+
+> Seja $ f: \mathbb{R}^n \rightarrow \mathbb{R}^m $ uma __aplicação linear bijetiva__.
+
+A __inversa__ de $ f $:
+
+* $ f^{-1}: V \rightarrow U $ tal que $ (f^{-1} \circ f)(u) = u $ é uma __aplicação linear__.
+
+* $ M_{f^{-1}} = (M_f)^{-1} $.
 
 ## __Matriz de uma Aplicação Linear__
 

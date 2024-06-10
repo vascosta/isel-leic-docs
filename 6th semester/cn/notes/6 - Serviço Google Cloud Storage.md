@@ -32,7 +32,7 @@ __E.g.:__
 
 * __Tolerância a falhas__ (energia, hardware e humanas);
 
-* __Tempos de resposa__ na ordem dos __milisegundos__;
+* __Tempos de resposta__ na ordem dos __milisegundos__;
 
 * Um objeto pode ter __até 5 TB__;
 

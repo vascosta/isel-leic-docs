@@ -51,7 +51,7 @@ Capacidade de um sistema de __aumentar__ ou __diminuir__ a sua capacidade de pro
 
 </div>
 
-* Condiçoes para a escalabilidade:
+* Condições para a escalabilidade:
     * Aumento de utilização de CPU de VMs num determinado dia e hora;
     * Número de utilizadores concorrentes.
 
@@ -59,7 +59,7 @@ Capacidade de um sistema de __aumentar__ ou __diminuir__ a sua capacidade de pro
 
 ## __Tratamento de Falhas (_Fault Tolerance_)__
 
-Capacidade de um sistema de __continuar a funcionar__ mesmo após a ocorrência de falhas, que num sistemda distribuído são __parciais__.
+Capacidade de um sistema de __continuar a funcionar__ mesmo após a ocorrência de falhas, que num sistema distribuído são __parciais__.
 
 * __Técnicas__ para __lidar__ com __falhas__:
     * Redundância do hardware;
@@ -112,7 +112,7 @@ Capacidade de __garantir__ que os __utilizadores__ têm __acesso__ às funcional
     * Desempenho;
     * Capacidade de reconfigurar o sistema (_Adaptability_).
 
-* __Metricas__:
+* __Métricas__:
     * Tempos de execução e de resposta;
     * Variações de carga (_workloads_) vs alocação dinâmica de recursos;
     * Possibilidade de monitorizar e definir restrições que garantam os níveis de serviços SLA (_Service Level Agreement_) adequados.

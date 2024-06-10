@@ -55,20 +55,6 @@ Mantém estado sobre um conjunto de tópicos e de subscrições associada a cada
 
 #
 
-## ___Event-driven serverless computing___
-
-Execução de código em resposta a eventos.
-
-* __Computação tradicional__ -> O servidor está ativo e a consumir recursos mesmo na ausência de pedidos.
-
-* __Computação _serverless___ -> O servidor está ativo e a consumir recursos apenas durante o processamento do evento.
-
-<div align="center">
-
-![](../imgs/google-cloud-platform-2.png)
-
-</div>
-
 #
 
 ## __Processamento de Dados (_Big Data_)__
@@ -99,7 +85,7 @@ Execução de código em resposta a eventos.
 
 <div align="center">
 
-![](../imgs/google-cloud-platform-3.png)
+![](../imgs/google-cloud-platform-2.png)
 
 </div>
 

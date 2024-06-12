@@ -129,7 +129,7 @@ Permite estruturar o agregado em __famílias de colunas__ permitindo à base de 
 
 * __Um documento__ pode conter __novas coleções__ com até um __máximo de 100 níveis de profundidade__;
 
-* __Documentos devem ser pequenos__ com máximo 1 MiB (mebibyte = 1024*1024 bytes).
+* __Documentos devem ser pequenos__ com máximo 1 MByte (megabyte = 1024*1024 bytes).
 
 ## __API Java__
 

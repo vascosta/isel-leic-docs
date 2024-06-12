@@ -4,7 +4,7 @@ F -> O teorema CAP fala sobre a consistência, disponibilidade e tolerância a p
 
 V
 
-F -> A transparência é a capacidade de um sistema de esconder a complexidade dos seus componentes e operações, logo não é desejável que a localização tenha total transparência.
+V
 
 F -> A latência é de facto um fator importante.
 ````

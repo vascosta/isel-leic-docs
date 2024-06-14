@@ -37,7 +37,7 @@ F -> As mensagens são recebidas na ordem em que foram enviadas.
 
 F -> O contrato define a interface e não o tipo de stub.
 
-F -> A assinatura correta seria "StreamObserver<Req> req()"
+V
 
 V
 ````

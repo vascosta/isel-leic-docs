@@ -75,7 +75,7 @@ public class ForumProcessor extends ForumServiceGrpc.ForumServiceImplBase {
     private Map<Topic, List<StreamObserver<Message>>> subscribers = new HashMap<>();
 
     @Override
-    public void listTopics (Empty request, StreamObserver<Topics> responseObserver) {
+    public void listTopics (ProtoVoid request, StreamObserver<Topics> responseObserver) {
         // Topics.Builder topicsBuilder = Topics.newBuilder();
         // for (Topic topic : topics) {
         //     topicsBuilder.addTopics(topic.getTopicName());
@@ -85,14 +85,14 @@ public class ForumProcessor extends ForumServiceGrpc.ForumServiceImplBase {
     }
 
     @Override
-    public void publishMessage (Message request, StreamObserver<Empty> responseObserver) {
+    public void publishMessage (Message request, StreamObserver<ProtoVoid> responseObserver) {
         // List<StreamObserver<Message>> topicSubscribers = subscribers.get(request.getTopicName());
         // if (topicSubscribers != null) {
         //     for (StreamObserver<Message> subscriber : topicSubscribers) {
         //         subscriber.onNext(request);
         //     }
         // }
-        // responseObserver.onNext(Empty.getDefaultInstance());
+        // responseObserver.onNext(ProtoVoid.newBuilder().build());
         // responseObserver.onCompleted();
     }
 
@@ -152,7 +152,7 @@ public class NewPSapp {
     }
 
     // static void listTopics() {
-    //     noBlockStub.getAllTopics(Empty.newBuilder().build(), new StreamObserver<Topics>() {
+    //     noBlockStub.getAllTopics(ProtoVoid.newBuilder().build(), new StreamObserver<Topics>() {
     //         @Override
     //         public void onNext(Topics value) {
     //             System.out.println("Topics:");
@@ -203,9 +203,9 @@ public class NewPSapp {
                 .setTopicName(topicName)
                 .build();
 
-        noBlockStub.publishMessage(request, new StreamObserver<Empty>() {
+        noBlockStub.publishMessage(request, new StreamObserver<ProtoVoid>() {
             @Override
-            public void onNext(Empty value) {
+            public void onNext(ProtoVoid value) {
                 System.out.println("Message published to topic " + topicName);
             }
 

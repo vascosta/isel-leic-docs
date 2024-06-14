@@ -9,12 +9,14 @@ syntax = "proto3";
 package grpcservice;
 
 service ForumService {
-    rpc listTopics (Empty) returns (Topics);
+    rpc listTopics (ProtoVoid) returns (Topics);
 
-    rpc publishMessage (PublishMessage) returns (Empty);
+    rpc publishMessage (Message) returns (Empty);
 
     rpc subscribeToTopic (Topic) returns (stream Message);
 }
+
+message ProtoVoid {}
 
 message Topics {
     repeated string topicsNames = 1;

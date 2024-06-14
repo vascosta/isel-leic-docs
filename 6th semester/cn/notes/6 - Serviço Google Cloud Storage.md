@@ -2,7 +2,7 @@
 
 ## __Armazenamento de Objetos Binários__
 
-O armazenamento na Cloud usa um modelo ___Flat___ ou ___data lake___, onde os dados são em ___BLOBS___.
+O armazenamento na Cloud usa um modelo ___Flat___ ou ___data lake___, onde os dados são armazenados em ___BLOBS___.
 
 ### ___Binary Large Object (BLOB)___
 
@@ -22,17 +22,17 @@ __E.g.:__
 
 </div>
 
-## __Requesitos do Serviço GCS__
+## __Requisitos do Serviço GCS__
 
 * Diferentes __tipos de localização__;
 
-* __Classes de acesso aos dados__, desde alta frequência a menos frequente;
+* __Classes de acesso aos dados__, desde mais a menos frequente;
 
 * __Alta disponibilidade__ (> 99 %) com __replicação distribuída__ geograficamente;
 
 * __Tolerância a falhas__ (energia, hardware e humanas);
 
-* __Tempos de resposta__ na ordem dos __milisegundos__;
+* __Tempos de resposta__ na ordem dos __milissegundos__;
 
 * Um objeto pode ter __até 5 TB__;
 
@@ -82,9 +82,9 @@ Podem ser criados e acessados através de:
 
 ## __Como Funciona o Espaço de Nomes__
 
-Não pode haver ___buckets___ com nomes iguais em diferentes projetos, visto que o nome do ___bucket___ é único e global.
+Não podem haver ___buckets___ com nomes iguais em diferentes projetos, pois devem ser globalmente únicos.
 
-Os nomes dos ___blobs___ podem conter "/" para criar uma hierarquia de diretórios (ilusória).
+Os nomes dos ___blobs___ podem ser compostos, que dão a ilusão de uma organização de diretorias, embora o modelo de armazenamento seja ___flat___ (não hierárquico).
 
 <div align="center">
 

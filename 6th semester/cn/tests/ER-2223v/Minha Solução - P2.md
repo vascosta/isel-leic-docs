@@ -223,8 +223,26 @@ public class POSapp {
 
 # 10
 ````
+Serviço de armazenamento dos ficheiros (.jpg) -> Usar o Google Cloud Storage para armazenar os ficheiros .jpg.
 
+Serviço de Catalogação das fotos -> Usar o Google Cloud Vision para catalogar as fotos armazenadas no Google Cloud Storage.
+
+Base de dados -> Usar o Google Cloud Firestore para armazenar as fotos catalogadas.
+
+Teremos um servidor gRPC que irá comunicar com os serviços de armazenamento e irá publicar uma mensagem num tópico (FotosToProcess) sempre que uma foto for armazenada. Para a empresa poder ter acesso às imagens catalogadas, também será o servidor grpc responsável por interagir com o Firestore. Este servidor estará dentro de um instance group.
+
+Para interagir com a API do Google Cloud Vision, iremos criar uma aplicação "Labels App" que irá subscrever ao tópico para onde o servidor gRPC publica as mensagens, assim sempre que houver uma nova mensagem, a "labels app" irá aceder ao Google Cloud Storage para obter a foto e irá enviar a foto para o Google Cloud Vision para obter as labels. As informações serão guardadas no Google Cloud Firestore. A aplicação estará também por sua vez dentro de um instance group.
+
+No firestore, as fotos catalogadas serão guardadas da seguinte forma:
+- Cada foto terá um documento com o nome da foto e as respetivas labels.
+- As labels serão guardadas num array de strings.
 ````
+
+<div align="center">
+
+![](./imgs/10-1.png)
+
+</div>
 
 # 11
 

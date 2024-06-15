@@ -127,7 +127,7 @@ public class NewPSapp {
                 svcIP = args[0];
                 svcPort = Integer.parseInt(args[1]);
             }
-            System.out.println("connect to " + svcIP + ":" + svcPort);
+            System.out.println("connected to " + svcIP + ":" + svcPort);
             channel = ManagedChannelBuilder.forAddress(svcIP, svcPort)
                     .usePlaintext()
                     .build();

@@ -238,7 +238,11 @@ No firestore, as fotos catalogadas serão guardadas da seguinte forma:
 - As labels serão guardadas num array de strings.
 ````
 
-![[6th semester/cn/tests/ER-2223v/imgs/10-1.png]]
+<div align="center">
+
+![](./imgs/10-1.png)
+
+</div>
 
 # 11
 
@@ -250,4 +254,8 @@ b) Concordo. Desacoplar o front-end dos serviços da plataforma GCP permite o si
 c) Discordo. Ter as máquinas vms que contêm a parte de processamento de fotos num instance group, permite que haja escalabilidade em relação ao número de instâncias e que, no caso de não existirem pedidos de clientes, com ou sem escalabilidade automática (pode também ser controlada por uma aplicação) pode-se reduzir o número ou até mesmo colocar a 0 o número de instâncias consoante uma dada métrica (e.g. % de CPU usada).
 ````
 
-![[6th semester/cn/tests/ER-2223v/imgs/11-1.png]]
+<div align="center">
+
+![](./imgs/11-1.png)
+
+</div>

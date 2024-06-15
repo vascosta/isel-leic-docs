@@ -2,7 +2,7 @@
 ````
 F -> Um sistema é escalável se ele poder aumentar a sua capacidade sem que isso afete o desempenho.
 
-F ->
+V
 
 F -> O Teorema CAP apenas garante 2 dos 3 requisitos: Consistência, Disponibilidade e Tolerância a Partições.
 

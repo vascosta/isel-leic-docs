@@ -2,7 +2,6 @@
 
 ## a
 ````java
-
 /*
 * Operação que registra um point of sale no sistema.
 * Cliente: Fornecer o identificador do POS.

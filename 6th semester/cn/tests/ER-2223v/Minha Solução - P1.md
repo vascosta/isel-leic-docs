@@ -70,9 +70,9 @@ a) Pode receber as mensagens de reclamação (m1, m2 e m3)
 
 b) Assim como "a)", pode também receber as mensagens de reclamação (m1, m2 e m3)
 
-c), d) e e) Podem tratar as mensagens de reclamação (m1, m2 e m3), visto que ambas as subscrições (rec-sub1 e rec-sub2) foram feitas no mesmo tópico (reclamações).
+c) Pode tratar as mensages de reclamação (m1, m2 e m3) visto que segue o padrão Fan-out.
 
-Este padrão é conhecido como Fan-out, onde várias subscrições são feitas no mesmo tópico, permitindo que várias aplicações (c1, c2 e c3) possam receber as mensagens do tópico.
+d) e e) Podem tratar as mensagens de reclamação (m1, m2 e m3), no entanto só um deles realmente a "consumirá" visto que se trata de um padrão Work Queue.
 ````
 
 # 8

@@ -37,7 +37,7 @@ F -> Escalabilidade é a capacidade de aumentar os recursos sobe demanda enquant
 
 V
 
-V
+F -> Uma vez que foi incrementada por alguêm logo não foi automática logo não se pode considerar elasticidade.
 
 V
 ````
@@ -46,9 +46,9 @@ V
 ````
 V
 
-V
+F -> A alínea seguinte corrige "StreamObserver<ZipBlock> oper(StreamObserver<Descriptor>)"
 
-F -> A alínea anterior corrige "StreamObserver<Descriptor> oper(StreamObserver<ZipBlock>)"
+V
 
 F -> A operação oper pode ser chamada tanto com sub bloqueante como não bloqueante.
 ````

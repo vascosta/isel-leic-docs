@@ -270,7 +270,6 @@ As __forças da procura e da oferta__ operam através do mercado para produzir u
 
 ![](../imgs/economia-11.png)
 
-
 </div>
 
 * __Utilidade Marginal Decrescente__:
@@ -397,7 +396,7 @@ Interessa ter uma __balança comercial positiva__ e também ao mesmo tempo as __
 
 #
 
-## __Óptioca da Despesa__
+## __Óptica da Despesa__
 
 * __Procura Interna (PI)__ 
     > Consumo privado (__C__) + Consumo público (__G__) + Investimento (__I__).

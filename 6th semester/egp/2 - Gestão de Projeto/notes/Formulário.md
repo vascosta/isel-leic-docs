@@ -49,7 +49,7 @@ $ CPI = \frac{EV}{AC} $
 
 ### __Cálculo do Índice de Desempenho do Prazo__
 
-$ SPI = \frac{EV}{PV} $
+$ SPI = \frac{EV}{PV} $ (%)
 
 ### __Cálculo do Custo Estimado aquando Completar__
 

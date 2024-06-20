@@ -31,7 +31,7 @@
 | Compras de matéria prima (CMP) | - | - | ... | ... | CMC + MP (ambos Ano N) - MP (Ano N-1) |
 | Crédito de fornecedores (F) | 1 mês de CMP | - | ... | ... | $ (\frac{1}{12}) $ * CMP (Ano N) |
 | Nec. de Fun. de Maneio (NFM) | - | - | ... | ... | Cl + PA + MP - F (todos Ano N) |
-| Investimento em NFM | - | NFM (Ano 1) | ... | ... | NFM (Ano N+1) - NFM (Ano N) |
+| Investimento em NFM | - | NFM (Ano 1) | ... | ... | NFM (Ano N) - NFM (Ano N-1) |
 
 ## __Mapa de Financiamento do Investimento__
 

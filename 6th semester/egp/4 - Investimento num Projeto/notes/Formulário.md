@@ -60,7 +60,7 @@
 | Descrição | Ano 0 | Ano 1 | ... | Ano N |
 |------------|---------------------|-------|-----|-------|
 | Vendas | - | ... | ... | Vendas (Ano N) |
-| CMC | - | - | - | Calculado no __Mapa de Amortizações__ |
+| CMC | - | - | - | Calculado no __Mapa de Investimento em Necessidades de Fundo de Maneio__ |
 | Materiais e Serviços | - | ... | ... | 0,10 * Vendas (Ano N) |
 | Custos com Pessoal | - | ... | ... | Custos com Pessoal (Ano N) |
 | Amortizações | - | ... | ... | Calculado no __Mapa de Amortizações__ |

@@ -19,8 +19,8 @@ RL = RAI - ISR = 75 000
 # b)
 
 ````
-Qe = CFT / (Pu - CVu) = 345 161 unidades/ano = 1 000 967 USD/ano
-Qf = (CFT - CND) / (Pu - CVu) = 283 871 unidades/ano = 823 226 USD/ano    
+Qe = CFT / (Pu - CVu) = 345 161 unidades/ano = 1 000 967 euro/ano
+Qf = (CFT - CND) / (Pu - CVu) = 283 871 unidades/ano = 823 226 euro/ano    
 ````
 
 # c)

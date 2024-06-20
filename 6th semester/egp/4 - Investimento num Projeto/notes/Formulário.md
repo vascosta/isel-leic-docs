@@ -92,7 +92,7 @@ Exemplo de __Valor de Mercado do Imobilizado__ -> "a __totalidade do imobilizado
 
 | Descrição | Ano 0 | Ano 1 | ... | Ano N |
 |------------|---------------------|-------|-----|-------|
-| Valor Residual do Activo Circulante | - | ... | ... | Calculado no __Mapa de Valor Residual do Investimento__ |
+| Resultado Líquido Previsional | - | ... | ... | Calculado no __Mapa de Demonstração de Resultados Previsionais__ |
 | Amortizações | - | ... | ... | Calculado no __Mapa de Amortizações__ |
 | Ajustamentos/Provisões | - | ... | ... | Calculado no __Mapa de Demonstração de Resultados Previsionais__ |
 | Encargos Financeiros | - | ... | ... | Calculado no __Mapa de Financiamento do Investimento__ |

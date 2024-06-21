@@ -96,7 +96,7 @@ Exemplo de __Valor de Mercado do Imobilizado__ -> "a __totalidade do imobilizado
 | Amortizações | - | ... | ... | Calculado no __Mapa de Amortizações__ |
 | Ajustamentos/Provisões | - | ... | ... | Calculado no __Mapa de Demonstração de Resultados Previsionais__ |
 | Encargos Financeiros | - | ... | ... | Calculado no __Mapa de Financiamento do Investimento__ |
-| Cash Flow de Exploração | - | ... | ... | Valor Residual do Activo Circulante + Amortizações + Ajustamentos/Provisões + Encargos Financeiros (Todos Ano N) |
+| Cash Flow de Exploração | - | ... | ... | Resultado Líquido Previsional + Amortizações + Ajustamentos/Provisões + Encargos Financeiros (Todos Ano N) |
 | Investimento em Imobilizado | Valor de Aquisição (Calculado no __Mapa de Financiamento do Investimento__) | - | - | - |
 | Investimento em NFM | ... | ... | ... | Calculado no __Mapa de Investimento em Necessidades de Fundo de Maneio__ |
 | Valor Residual do Imobilizado | - | - | - | Calculado no __Mapa de Valor Residual do Investimento__ |

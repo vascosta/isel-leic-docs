@@ -6,6 +6,9 @@ $ MC = V - CV $
 
 * __V__ -> Vendas
 * __CV__ -> Custos Variáveis
+    * $ CV = CVu * Q $
+
+$ MC = MCu * Q $
 
 ### __Margem de Contribuição Unitária__
 

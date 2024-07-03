@@ -33,8 +33,18 @@ public class App {
 public class App {
 
     public static void main(String[] args) throws Exception {
-        // Default Instance for a easier implementation
-        Firestore db = FirestoreOptions.getDefaultInstance().getService();
+        /* Variável de ambiente com chave
+        * GOOGLE_APPLICATION_CREDENTIALS=<pathname do ficheiro json com chave>
+        */
+
+        GoogleCredentials credentials = GoogleCredentials.getApplicationDefault();
+
+        FirestoreOptions options = FirestoreOptions
+            .newBuilder()
+            .setDatabaseId("db-name")
+            .setCredentials(credentials)
+            .build();
+        Firestore db = options.getService();
 
         ProjectSubscriptionName subscriptionName = ProjectSubscriptionName.of(project, subscription);
 

@@ -1,3 +1,13 @@
+```protobuf
+rpc Op1 (Request) returns (Response);
+
+rpc Op2 (Request) returns (stream Response);
+
+rpc Op3 (stream Request) returns (Response);
+
+rpc Op4 (stream Request) returns (stream Response);
+```
+
 ```java
 // imports
 
@@ -33,7 +43,75 @@ public class App {
         }
     }
 
-    // implement the service methods in the cliente side
-    static void ...
+    static void op1() {
+        Request request = Request.newBuilder().build();
+        Response response = blockingStub.op1(request);
+    }
+
+    static void op2() {
+        Request request = Request.newBuilder().build();
+        noBlockStub.op2(request, new StreamObserver<Response>() {
+            @Override
+            public void onNext(Response response) {
+                // process response
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                // handle error
+            }
+
+            @Override
+            public void onCompleted() {
+                // handle completion
+            }
+        });
+    }
+
+    static void op3() {
+        StreamObserver<Response> responseObserver = new StreamObserver<Response>() {
+            @Override
+            public void onNext(Response response) {
+                // process response
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                // handle error
+            }
+
+            @Override
+            public void onCompleted() {
+                // handle completion
+            }
+        };
+
+        StreamObserver<Request> requestObserver = noBlockStub.op3(responseObserver);
+        requestObserver.onNext(Request.newBuilder().build());
+        requestObserver.onCompleted();
+    }
+
+    static void op4() {
+        StreamObserver<Response> responseObserver = new StreamObserver<Response>() {
+            @Override
+            public void onNext(Response response) {
+                // process response
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                // handle error
+            }
+
+            @Override
+            public void onCompleted() {
+                // handle completion
+            }
+        };
+
+        StreamObserver<Request> requestObserver = noBlockStub.op4(responseObserver);
+        requestObserver.onNext(Request.newBuilder().build());
+        requestObserver.onCompleted();
+    }
 }
 ```

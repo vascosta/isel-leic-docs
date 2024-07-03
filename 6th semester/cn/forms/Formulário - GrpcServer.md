@@ -1,3 +1,13 @@
+```protobuf
+rpc Op1 (Request) returns (Response);
+
+rpc Op2 (Request) returns (stream Response);
+
+rpc Op3 (stream Request) returns (Response);
+
+rpc Op4 (stream Request) returns (stream Response);
+```
+
 ```java
 // imports
 
@@ -28,10 +38,73 @@ public class GrpcServer {
 // imports
 
 public class NameProcessor extends NameServiceGrpc.NameServiceImplBase {
-    // Default Instance for a easier implementation
-    private Firestore firestore = FirestoreOptions.getDefaultInstance().getService();
+    /* Variável de ambiente com chave
+    * GOOGLE_APPLICATION_CREDENTIALS=<pathname do ficheiro json com chave>
+    */
+
+    GoogleCredentials credentials = GoogleCredentials.getApplicationDefault();
+
+    FirestoreOptions options = FirestoreOptions
+        .newBuilder()
+        .setDatabaseId("db-name")
+        .setCredentials(credentials)
+        .build();
+    Firestore db = options.getService();
 
     @Override
-    public ...
+    public void op1(Request request, StreamObserver<Response> responseObserver) {
+        // process request
+        responseObserver.onNext(Response.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void op2(Request request, StreamObserver<Response> responseObserver) {
+        // process request
+        responseObserver.onNext(Response.newBuilder().build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public StreamObserver<Request> op3(StreamObserver<Response> responseObserver) {
+        return new StreamObserver<Request>() {
+            @Override
+            public void onNext(Request request) {
+                // process request
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                // handle error
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onNext(Response.newBuilder().build());
+                responseObserver.onCompleted();
+            }
+        };
+    }
+
+    @Override
+    public StreamObserver<Request> op4(StreamObserver<Response> responseObserver) {
+        return new StreamObserver<Request>() {
+            @Override
+            public void onNext(Request request) {
+                // process request
+                responseObserver.onNext(Response.newBuilder().build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                // handle error
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onCompleted();
+            }
+        };
+    }
 }
 ```

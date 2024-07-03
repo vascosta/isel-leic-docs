@@ -85,5 +85,5 @@ OperationFuture<Operation, Operation> result = managersClient.resizeAsync(
     newSize
 );
 
-Operation oper=result.get();
+Operation oper = result.get();
 ```

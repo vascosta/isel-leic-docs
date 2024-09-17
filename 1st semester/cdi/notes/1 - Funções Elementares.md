@@ -78,11 +78,45 @@ O __transformado__ do conjunto $ A $ é definido por:
 
 * $ f(A) = \{ y \in \mathbb{R} \ | \ \exists \ x \in A, \ f(x) = y \} $
 
+E.g.:
 
+$ f(x) = 2x \ \text{e} \ D = \mathbb{R} $
 
+$ f([0, 1]) = [0, \ 2] $
 
+$ CD = f(D) = f(\mathbb{R}) = \mathbb{R} $
 
+### __Injetividade__
 
+Uma função é injetiva se cada ponto do CD corresponder a um único ponto do D:
+
+* $ \forall \ z \in CD: z = f(x) \ \wedge \ z = f(y) \Rightarrow x = y $
+
+E.g.:
+
+$ f(x) = 2x $ é injetiva
+
+$ g(x) = x^2 $ não é injetiva
+
+### __Função Inversa__
+
+Se $ f $ é uma função injetiva, então a função inversa de $ f $ é a função $ f^{-1} $ tal que:	
+
+$$ f^{-1}: f(D) \rightarrow D $$
+
+$$ f^{-1}(f(x)) = x, \ \forall \ x \in D $$
+
+E.g.:
+
+$ f(x) = 2x $ é injetiva logo tem inversa
+
+* $ f^{-1}(x) = \frac{x}{2} $
+
+* $ f^{-1}(f(x)) = x \ (=) \ f(\frac{x}{2}) = x \ (=) \ x = x $
+
+$ g(x) = x^2 $ não é injetiva logo não tem inversa
+
+Sendo h a restrição de g a $ \mathbb{R}^+ $, então h é injetiva e tem inversa
 
 ## __Função Exponencial__
 
@@ -106,3 +140,43 @@ __Função inversa da função exponencial__, logo:
 
 ## __Funções Trigonométricas Inversas__
 
+> Uma vez que as funções trigonométricas são periódicas, não são injetivas, logo é necessário restringir o seu domínio para que sejam injetivas
+
+### __Função Arco Seno__
+> __Restrição principal__ da função seno é $ f: [-\frac{\pi}{2}, \ \frac{\pi}{2}] \rightarrow \mathbb{R} $ com $ CD = f([-\frac{\pi}{2}, \ \frac{\pi}{2}]) = [-1, \ 1] $
+
+A função __arco seno é a função inversa da função seno__ definida por:
+
+$$ f^{-1} = \arcsin x, \ \forall \ x \in [-1, \ 1] $$
+
+$$ \arcsin x = y \Leftrightarrow \sin y = x, \ y \in [-\frac{\pi}{2}, \ \frac{\pi}{2}] $$
+
+### __Função Arco Cosseno__
+
+> __Restrição principal__ da função cosseno é $ f: [0, \ \pi] \rightarrow \mathbb{R} $ com $ CD = f([0, \ \pi]) = [-1, \ 1] $
+
+A função __arco cosseno é a função inversa da função cosseno__ definida por:
+
+$$ f^{-1} = \arccos x, \ \forall \ x \in [-1, \ 1] $$
+
+$$ \arccos x = y \Leftrightarrow \cos y = x, \ y \in [0, \ \pi] $$
+
+### __Função Arco Tangente__
+
+> __Restrição principal__ da função tangente é $ f: ]-\frac{\pi}{2}, \ \frac{\pi}{2}[ \rightarrow \mathbb{R} $ e $ \cos x \neq 0 $
+
+A função __arco tangente é a função inversa da função tangente__ definida por:
+
+$$ f^{-1} = \arctg x, \ \forall \ x \in \mathbb{R} $$
+
+$$ \arctg x = y \Leftrightarrow \tan y = x, \ y \in \ ]-\frac{\pi}{2}, \ \frac{\pi}{2}[ $$
+
+### __Função Arco Cotangente__
+
+> __Restrição principal__ da função cotangente é $ f: ]0, \ \pi[ \rightarrow \mathbb{R} $ e $ \sin x \neq 0 $
+
+A função __arco cotangente é a função inversa da função cotangente__ definida por:
+
+$$ f^{-1} = arccotg \ x, \ \forall \ x \in \mathbb{R} $$
+
+$$ arccotg \ x = y \Leftrightarrow \cotg \ y = x, \ y \in \ ]0, \ \pi[ $$

@@ -120,13 +120,31 @@ Sendo h a restrição de g a $ \mathbb{R}^+ $, então h é injetiva e tem invers
 
 ## __Função Exponencial__
 
+> $ f(x) = a^x $
+
+* $ f: \mathbb{R} \rightarrow \mathbb{R}^+ $ com $ CD = f(\mathbb{R}) = \mathbb{R}^+ \ \text{e injetiva} $
+
+## __Função Exponencial Potência__
+
 > $ f(x) = e^x $
 
-* $ f: \mathbb{R} \rightarrow \mathbb{R}^+ \ \text{e injetiva} $
+* $ f: \mathbb{R} \rightarrow \mathbb{R}^+ $ com $ CD = f(\mathbb{R}) = \mathbb{R}^+ \ \text{e injetiva} $
+
+### __Propriedades__
+
+* $ e^0 = 1 $
+
+* $ e^{x + y} = e^x \cdot e^y \ \forall \ x, y \in \mathbb{R} $
+
+* $ e^{x - y} = \frac{e^x}{e^y} \ \forall \ x, y \in \mathbb{R} $
+
+* $ e^{x \cdot y} = (e^x)^y = (e^y)^x \ \forall \ x, y \in \mathbb{R} $
+
+* $ a^x = e^{x \cdot \ln a} \ \forall \ a > 0 \wedge a \neq 1 \wedge x \in \mathbb{R} $
 
 ## __Função Logarítmica__
 
-> $ f(x) = \log_e x $
+> $ f(x) = \log_a x $ ou $ f(x) = \ln x $ com $ a > 0 \wedge a \neq 1 $
 
 __Função inversa da função exponencial__, logo:
 
@@ -134,9 +152,31 @@ __Função inversa da função exponencial__, logo:
 
 ### __Propriedades__
 
-* $ e^{\log_e x} = x, \ \forall \ x \in \mathbb{R}^+ $
+Para $ a > 0 \wedge a \neq 1 $:
 
-* $ \log_e e^x = x, \ \forall \ x \in \mathbb{R} $
+* $ \log_a 1 = 0 $
+
+* $ \log_a a^x = x $
+
+* $ \log_a (x \cdot y) = \log_a x + \log_a y $ se $ x, y > 0 $
+
+* $ \log_a \frac{x}{y} = \log_a x - \log_a y $ se $ x, y > 0 $
+
+* $ \log_a x^y = y \cdot \log_a x $
+
+* $ a^{\log_a x} = x \ \forall \ x > 0 $
+
+* $ a^{\log_a x + \log_a y} = x \cdot y \ \forall \ x, y > 0 $	
+
+* $ \log_a x = \frac{\ln x}{\ln a} $
+
+* $ \ln x = \ln a \cdot \log_a x $
+
+* $ \ln (x \cdot y) = \ln x + \ln y $ se $ x, y > 0 $
+
+* $ \ln \frac{x}{y} = \ln x - \ln y $ se $ x, y > 0 $
+
+* $ \ln x^y = y \cdot \ln x $
 
 ## __Funções Trigonométricas Inversas__
 

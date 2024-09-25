@@ -220,3 +220,23 @@ A função __arco cotangente é a função inversa da função cotangente__ defi
 $$ f^{-1} = arccotg \ x, \ \forall \ x \in \mathbb{R} $$
 
 $$ arccotg \ x = y \Leftrightarrow \cotg \ y = x, \ y \in \ ]0, \ \pi[ $$
+
+### __Propriedades__
+
+* $ \cos^2 x + \sin^2 x = 1 $
+
+* $ \sin(x \pm y) = \sin x \cos y \pm \cos x \sin y $
+
+* $ \sin 2x = 2 \sin x \cos x $
+
+* $ \cos(x \pm y) = \cos x \cos y \mp \sin x \sin y $
+
+* $ \cos 2x = \cos^2 x - \sin^2 x $
+
+* $ \sin^2 x = \frac{1 - \cos 2x}{2} $
+
+* $ \cos^2 x = \frac{1 + \cos 2x}{2} $
+
+* $ \sin x = \frac{2 \tan \frac{x}{2}}{1 + \tan^2 \frac{x}{2}} $
+
+* $ \cos x = \frac{1 - \tan^2 \frac{x}{2}}{1 + \tan^2 \frac{x}{2}} $

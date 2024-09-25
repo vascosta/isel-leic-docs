@@ -228,3 +228,21 @@ $ X = \ ]-\infty, \ \frac{3}{5}] \ \cap \ (]-\frac{1}{2}, \ 2[ \ \cup \ [-1, \ 0
 * $ \overline{X} = \ [-1, \ \frac{3}{5}] = X \Rightarrow X $ __é fechado__
 
 * $ X $ __é compacto__
+
+## __Como Determinar o Domínio de uma Função de Variável Real__
+
+* Fazer o levantamento das condições de existência da função:
+
+    * $ \frac{x}{y} $ apenas está definida se $ y \neq 0 $
+    
+    * $ \sqrt[2k]{x} \equiv x^{\frac{1}{2k}} $ apenas está definida se $ x \geq 0 $, se $ k \in \mathbb{N} $
+
+    * $ \ln{x} $ e $ \log_b{x} $ apenas estão definidas se $ x > 0 $
+
+    * $ x^k $ apenas está definida se $ x > 0 $
+
+    * $ \tan{x} $ apenas está definida se $ x \neq \frac{\pi}{2} + k\pi, \ k \in \mathbb{Z} $
+
+    * $ \arcsin{x} $ e $ \arccos{x} $ apenas estão definidas se $ -1 \leq x \leq 1 $
+
+* Resolver as condições de existência da função	e intersetar os resultados de forma a obter o domínio da função.

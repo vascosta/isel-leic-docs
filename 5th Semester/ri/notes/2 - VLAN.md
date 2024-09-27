@@ -155,7 +155,7 @@ ip 192.168.22.1/24 192.168.22.254
 
 ```
 enable
-conf -> Entrar no modo de configuração
+conf terminal -> Entrar no modo de configuração
 
 # VLAN 11
 

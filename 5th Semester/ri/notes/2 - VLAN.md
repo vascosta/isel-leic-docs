@@ -154,6 +154,7 @@ ip 192.168.22.1/24 192.168.22.254
 ### __Configuração do _Router___
 
 ```
+enable
 conf -> Entrar no modo de configuração
 
 # VLAN 11

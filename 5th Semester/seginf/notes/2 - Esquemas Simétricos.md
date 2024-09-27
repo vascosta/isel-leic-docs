@@ -123,7 +123,7 @@ E.g.: TLS, TLS-RSA-WITH-DES-CBC-SHA.
 
 * A __cifra__ é realizada de __forma independente de bloco para bloco__.
 
-A ocorrência de erros num bloco de texto cifrado __afecta apenas a decifra desse bloco__.
+* A ocorrência de erros num bloco de texto cifrado __afecta apenas a decifra desse bloco__.
 
 * Permite o acesso aleatório para decrifra e "recifra" de múltiplos blocos.
 

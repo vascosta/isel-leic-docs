@@ -211,7 +211,7 @@
 
 </div>
 
-* Cada _bridge calcula o seu RPC para cada porta sendo a com menor valor eleita _root port_ e em caso de empate, a porta com o menor valor de BID.
+* Cada _bridge_ calcula o seu RPC para cada porta sendo a com menor valor eleita _root port_ e em caso de empate, a porta com o menor valor de BID.
 
 ### __Eleição da _Designated Port___
 

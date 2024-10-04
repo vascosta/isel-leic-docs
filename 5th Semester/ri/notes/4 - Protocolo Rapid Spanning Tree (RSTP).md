@@ -157,7 +157,7 @@
 
             * A _secondary root bridge_ original repara que está a receber BPDUs superiores da _access bridge_ original e aceita-os, parando então de se comportar como _root bridge_ e passa a ser _access bridge_ (a sua _designated port_ passa a ser _root port_).
 
-### __Sequência de Eventos durante _Proposal/Agreement__
+### __Sequência de Eventos durante _Proposal/Agreement___
 
 <div align=center>
 

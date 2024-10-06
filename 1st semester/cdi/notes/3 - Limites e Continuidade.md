@@ -46,9 +46,9 @@ Se $ f $ e $ g $ são contínuas em $ a $, então:
 
 ## __Função Polinomial__
 
-> $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $, $ f(x) = a_0 + a_1x + a_2x^2 + \ldots + a_nx^n, a_0, a_1, \ldots, a_n \in \mathbb{R} $
+> $ P: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $, $ P(x) = a_0 + a_1x + a_2x^2 + \ldots + a_nx^n, a_0, a_1, \ldots, a_n \in \mathbb{R} $
 
-f é uma __função polinomial__ de grau $ n \in \mathbb{N} \cup \{0\} $ e contínua em $ \mathbb{R} $.
+$ P $ é uma __função polinomial__ de grau $ n \in \mathbb{N} \cup \{0\} $ e contínua em $ \mathbb{R} $.
 
 ### __Exemplos__
 
@@ -56,9 +56,9 @@ $ f(x) = 3 - x^2 + \sqrt{x^3} + \frac{1}{2}x^4  $ é uma função polinomial de 
 
 ## __Função Racional__
 
-> $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $, $ f(x) = \frac{p(x)}{q(x)}, \ p(x), \ q(x) $ são polinomiais.
+> $ R: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $, $ R(x) = \frac{p(x)}{q(x)}, \ p(x), \ q(x) $ são polinomiais.
 
-$ f $ é uma __função racional__ e contínua em $ \{ x \in \mathbb{R}: \ q(x) \neq 0 \} $.
+$ R $ é uma __função racional__ e contínua em $ \{ x \in \mathbb{R}: \ q(x) \neq 0 \} $.
 
 ### __Exemplos__
 

@@ -233,8 +233,6 @@ $ f(x) = \begin{cases} \frac{sen \ x}{x}, \ se \ x \neq 0 \\ 0, \ se \ x = 0 \en
 
 * $ f $ não é contínua em $ x = 0 $, logo, não é prolongável por continuidade a $ x = 0 $.
 
-
-
 ## __Teorema de Bolzano__
 
 > $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $ e $ [a, b] \subseteq D $
@@ -252,3 +250,17 @@ $ f(x) = x^3 - 2x - 5 $
 $ f(2) = -1 $ e $ f(3) = 16 $
 
 $ f $ é contínua em $ [2, 3] $ e $ f(2) $ e $ f(3) $ têm sinais opostos, logo, $ \exists \ c \in \ ]2, 3[ $ tal que $ f(c) = 0 $.
+
+## __Teorema de Weierstrass__
+
+> $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $ e $ [a, b] \subseteq D $
+
+Se $ f $ for __contínua no intervalo compacto__ $ [a, b] $, então $ f $ __tem máximo e mínimo__ em $ [a, b] $.
+
+### __Exemplo__
+
+$ f(x) = \begin{cases} x.sen(\frac{1}{x}), \ se \ x \neq 0 \\ 0, \ se \ x = 0 \end{cases} $
+
+* Por exemplo, o intervalo $ X =  [0, a], \ a > 0 $:
+
+    * $ f(x) $ é contínua em $ [0, a] \Rightarrow \exists \ c_1, c_2 \in X: \ f(c_1) = max \ f(x) \ e \ f(c_2) = min \ f(x), x \in X $

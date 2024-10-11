@@ -235,7 +235,7 @@
 
 > Dados 2 BPDUs
 
-* Se o RBID de um PBDU for menor que o de outro BPDU o valor menor é o melhor.
+* Se o RBID de um BPDU for menor que o de outro BPDU o valor menor é o melhor.
 
     * Se os RBIDs forem iguais, __compara-se o RPC__ e o BPDU com o menor valor é o melhor.
 

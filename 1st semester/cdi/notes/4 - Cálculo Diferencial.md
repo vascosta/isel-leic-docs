@@ -124,12 +124,6 @@ $ f(x) = |x| $ e $ a = 0 $
 
 * Logo, $ f $ não é diferenciável em $ x = 0 $
 
-
-
-
-
-
-
 ## __Regras de Derivação__
 
 > $ u $ e $ v $ funções de $ x $
@@ -256,13 +250,13 @@ $ f(x) = sen(x) $ e $ [a, \ b] = [-x, \ x] $
 
 > $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R} $ e diferenciável em $ ]a, \ b[ $
 
-* Se $ f'(x) = 0 \ \geq 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é crescente em $ ]a, \ b[ $
+* Se $ f'(x) \ \geq 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é crescente em $ ]a, \ b[ $
 
-* Se $ f'(x) = 0 \ > 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é estritamente crescente em $ ]a, \ b[ $
+* Se $ f'(x) \ > 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é estritamente crescente em $ ]a, \ b[ $
 
-* Se $ f'(x) = 0 \ \leq 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é decrescente em $ ]a, \ b[ $
+* Se $ f'(x) \ \leq 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é decrescente em $ ]a, \ b[ $
 
-* Se $ f'(x) = 0 \ < 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é estritamente decrescente em $ ]a, \ b[ $
+* Se $ f'(x) \ < 0 \ \forall \ x \in ]a, \ b[ \ \Rightarrow f $ é estritamente decrescente em $ ]a, \ b[ $
 
 ## __Teorema de Couchy__
 
@@ -347,7 +341,7 @@ $$ P_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \ldots + \frac{f^
 
 A fórmula de Taylor de ordem $ n $ de $ f $ em torno de $ x = a $ é:
 
-$$ f(x) = P_n(x) + R_n(x) = P_n(x) + \frac{f^{(n + 1)}(c)}{(n + 1)!}(x - a)^{n + 1} $$
+$$ f(x) = P_n(x) + R_n(x), \ lim_{x \to a} \ \frac{R_n(x)}{(x - a)^n} = 0 $$
 
 ## __Polinómio de Maclaurin__
 
@@ -359,4 +353,104 @@ $$ P_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \ldots + \frac{f^{(n)}(0)}{n!
 
 Formula de Taylor de ordem $ n $ de $ f $ em torno de $ x = 0 $ é:
 
-$$ f(x) = P_n(x) + R_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \ldots + \frac{f^{(n + 1)}(c)}{(n + 1)!}(-a)^{n + 1}
+$$ f(x) = P_n(x) + R_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \ldots + \frac{f^{(n + 1)}(c)}{(n + 1)!}(x)^{n + 1} $$
+
+## __Paridade de Funções__
+
+> $ f: D \subseteq \mathbb{R} \rightarrow \mathbb{R}, \ f \in C^n(V_e(a)) $
+
+> $ n, k \in \mathbb{N}, \ k \leq n $
+
+> $ f'(a) = f''(a) = \ldots = f^{(k - 1)}(a) = 0 \ \wedge \ f^{(k)}(a) \neq 0 $
+
+* Se $ k $ é impár e $ f^{(k)}(a) > 0 \Rightarrow f $ é crescente em $ x = a $
+
+* Se $ k $ é impár e $ f^{(k)}(a) < 0 \Rightarrow f $ é decrescente em $ x = a $
+
+* Se $ k $ é impár $ \Rightarrow f $ tem um ponto de inflexão em $ x = a $
+
+* Se $ k $ é par e $ f^{(k)}(a) > 0 \Rightarrow f $ tem um mínimo relativo em $ x = a $
+
+* Se $ k $ é par e $ f^{(k)}(a) < 0 \Rightarrow f $ tem um máximo relativo em $ x = a $
+
+* Se $ k $ é par e $ f^{(k)}(a) > 0 \Rightarrow f $ tem a concavidade voltada para cima em $ x = a $
+
+* Se $ k $ é par e $ f^{(k)}(a) < 0 \Rightarrow f $ tem a concavidade voltada para baixo em $ x = a $
+
+### __Exemplo__
+
+$ f(x) = x^2 $
+
+* $ f'(x) = 2x $
+
+* $ f''(x) = 2 $
+
+* $ k = 2 $
+
+* $ f'(0) = 0 $
+
+* $ f''(0) = 2 $
+
+* Em $ x \neq 0 $:
+
+    * $ k $ é ímpar $ \Rightarrow f $ não tem extremos relativos nos intervalos $ ]-\infty, \ 0[ $ e $ ]0, \ \infty[ $
+
+* Em $ x = 0 $:
+
+    * $ k $ é par e $ f^{(k)}(0) > 0 \Rightarrow f $ tem um mínimo relativo em $ x = 0 $
+
+#
+
+$ f(x) = (x - 1)^3 $
+
+* $ f'(x) = 3(x - 1)^2 $
+
+* $ f''(x) = 6(x - 1) $
+
+* $ f^{(3)}(x) = 6 $
+
+* $ k = 3 $
+
+* $ f'(1) = 0 $
+
+* $ f''(1) = 0 $
+
+* $ f^{(3)}(1) = 6 $
+
+* Em $ x \neq 1 $:
+
+    * $ k $ é ímpar $ \Rightarrow f $ não tem extremos relativos nos intervalos $ ]-\infty, \ 1[ $ e $ ]1, \ \infty[ $
+
+* Em $ x = 1 $:
+
+    * $ k $ é ímpar e $ f^{(k)}(1) > 0 \Rightarrow f $ é crescente em $ x = 1 $ logo não tem extremos relativos
+
+#
+
+$ f(x) = -x^4 + 1 $
+
+* $ f'(x) = -4x^3 $
+
+* $ f''(x) = -12x^2 $
+
+* $ f^{(3)}(x) = -24x $
+
+* $ f^{(4)}(x) = -24 $
+
+* $ k = 4 $
+
+* $ f'(0) = 0 $
+
+* $ f''(0) = 0 $
+
+* $ f^{(3)}(0) = 0 $
+
+* $ f^{(4)}(0) = -24 $
+
+* Em $ x \neq 0 $:
+
+    * $ k $ é ímpar $ \Rightarrow f $ não tem extremos relativos nos intervalos $ ]-\infty, \ 0[ $ e $ ]0, \ \infty[ $
+
+* Em $ x = 0 $:
+
+    * $ k $ é par e $ f^{(k)}(0) < 0 \Rightarrow f $ tem um máximo relativo em $ x = 0 $

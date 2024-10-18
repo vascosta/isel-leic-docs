@@ -127,7 +127,8 @@
     CertificateFactory factory = CertificateFactory.getInstance("X.509");
     
     // Obtém o certificado a partir do ficheiro .cer
-    FileInputStream fis = new FileInputStream("certificado.cer");X509Certificate cert = (X509Certificate)
+    FileInputStream fis = new FileInputStream("certificado.cer");
+    X509Certificate cert = (X509Certificate)
     
     factory.generateCertificate(fis);
     

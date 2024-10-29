@@ -124,7 +124,7 @@ Os limites laterais, se existirem, são os limites de $ f $ segundo os conjuntos
 
 $ h(x) = \begin{cases} 1, \ se \ x \geq 0 \\ 0, \ se \ x < 0 \end{cases} $
 
-$ h $ é contínua em $ [0, +\infty[ $ e $ ]-\infty, 0[] $.
+$ h $ é contínua em $ [0, +\infty[ $ e $ ]-\infty, 0] $.
 
 Em $ x = 0 $:
 

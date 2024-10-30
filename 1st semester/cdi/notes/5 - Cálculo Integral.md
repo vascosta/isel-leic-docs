@@ -44,8 +44,6 @@ Qual a primitiva de $ f(x) = \frac{1}{x} $ que verifica $ F(1) = 0 $ e $ F(-e) =
 
 * $ P[K] = Kx $
 
-* $ P[u^n] = \frac{u^{n+1}}{n+1}, \ n \neq -1 $
-
 * $ P[u'.u^n] = \frac{u^{n+1}}{n+1}, \ n \neq -1 $
 
 * $ P[\frac{u'}{u}] = \ln |u| $
@@ -76,35 +74,60 @@ Qual a primitiva de $ f(x) = \frac{1}{x} $ que verifica $ F(1) = 0 $ e $ F(-e) =
 
 #### __Exemplos__
 
-$ \int sen(x).cos^2(x) \ dx = \int (-(-sen(x)).(cos(x))^2)\ dx = -\int -sen(x).cos^2(x) \ dx = - \frac{cos(x)^3}{3} $
+$ \int sen(x).cos^2(x) \ dx = 
+\\ \int (-(-sen(x)).(cos(x))^2)\ dx = 
+\\ -\int -sen(x).cos^2(x) \ dx = - \frac{cos(x)^3}{3} 
+$
 
 #
 
-$ \int x.e^{x^2} \ dx = \frac{1}{2}.\int 2x.e^{x^2} \ dx = \frac{1}{2}e^{x^2} $
+$ \int x.e^{x^2} \ dx = 
+\\ \frac{1}{2}.\int 2x.e^{x^2} \ dx = \frac{1}{2}e^{x^2} 
+$
 
 # 
 
-$ \int 2^{x-1} \ dx = \int (e^{ln (2)})^{x-1} \ dx = \int e^{(x-1).ln(2)} \ dx = \frac{1}{ln(2)}.\int ln(2).e^{(x-1).ln(2)} \ dx = \frac{e^{(x-1).ln(2)}}{ln(2)}  $
+$ \int 2^{x-1} \ dx = 
+\\ \int (e^{ln (2)})^{x-1} \ dx = 
+\\ \int e^{(x-1).ln(2)} \ dx = 
+\\ \frac{1}{ln(2)}.\int ln(2).e^{(x-1).ln(2)} \ dx = \frac{e^{(x-1).ln(2)}}{ln(2)}  
+$
 
 #
 
-$ \int \frac{x^3}{1+x^8} \ dx = \int \frac{x^3}{1+(x^4)^2} \ dx = \frac{1}{4}\int \frac{4x^3}{1+(x^4)^2} \ dx = \frac{arctg(x^4)}{4} $
+$ \int \frac{x^3}{1+x^8} \ dx = 
+\\ \int \frac{x^3}{1+(x^4)^2} \ dx = 
+\\ \frac{1}{4}\int \frac{4x^3}{1+(x^4)^2} \ dx = \frac{arctg(x^4)}{4} 
+$
 
 #
 
-$ \int \frac{e^x}{\sqrt{1-e^{2x}}} \ dx = \int \frac{e^x}{\sqrt{1-(e^x)^2}} \ dx = arcsen(e^x) $
+$ \int \frac{e^x}{\sqrt{1-e^{2x}}} \ dx = 
+\\ \int \frac{e^x}{\sqrt{1-(e^x)^2}} \ dx = arcsen(e^x) 
+$
 
 #
 
-$ \int \frac{x^3}{1+x^4} \ dx = \frac{1}{4} \int \frac{4x^3}{1+x^4} \ dx = \frac{ln(1+x^4)}{4} $
+$ \int \frac{x^3}{1+x^4} \ dx =
+\\ \frac{1}{4} \int \frac{4x^3}{1+x^4} \ dx = 
+\\ \frac{ln(1+x^4)}{4} 
+$
 
 #
 
-$ \int \frac{e^x}{\sqrt{1-e^x}} \ dx = \int e^x(1-e^x)^{-\frac{1}{2}} \ dx = \int (-(-e^x))(1-e^x)^{-\frac{1}{2}} \ dx = - \int -e^x(1-e^x)^{-\frac{1}{2}} \ dx = -(\frac{(1-e^x)^{-\frac{1}{2}}}{-\frac{1}{2}+1}) = -2(1-e^x)^{\frac{1}{2}} $
+$ \int \frac{e^x}{\sqrt{1-e^x}} \ dx = 
+\\ \int e^x(1-e^x)^{-\frac{1}{2}} \ dx = 
+\\ \int (-(-e^x))(1-e^x)^{-\frac{1}{2}} \ dx = 
+\\ - \int -e^x(1-e^x)^{-\frac{1}{2}} \ dx = 
+\\ -(\frac{(1-e^x)^{-\frac{1}{2}}}{-\frac{1}{2}+1}) = -2(1-e^x)^{\frac{1}{2}} 
+$
 
 #
 
-$ \int \frac{5x^2}{9 + x^6} \ dx = \int \frac{1}{9}.\frac{5x^2}{1+\frac{x^6}{9}} \ dx = \frac{5}{9} \int \frac{x^2}{1+(\frac{x^3}{3})^2} \ dx = \frac{5}{9}.arctg(\frac{x^3}{3}) $
+$ \int \frac{5x^2}{9 + x^6} \ dx = 
+\\ \int \frac{1}{9}.\frac{5x^2}{1+\frac{x^6}{9}} \ dx = 
+\\ \frac{5}{9} \int \frac{x^2}{1+(\frac{x^3}{3})^2} \ dx = \frac{5}{9}.arctg(\frac{x^3}{3}) 
+$
 
 ### __Primitivas Quase Imediatas__
 
@@ -122,38 +145,196 @@ $ \int \frac{5x^2}{9 + x^6} \ dx = \int \frac{1}{9}.\frac{5x^2}{1+\frac{x^6}{9}}
 
 #### __Exemplos__
 
-$ \int x.ln(x) \ dx = \frac{x^2.ln(x)}{2} - \int \frac{x^2}{2}. \frac{1}{x} \ dx = \frac{x^2.ln(x)}{2} - \int \frac{x}{2} \ dx = \frac{x^2.ln(x)}{2} - \frac{x^2}{4} $
+$ \int x.ln(x) \ dx = 
+\\ \frac{x^2.ln(x)}{2} - \int \frac{x^2}{2}. \frac{1}{x} \ dx = 
+\\ \frac{x^2.ln(x)}{2} - \int \frac{x}{2} \ dx = \frac{x^2.ln(x)}{2} - \frac{x^2}{4} 
+$
 
 #
 
-$ \int ln(x) \ dx = \int 1.ln(x) \ dx = x.ln(x) - \int x.\frac{1}{x} \ dx = x.ln(x) - \int 1 \ dx = x.ln(x) - x $
+$ \int ln(x) \ dx = 
+\\ \int 1.ln(x) \ dx = 
+\\ x.ln(x) - \int x.\frac{1}{x} \ dx = 
+\\ x.ln(x) - \int 1 \ dx = x.ln(x) - x 
+$
 
 #
 
-$ \int x.sen(x) \ dx = -x.cos(x) + \int 1.cos(x) \ dx = -x.cos(x) + sen(x) $
+$ \int x.sen(x) \ dx = 
+\\ -x.cos(x) + \int 1.cos(x) \ dx = -x.cos(x) + sen(x) 
+$
 
 #
 
-$ \int x^2.e^{-x} \ dx = -x^2.e^{-x} + \int 2x.e^{-x} \ dx = -x^2.e^{-x} - 2\int x.e^{-x} \ dx = -x^2.e^{-x} - 2(-x.e^{-x} + \int 1.e^{-x} \ dx) = -x^2.e^{-x} - 2x.e^{-x} - 2e^{-x} $
+$ \int x^2.e^{-x} \ dx = -x^2.e^{-x} + \int 2x.e^{-x} \ dx = 
+\\ -x^2.e^{-x} - 2\int x.e^{-x} \ dx = 
+\\ -x^2.e^{-x} - 2(-x.e^{-x} + \int 1.e^{-x} \ dx) = -x^2.e^{-x} - 2x.e^{-x} - 2e^{-x} 
+$
 
 #
 
-$ \int e^{-x}.cos(x) \ dx = e^{-x}.sen(x) + \int e^{-x}.sen(x) \ dx = e^{-x}.sen(x) + \int e^{-x}.sen(x) \ dx = e^{-x}.sen(x) + (-e.x.cos(x) - \int -e^{-x}.cos(x) \ dx) $
+$ \int e^{-x}.cos(x) \ dx = 
+\\ e^{-x}.sen(x) + \int e^{-x}.sen(x) \ dx = 
+\\ e^{-x}.sen(x) + \int e^{-x}.sen(x) \ dx = 
+\\ e^{-x}.sen(x) + (-e.x.cos(x) - \int -e^{-x}.cos(x) \ dx) 
+$
 
-$ \int e^{-x}.cos(x) \ dx = e^{-x}.sen(x) - e^{-x}.cos(x) - \int e^{-x}.cos(x) \ dx \ (=) \ 2\int e^{-x}.cos(x) \ dx = e^{-x}(sen(x) - cos(x)) \ (=) \ \int e^{-x}.cos(x) \ dx = \frac{e^{-x}(sen(x) - cos(x))}{2} $
+$ \int e^{-x}.cos(x) \ dx = e^{-x}.sen(x) - e^{-x}.cos(x) - \int e^{-x}.cos(x) \ dx \ (=) 
+\\ 2\int e^{-x}.cos(x) \ dx = e^{-x}(sen(x) - cos(x)) \ (=) 
+\\ \int e^{-x}.cos(x) \ dx = \frac{e^{-x}(sen(x) - cos(x))}{2} 
+$
 
 #
 
-$ \int sen^2(x) \ dx = \int sen(x).sen(x) \ dx = -cos(x).sen(x) + \int cos(x).cos(x) \ dx = -cos(x).sen(x) + \int 1 - sen^2(x) \ dx = -cos(x).sen(x) + x - \int sen^2(x) \ dx \ (=) \ 2\int sen^2(x) \ dx = x - cos(x).sen(x) \ (=) \ \int sen^2(x) \ dx = \frac{x}{2} - \frac{cos(x).sen(x)}{2} $
+$ \int sen^2(x) \ dx = 
+\\ \int sen(x).sen(x) \ dx = 
+\\ -cos(x).sen(x) + \int cos(x).cos(x) \ dx =
+\\ -cos(x).sen(x) + \int 1 - sen^2(x) \ dx = 
+\\ -cos(x).sen(x) + x - \int sen^2(x) \ dx \ (=)
+\\ 2\int sen^2(x) \ dx = x - cos(x).sen(x) \ (=) 
+\\ \int sen^2(x) \ dx = \frac{x}{2} - \frac{cos(x).sen(x)}{2} 
+$
 
 #
 
-$ \int \frac{x}{(1+x^2)^2} \ dx = \frac{1}{2} \int 2x(1+x^2)^{-2} dx = \frac{1}{2} . \frac{(1+x^2)^{-2+1}}{-2+1} = \frac{1}{2}. \frac{(1+x^2)^{-1}}{-1} = -\frac{1}{2(1+x^2)} $
+$ \int \frac{x}{(1+x^2)^2} \ dx = 
+\\ \frac{1}{2} \int 2x(1+x^2)^{-2} dx = 
+\\ \frac{1}{2} . \frac{(1+x^2)^{-2+1}}{-2+1} = 
+\\ \frac{1}{2}. \frac{(1+x^2)^{-1}}{-1} = -\frac{1}{2(1+x^2)} 
+$
 
 #
 
-$ \int \frac{x^2}{(1+x^2)^2} \ dx = \int x.\frac{x}{(1+x^2)^2} \ dx = x.(-\frac{1}{2(1+x^2)}) + \int 1.(\frac{1}{2(1+x^2)}) \ dx = -\frac{x}{2(1+x^2)} + 2arctg(x) $
+$ \int \frac{x^2}{(1+x^2)^2} \ dx = 
+\\ \int x.\frac{x}{(1+x^2)^2} \ dx = 
+\\ x.(-\frac{1}{2(1+x^2)}) + \int 1.(\frac{1}{2(1+x^2)}) \ dx = -\frac{x}{2(1+x^2)} + 2arctg(x) $
 
 ### __Primitivação por Substituição__
 
+## __Fração Própria__
 
+> $ f(x) = \frac{N(x)}{D(x)} $
+
+Se grau de $ N(x) < $ grau de $ D(x) $, então $ f(x) $ é uma __fração própria__.
+
+Se grau de $ N(x) \geq $ grau de $ D(x) $, então $ f(x) $ é uma __fração imprópria__ e é possível dividir os polinómios:
+
+$$ f(x) = Q(x) + \frac{R(x)}{D(x)} $$
+
+Se o grau de $ R(x) < $ grau de $ D(x) $, então $ f(x) $ é uma __fração própria__.
+
+### __Exemplos__
+
+$ f(x) = \frac{x + 3}{x + 2} = \frac{x + 2 + 1}{x + 2} = 1 + \frac{1}{x + 2} $
+
+* $ \int \frac{x + 3}{x + 2} \ dx = \int 1 + \frac{1}{x + 2} \ dx = x + ln|x + 2| $
+
+#
+
+$ f(x) = \frac{x^2 + 2x + 5}{x - 1} = $ (Regra de Ruffini) $ x + 3 + \frac{8}{x - 1} $
+
+* $ \int \frac{x^2 + 2x + 5}{x - 1} \ dx = \int x + 3 + \frac{8}{x - 1} \ dx = \frac{x^2}{2} + 3x + 8.ln|x - 1| $
+
+## __Decomposição de Frações Próprias em Frações Simples__
+
+> $ f(x) = \frac{R(x)}{D(x)} $
+
+* $ D(x) $ tem raízes reais simples $ a_1, a_2, ..., a_n \Rightarrow f(x) = \frac{A_1}{x - a_1} + \frac{A_2}{x - a_2} + ... + \frac{A_n}{x - a_n} \ $, $ A_1, A_2, ..., A_n $ constantes.
+
+* $ D(x) $ tem raízes reais múltiplas e se admite a raiz real $ a $ com multiplicidade $ m \Rightarrow f(x) = \frac{A_1}{x - a} + \frac{A_2}{(x - a)^2} + ... + \frac{A_m}{(x - a)^m} \ $, $ A_1, A_2, ..., A_m $ constantes.
+
+* $ D(x) $ tem as raízes complexas conjugadas $ \alpha + \beta i, \beta \neq 0, \ $ com multiplicidade 1 $ \Rightarrow f(x) = \frac{B_x + C}{(x - \alpha)^2 + \beta_i^2} \ $, $ B, C $ constantes.
+
+### __Exemplos__
+
+$ f(x) = \frac{x}{x^2 + x - 2} = $ (Fórmula Resolvente) $ \frac{x}{(x + 2)(x - 1)} = \frac{A}{x + 2} + \frac{B}{x - 1} $
+
+* Reduzindo ao mesmo denominador: $ x = A(x - 1) + B(x + 2) $
+
+    * Com $ x = 1 $:
+        * $ 1 = 3B \Rightarrow B = \frac{1}{3} $
+
+        * Com $ x = -2 $:
+            * $ -2 = -3A \Rightarrow A = \frac{2}{3} $
+
+* $ \int \frac{x}{x^2 + x - 2} \ dx = \int \frac{2}{3(x + 2)} + \frac{1}{3(x - 1)} \ dx = \frac{2}{3}.ln|x + 2| + \frac{1}{3}.ln|x - 1| + C, \ C \in \mathbb{R} $
+
+#
+
+$ f(x) = \frac{2x + 1}{(x-1)^2} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} $
+
+* Reduzindo ao mesmo denominador: $ 2x + 1 = A(x - 1) + B $
+
+    * Com $ x = 1 $:
+        * $ 3 = B \Rightarrow B = 3 $
+
+        * Comparando os coeficientes de $ x $:
+            * $ 2 = A $
+
+* $ \int \frac{2x + 1}{(x-1)^2} \ dx = \int \frac{2}{x - 1} + \frac{3}{(x - 1)^2} \ dx = 2.ln|x - 1| + 3.\int (x - 1)^{-2} \ dx $
+
+    * $ \int (x - 1)^{-2} \ dx = \int \frac{(x-1)^{-2+1}}{-2+1} \ dx = \frac{(x-1)^{-1}}{-1} = -\frac{1}{x - 1} $
+
+* $ 2.ln|x - 1| - \frac{3}{x - 1} + C, \ C \in \mathbb{R} $
+
+#
+
+$ f(x) = \frac{x + 3}{x^3 -2x^2 + 3x} = \frac{x + 3}{x(x^2 - 2x + 3)} = \frac{A}{x} + \frac{Bx + C}{x^2 - 2x + 3} $
+
+* Reduzindo ao mesmo denominador: $ x + 3 = A(x^2 - 2x + 3) + (Bx + C)x $
+
+    * Com $ x = 0 $:
+        * $ 3 = 3A \Rightarrow A = 1 $
+
+    * Comparando os coeficientes de $ x $:
+        * $ 0 = A + B \Rightarrow B = -1 $
+
+    * Comparando os coeficientes de $ x^2 $:
+        * $ 1 = -2A + C \Rightarrow C = 3 $
+
+* $ \int \frac{x + 3}{x^3 -2x^2 + 3x} \ dx = \int \frac{1}{x} + \frac{-x + 3}{x^2 - 2x + 3} \ dx = ln|x| - \int \frac{x - 3}{x^2 - 2x + 3} \ dx $
+
+    * $ \int \frac{x - 3}{x^2 - 2x + 3} \ dx = \frac{1}{2} \int \frac{2x - 2}{x^2 - 2x + 3} \ dx = \frac{1}{2} \int \frac{2x - 2}{x^2 - 2x + 3} \ dx  = \frac{1}{2} \int \frac{2x - 2 - 4}{x^2 - 2x + 3} \ dx = \frac{1}{2} \int \frac{2x - 2}{x^2 - 2x + 3} - \frac{4}{x^2 - 2x + 3} \ dx = \frac{1}{2}.ln|x^2 - 2x + 3| - 2\int \frac{1}{x^2 - 2x + 3} \ dx $
+
+        * $ \int \frac{1}{x^2 - 2x + 3} \ dx = \int \frac{1}{(x - 1)^2 + 2} \ dx = 2\int \frac{1}{2(1 + (\frac{(x - 1)^2}{2}))} \ dx = \int \frac{1}{1 + (\frac{(x - 1)^2}{2})} \ dx = \int \frac{1}{1 + (\frac{x - 1}{\sqrt{2}})^2} \ dx  = \sqrt{2} \int \frac{\frac{1}{\sqrt{2}}}{1 + (\frac{x - 1}{\sqrt{2}})^2} \ dx = \sqrt{2}.arctg(\frac{x - 1}{\sqrt{2}}) $
+
+* $ ln|x| - \frac{1}{2}.ln|x^2 - 2x + 3| - \sqrt{2}.arctg(\frac{x - 1}{\sqrt{2}}) + C, \ C \in \mathbb{R} $
+
+#
+
+$ f(x) = \frac{x^3 - 5x^2 + 9x - 4}{x^3 - 5x^2 + 4x} = 1 + \frac{5x - 4}{x^3 - 5x^2 + 4x} = 1 + \frac{5x - 4}{x(x^2 - 5x + 4)} = $ (Fórmula Resolvente) $ 1 + \frac{5x - 4}{x(x - 1)(x - 4)} = \frac{A}{x} + \frac{B}{x - 1} + \frac{C}{x - 4} $
+
+* Reduzindo ao mesmo denominador: $ 5x - 4 = A(x - 1)(x - 4) + Bx(x - 4) + C(x)(x - 1) $
+
+    * Com $ x = 0 $:
+        * $ -4 = 4A \Rightarrow A = -1 $
+
+    * Com $ x = 1 $:
+        * $ 1 = -3B \Rightarrow B = -\frac{1}{3} $
+
+    * Com $ x = 4 $:
+        * $ 16 = 12C \Rightarrow C = \frac{4}{3} $
+
+* $ \int \frac{x^3 - 5x^2 + 9x - 4}{x^3 - 5x^2 + 4x} \ dx = \int 1 + \frac{1}{x} - \frac{1}{3(x - 1)} + \frac{4}{3(x - 4)} \ dx = x - ln|x| - \frac{1}{3}.ln|x - 1| + \frac{4}{3}.ln|x - 4| + C, \ C \in \mathbb{R} $
+
+#
+
+$ f(x) = \frac{x - 1}{x(x^2 + 1)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} $
+
+* Reduzindo ao mesmo denominador: $ x - 1 = A(x^2 + 1) + (Bx + C)x $
+
+    * Com $ x = 0 $:
+        * $ -1 = A \Rightarrow A = -1 $
+
+    * Comparando os coeficientes de $ x $:
+        * $ 1 = C \Rightarrow C = 1 $
+
+    * Comparando os coeficientes de $ x^2 $:
+        * $ 0 = A + B \Rightarrow B = 1 $
+
+* $ \int \frac{x - 1}{x(x^2 + 1)} \ dx = \int -\frac{1}{x} + \frac{x + 1}{x^2 + 1} \ dx = - ln|x| + \frac{1}{2} \int \frac{2x}{x^2 + 1} \ dx + \frac{1}{2} \int \frac{2}{x^2 + 1} \ dx $
+
+    * $ \int \frac{2x}{x^2 + 1} \ dx = ln|x^2 + 1| $
+    * $ \int \frac{2}{x^2 + 1} \ dx = 2\int \frac{1}{1 + x^2} \ dx = 2.arctg(x^2 + 1) $
+
+* $ -ln|x| + \frac{1}{2}.ln|x^2 + 1| + arctg(x^2 + 1) + C, \ C \in \mathbb{R} $

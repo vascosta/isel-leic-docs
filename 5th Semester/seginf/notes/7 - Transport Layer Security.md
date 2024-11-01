@@ -116,4 +116,78 @@ Define:
 
 > Propriedade do _handshake_ que garante que se a chave privada for comprometida, não é possível decifrar _master secret_ anteriores nem mensagens do _record protocol_.
 
-## ___Master Secrete_ baseado em _Diffie-Hellman___
+## ___Sockets_ TLS em Java__
+
+### ___Sockets_ e Fábricas de _Sockets___
+
+<div align=center>
+
+![](imgs/29.png)
+
+</div>
+
+* ``SSLSocketFactory`` e ``SSLServerSocketFactory``:
+    * Obtenção de _cipher suites_ suportados por omissão.
+
+    * Criação de istâncias de _sockets_.
+
+* ``SSLSocket`` e ``SSLServerSocket``:
+    * Inicia o _handshake_ e recebe notificações da sua conclusão.
+
+    * Define os protocolos e _cipher suites_ habilitados.
+
+    * Aceita/requisita autenticação do cliente.
+
+    * Obtém a sessão que foi negociada.
+
+* ``SSLSession``:
+    * Obtém o _cipher suite_ negociado.
+
+    * Obtém a identidade do par autenticada e a cadeia de certificados.
+
+### __Raízes de Confiança por Omissão em Java__
+
+```java
+public class SSLDemo {
+    public static void main(String[] args) throws IOException {
+        SSLContext sc = SSLContext.getInstance("TLSv1.2");
+
+        sc.init(null, null, new java.security.SecureRandom());
+        
+        SSLSocketFactory sslFactory = sc.getSocketFactory();
+        
+        SSLSocket client = (SSLSocket)
+        
+        sslFactory.createSocket("docs.oracle.com", 443);
+        client.startHandshake();
+        
+        SSLSession session = client.getSession();
+        
+        System.out.println(session.getCipherSuite());
+        
+        System.out.println(session.getPeerCertificates()[0]);
+        client.close();
+    }
+}
+```
+
+### __Raízes de Confiança com ``TrustManager`` em Java__
+
+```java
+TrustManagerFactory tmf = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+
+KeyStore ks = KeyStore.getInstance("JKS");
+
+ks.load(new FileInputStream("CA.jks"), "changeit".toCharArray());
+
+tmf.init(ks);
+
+SSLContext sc = SSLContext.getInstance("TLS");
+
+sc.init(null, tmf.getTrustManagers(), null);
+
+SSLSocketFactory sslFactory = sc.getSocketFactory();
+
+SSLSocket cli = (SSLSocket) sslFactory.createSocket("docs.oracle.com", 443);
+// Continue...
+```

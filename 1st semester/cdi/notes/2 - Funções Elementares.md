@@ -172,6 +172,8 @@ Para $ a > 0 \wedge a \neq 1 $:
 
 * $ \ln x = \ln a \cdot \log_a x $
 
+* $ \ln x = a \ (=) \ x = e^a $
+
 * $ \ln (x \cdot y) = \ln x + \ln y $ se $ x, y > 0 $
 
 * $ \ln \frac{x}{y} = \ln x - \ln y $ se $ x, y > 0 $

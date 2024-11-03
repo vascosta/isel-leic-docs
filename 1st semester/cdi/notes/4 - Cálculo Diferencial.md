@@ -40,9 +40,9 @@ $ f(x) = x^2 $ e $ a = 2 $
 
 * $ f'(2) = 4 $
 
-* Reta tangente: $ y = 4x + 4(x - 2) $
+* Reta tangente: $ y = 4 + 4(x - 2) $
 
-* Reta normal: $ y = 4x - \frac{1}{4}(x - 2) $
+* Reta normal: $ y = 4 - \frac{1}{4}(x - 2) $
 
 ## __Propriedades__
 
@@ -367,11 +367,13 @@ $$ f(x) = P_n(x) + R_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \ldots + \fra
 
 * Se $ k $ é impár e $ f^{(k)}(a) < 0 \Rightarrow f $ é decrescente em $ x = a $
 
-* Se $ k $ é impár $ \Rightarrow f $ tem um ponto de inflexão em $ x = a $
-
 * Se $ k $ é par e $ f^{(k)}(a) > 0 \Rightarrow f $ tem um mínimo relativo em $ x = a $
 
 * Se $ k $ é par e $ f^{(k)}(a) < 0 \Rightarrow f $ tem um máximo relativo em $ x = a $
+
+> $ f''(a) = f'''(a) = \ldots = f^{(k - 1)}(a) = 0 \ \wedge \ f^{(k)}(a) \neq 0 $
+
+* Se $ k $ é impár $ \Rightarrow f $ tem um ponto de inflexão em $ x = a $
 
 * Se $ k $ é par e $ f^{(k)}(a) > 0 \Rightarrow f $ tem a concavidade voltada para cima em $ x = a $
 

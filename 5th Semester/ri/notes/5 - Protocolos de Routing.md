@@ -1,6 +1,6 @@
 # __Protocolos de Roteamento__
 
-## __Tabela de Roteamento__
+## __Tabela de _Routing___
 
 ### __Entrada da Tabela de _Routing_ num _Router___
 

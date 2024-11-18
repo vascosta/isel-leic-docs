@@ -11,7 +11,7 @@ $$ P[f(x)] = F(x) $$
 
 O conjunto de __todas as primitivas__ de $ f(x) $ em $ I $ é designado por:
 
-$$ \int f(x)dx = F(x) $$
+$$ \int f(x) \ dx = F(x) $$
 
 ### __Propriedades__
 
@@ -211,6 +211,155 @@ $ \int \frac{x^2}{(1+x^2)^2} \ dx =
 
 ### __Primitivação por Substituição__
 
+$ \int f(x) \ dx = \int f(\phi(t)) \frac{dx}{dt} \ dt $
+
+* Se $ f(x) $ contêm o fator $\sqrt{a^2 - x^2}$, então $ x = a.sen(t) \vee x = a.cos(t) $
+
+* Se $ f(x) = A.sen(x).cos(x), A \in \mathbb{R} \Rightarrow x = arcsen(t) \wedge t = sen(x) $
+
+* Se $ f(x) = A.cos(x).sen(x), A \in \mathbb{R} \Rightarrow x = arccos(t) \wedge t = cos(x) $
+
+#### __Exemplos__
+
+$ \int \frac{1}{e^x - 1} \ dx $
+
+* $ t = e^x $
+
+* $ x = ln(t) = \phi(t) $
+
+* $ \frac{1}{t} = \phi'(t) $
+
+$ \Rightarrow \int \frac{1}{t - 1}. \frac{1}{t} \ dt = \int \frac{1}{t(t-1)} \ dt = \frac{A}{t} + \frac{B}{t-1} $
+
+* Reduzindo ao mesmo denominador: $ 1 = A(t-1) + Bt $
+
+    * Com $ t = 0 $:
+        * $ 1 = -A \Rightarrow A = -1 $
+
+    * Com $ t = 1 $:
+        * $ 1 = B \Rightarrow B = 1 $
+
+$ \Rightarrow -\int \frac{1}{t} \ dt + \int \frac{1}{t-1} \ dt =
+\\ -ln|t| + ln|t-1| =
+\\ -ln|e^x| + ln|e^x - 1| =
+\\ -x + ln(e^x - 1) + C, \ C \in \mathbb{R} $
+
+#
+
+$ \int \sqrt{9 - x^2} \ dx $
+
+* $ x = 3.sen(t) = \phi(t) $
+
+* $ x^2 = 9.sen^2(t) = \phi^2(t) $
+
+* $ 3.cos(t) = \phi'(t) $
+
+* $ sen(t) = \frac{x}{3} $
+
+* $ t = arcsen(\frac{x}{3}) $
+
+
+$ \Rightarrow \int \sqrt{9 - 9.sen^2(t)} \ \ .3.cos(t) \ dt =
+\\ \int 3.\sqrt{1 - sen^2(t)} \ \ .3.cos(t) \ dt =
+\\ 9.\int \sqrt{cos^2(t)} \ \ .cos(t) \ dt =
+\\ 9.\int cos(t) \ \ .cos(t) \ dt =
+\\ 9.\int cos^2(t) \ dt =
+\\ 9.\int \frac{1}{2} + \frac{cos(2t)}{2} \ dt =
+\\ 9.\frac{t}{2} + 9.\frac{sen(2t)}{4} =
+\\ \frac{9}{2}.arcsen(\frac{x}{3}) + \frac{9}{4}.sen(2.arcsen(\frac{x}{3})) + C, \ C \in \mathbb{R} $
+$
+
+#
+
+$ \int \frac{2.sen(x).cost(x)}{2 + sen(x)^2} \ dx $
+
+* $ t = sen(x) $
+
+* $ x = arcsen(t) = \phi(t) $
+
+* $ \frac{1}{\sqrt{1 - t^2}} = \phi'(t) $
+
+* $ cos(x) = \sqrt{1 - sen^2(x)} = \sqrt{1 - t^2} $
+
+$ \Rightarrow \int \frac{2.t.\sqrt{1 - t^2}}{(2 + t)^2} \ \ .\frac{1}{\sqrt{1 - t^2}} \ dt =
+\\ \int \frac{2t}{(2 + t)^2} \ dt =
+\\ \frac{A}{2 + t} + \frac{B}{(2 + t)^2} $
+
+* Reduzindo ao mesmo denominador: $ 2t = A(2 + t) + B $
+
+    * Com $ t = -2 $:
+        * $ -4 = B \Rightarrow B = -4 $
+
+    * Com $ t = 0 $:
+        * $ 0 = 2A - 4 \Rightarrow A = 2 $
+
+$ \Rightarrow \int \frac{2}{2 + t} \ dt - \int \frac{4}{(2 + t)^2} \ dt = 
+\\ 2.ln|2 + t| - 4.\int (2 + t)^{-2} \ dt =
+\\ 2.ln|2 + t| + \frac{4}{2 + t} =
+\\ 2.ln|2 + sen(x)| + \frac{4}{2 + sen(x)} + C, \ C \in \mathbb{R} $
+
+#
+
+$ \int \frac{2.ln(x) - 1}{x.ln(x).(ln(x) -1)^2} \ dx $
+
+* $ t = ln(x) $
+
+* $ x = e^t = \phi(t) $
+
+* $ e^t = \phi'(t) $
+
+$ \Rightarrow \int \frac{2t - 1}{e^t.t(t - 1)^2} \ \ .e^t \ dt = 
+\\ \int \frac{2t - 1}{t(t - 1)^2} \ dt =
+\\ \frac{A}{t} + \frac{B}{t - 1} + \frac{C}{(t - 1)^2} $
+
+* Reduzindo ao mesmo denominador: $ 2t - 1 = A(t - 1)^2 + B.t(t - 1) + C.t $
+
+    * Com $ t = 0 $:
+        * $ -1 = A \Rightarrow A = -1 $
+
+    * Com $ t = 1 $:
+        * $ 1 = C \Rightarrow C = 1 $
+
+    * Comparar os coeficientes de $ t^2 $:
+        * $ 0 = A + B \Rightarrow B = 1 $
+
+$ \Rightarrow -\int \frac{1}{t} \ dt + \int \frac{1}{t - 1} \ dt + \int \frac{1}{(t - 1)^2} \ dt = 
+\\ -ln|t| + ln|t - 1| - \frac{1}{t - 1} =
+\\ -ln|ln(x)| + ln|ln(x) - 1| - \frac{1}{ln(x) - 1} + C, \ C \in \mathbb{R} $
+$
+
+#
+
+$ \int \frac{1}{tg(x) + 1} \ dx $
+
+* $ t = tg(x) $
+
+* $ x = arctg(t) = \phi(t) $
+
+* $ \frac{1}{1 + t^2} = \phi'(t) $
+
+$ \Rightarrow \int \frac{1}{t + 1} \ \ .\frac{1}{1 + t^2} \ dt =
+\\ \int \frac{1}{(t + 1)(1 + t^2)} \ dt =
+\\ \frac{A}{t + 1} + \frac{Bt + C}{1 + t^2} $
+
+* Reduzindo ao mesmo denominador: $ 1 = A(1 + t^2) + (Bt + C)(t + 1) $
+
+    * Com $ t = -1 $:
+        * $ 1 = 2A \Rightarrow A = \frac{1}{2} $
+
+    * Comparar os coeficientes de $ t ^2 $:
+        * $ 0 = A + B \Rightarrow B = -\frac{1}{2} $
+
+    * Comparar os coeficientes de $ t $:
+        * $ 0 = B + C \Rightarrow C = \frac{1}{2} $
+
+$ \Rightarrow \int \frac{\frac{1}{2}}{t + 1} \ dt - \int \frac{\frac{1}{2}t + \frac{1}{2}}{1 + t^2} \ dt =
+\\ \frac{1}{2}.\int \frac{1}{t + 1} \ dt - \frac{1}{2}.\int \frac{t + 1}{1 + t^2} \ dt =
+\\ \frac{1}{2}.ln|t + 1| - \frac{1}{2}.(\int \frac{t}{1 + t^2} \ dt + \int \frac{1}{1 + t^2} \ dt) =
+\\ \frac{lnt|t + 1|}{2} - \frac{1}{4}.ln|1 + t^2| + \frac{1}{2}.arctg(t) =
+\\ \frac{ln|tg(x) + 1|}{2} - \frac{1}{4}.ln|1 + tg^2(x)| + \frac{x}{2} + C, \ C \in \mathbb{R} $
+$
+
 ## __Fração Própria__
 
 > $ f(x) = \frac{N(x)}{D(x)} $
@@ -254,8 +403,8 @@ $ f(x) = \frac{x}{x^2 + x - 2} = $ (Fórmula Resolvente) $ \frac{x}{(x + 2)(x - 
     * Com $ x = 1 $:
         * $ 1 = 3B \Rightarrow B = \frac{1}{3} $
 
-        * Com $ x = -2 $:
-            * $ -2 = -3A \Rightarrow A = \frac{2}{3} $
+    * Com $ x = -2 $:
+        * $ -2 = -3A \Rightarrow A = \frac{2}{3} $
 
 * $ \int \frac{x}{x^2 + x - 2} \ dx = \int \frac{2}{3(x + 2)} + \frac{1}{3(x - 1)} \ dx = \frac{2}{3}.ln|x + 2| + \frac{1}{3}.ln|x - 1| + C, \ C \in \mathbb{R} $
 
@@ -268,8 +417,8 @@ $ f(x) = \frac{2x + 1}{(x-1)^2} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} $
     * Com $ x = 1 $:
         * $ 3 = B \Rightarrow B = 3 $
 
-        * Comparando os coeficientes de $ x $:
-            * $ 2 = A $
+    * Comparando os coeficientes de $ x $:
+        * $ 2 = A $
 
 * $ \int \frac{2x + 1}{(x-1)^2} \ dx = \int \frac{2}{x - 1} + \frac{3}{(x - 1)^2} \ dx = 2.ln|x - 1| + 3.\int (x - 1)^{-2} \ dx $
 

@@ -52,6 +52,8 @@ Qual a primitiva de $ f(x) = \frac{1}{x} $ que verifica $ F(1) = 0 $ e $ F(-e) =
 
 * $ P[\frac{u'}{\sqrt{1 - u^2}}] = \arcsin(u) $
 
+* $ P[\frac{u'}{a^2 + u^2}] = \frac{1}{a}.arctan(\frac{u}{a}) $
+
 * $ P[u'.sen(u)] = -cos(u) $
 
 * $ P[u'.cos(u)] = sen(u) $
@@ -215,6 +217,8 @@ $ \int f(x) \ dx = \int f(\phi(t)) \frac{dx}{dt} \ dt $
 
 * Se $ f(x) $ contêm o fator $\sqrt{a^2 - x^2}$, então $ x = a.sen(t) \vee x = a.cos(t) $
 
+* Se $ f(x) $ contêm o fator $\sqrt{x^2 + a^2}$, então $ x = a.tg(t) $
+
 * Se $ f(x) = A.sen(x).cos(x), A \in \mathbb{R} \Rightarrow x = arcsen(t) \wedge t = sen(x) $
 
 * Se $ f(x) = A.cos(x).sen(x), A \in \mathbb{R} \Rightarrow x = arccos(t) \wedge t = cos(x) $
@@ -254,9 +258,7 @@ $ \int \sqrt{9 - x^2} \ dx $
 
 * $ 3.cos(t) = \phi'(t) $
 
-* $ sen(t) = \frac{x}{3} $
-
-* $ t = arcsen(\frac{x}{3}) $
+* $ sen(t) = \frac{x}{3} \Rightarrow t = arcsen(\frac{x}{3}) $
 
 
 $ \Rightarrow \int \sqrt{9 - 9.sen^2(t)} \ \ .3.cos(t) \ dt =
@@ -358,7 +360,29 @@ $ \Rightarrow \int \frac{\frac{1}{2}}{t + 1} \ dt - \int \frac{\frac{1}{2}t + \f
 \\ \frac{1}{2}.ln|t + 1| - \frac{1}{2}.(\int \frac{t}{1 + t^2} \ dt + \int \frac{1}{1 + t^2} \ dt) =
 \\ \frac{lnt|t + 1|}{2} - \frac{1}{4}.ln|1 + t^2| + \frac{1}{2}.arctg(t) =
 \\ \frac{ln|tg(x) + 1|}{2} - \frac{1}{4}.ln|1 + tg^2(x)| + \frac{x}{2} + C, \ C \in \mathbb{R} $
-$
+
+#
+
+$ \int \frac{1}{\sqrt{4 + x^2}} \ dx $
+
+* $ x = 2.tg(t) = \phi(t) $
+
+* $ x^2 = 4.tg^2(t) = \phi^2(t) $
+
+* $ 2.sec^2(t) = \phi'(t) $
+
+* $ tg(t) = \frac{x}{2} \Rightarrow t = arctg(\frac{x}{2}) $
+
+$ \Rightarrow \int \frac{1}{\sqrt{4 + 4.tg^2(t)}} \ \ .2.sec^2(t) \ dt = 
+\\ \int \frac{2}{\sqrt{4 + 4.tg^2(t)}} \ \ .sec^2(t) \ dt =
+\\ \int \frac{1}{\sqrt{1 + tg^2(t)}} \ \ .sec^2(t) \ dt =
+\\ \int \frac{sec^2(t)}{sec(t)} \ dt =
+\\ \int sec(t) \ dt = 
+\\ ln|sec(t) + tg(t)| =
+\\ ln|sec(arctg(\frac{x}{2})) + \frac{x}{2}| + C, \ C \in \mathbb{R} $
+
+#
+#
 
 ## __Fração Própria__
 
@@ -384,6 +408,9 @@ $ f(x) = \frac{x^2 + 2x + 5}{x - 1} = $ (Regra de Ruffini) $ x + 3 + \frac{8}{x 
 
 * $ \int \frac{x^2 + 2x + 5}{x - 1} \ dx = \int x + 3 + \frac{8}{x - 1} \ dx = \frac{x^2}{2} + 3x + 8.ln|x - 1| $
 
+#
+#
+
 ## __Decomposição de Frações Próprias em Frações Simples__
 
 > $ f(x) = \frac{R(x)}{D(x)} $
@@ -392,8 +419,7 @@ $ f(x) = \frac{x^2 + 2x + 5}{x - 1} = $ (Regra de Ruffini) $ x + 3 + \frac{8}{x 
 
 * $ D(x) $ tem raízes reais múltiplas e se admite a raiz real $ a $ com multiplicidade $ m \Rightarrow f(x) = \frac{A_1}{x - a} + \frac{A_2}{(x - a)^2} + ... + \frac{A_m}{(x - a)^m} \ $, $ A_1, A_2, ..., A_m $ constantes.
 
-* $ D(x) $ tem as raízes complexas conjugadas $ \alpha + \beta i, \beta \neq 0, \ $ com multiplicidade 1 $ \Rightarrow f(x) = \frac{B_x + C}{(x - \alpha)^2 + \beta_i^2} \ $, $ B, C $ constantes.
-
+* $ D(x) $ tem as raízes complexas conjugadas $ \alpha + \beta i, \beta \neq 0, \ $ com multiplicidade m $ \Rightarrow f(x) = \frac{B_x + C}{(x - \alpha)^2 + \beta_i^2} + \frac{D_x + E}{(x - \alpha)^2 + \beta_i^2} + ... + \frac{G_x + H}{(x - \alpha)^2 + \beta_i^2} \ $, $ B_x, C, D_x, E, ..., G_x, H $ constantes.
 ### __Exemplos__
 
 $ f(x) = \frac{x}{x^2 + x - 2} = $ (Fórmula Resolvente) $ \frac{x}{(x + 2)(x - 1)} = \frac{A}{x + 2} + \frac{B}{x - 1} $

@@ -513,3 +513,92 @@ $ f(x) = \frac{x - 1}{x(x^2 + 1)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} $
     * $ \int \frac{2}{x^2 + 1} \ dx = 2\int \frac{1}{1 + x^2} \ dx = 2.arctg(x^2 + 1) $
 
 * $ -ln|x| + \frac{1}{2}.ln|x^2 + 1| + arctg(x^2 + 1) + C, \ C \in \mathbb{R} $
+
+#
+#
+
+## __Integral__
+
+> $ f(x) $ limitada em $ [a, \ b] $
+
+* Se o integral inferior de $ f $ for igual ao integral superior de $ f \Rightarrow f $ diz-se __integrável__ em $ [a, \ b] $ e o seu __integral__ é dado por:
+
+$$ \int_a^b f(x) \ dx $$
+
+
+### __Propriedades__
+
+> Seja $ A $ a __área limitada pela curva__ $ y = f(x) $ e o eixo $ x $.
+
+* Se $ f(x) \geq 0 \Rightarrow \int_a^b f(x) \ dx = A $
+
+* Se $ f(x) \leq 0 \Rightarrow \int_a^b f(x) \ dx = - A $
+
+> Seja $ v $ e $ w $ funções integráveis em $ [a, \ b], \ c \in [a, \ b] $ e $ k $ constante.
+
+* $ \int_a^a v(x) \ dx = 0 $
+
+* $ \int_a^b v(x) \ dx = - \int_b^a v(x) \ dx $
+
+* $ \int_a^b k.v(x) \ dx = k.\int_a^b v(x) \ dx $
+
+* $ \int_a^b (v(x) + w(x)) \ dx = \int_a^b v(x) \ dx + \int_a^b w(x) \ dx $
+
+* $ \int_a^b v(x) \ dx = \int_a^c v(x) \ dx + \int_c^b v(x) \ dx $
+
+* $ | \int_a^b v(x) \ dx | \leq \int_a^b |v(x)| \ dx $
+
+* Se $ v(x) \leq w(x) \ \forall x \in [a, \ b] \Rightarrow \int_a^b v(x) \ dx \leq \int_a^b w(x) \ dx $
+
+## __Integral Indefinido__
+
+> $ f(x) $ integrável em $ I $ e $ a \in I $
+
+> $ \phi: I \rightarrow \mathbb{R} $
+
+$$ \phi(x) = \int_a^x f(t) \ dt $$
+
+#
+#
+
+## __Teorema Fundamental do Cálculo__
+
+> $ f $ contínua e primitivável em $ I $ e $ a \in I $
+
+> $ \phi: I \rightarrow \mathbb{R} $
+
+Se $ \phi(x) = \int_a^x f(t) \ dt \Rightarrow \phi'(x) = f(x) $
+
+#
+#
+
+## __Regra de Barrow__
+
+> $ f(x) $ integrável $ em [a, \ b] $
+
+$$ \int_a^b f(x) \ dx = P[f(x)]|_a^b = P[f(x)]|_b - P[f(x)]|_a $$
+
+### __Exemplos__
+
+$ \int_0^2 \sqrt{x} \ dx = 
+\\ [\frac{2}{3}x^{\frac{3}{2}}]_0^2 =
+\\ \frac{2}{3}.2^{\frac{3}{2}} - 0 =
+\\ \frac{2.\sqrt{8}}{3} =
+\\ \frac{4.\sqrt{2}}{3} + C, \ C \in \mathbb{R} $
+
+#
+
+$ \int_2^e -\frac{1}{x} \ dx =
+\\ -\int_2^e \frac{1}{x} \ dx =
+\\ -[(ln x )]_2^e =
+\\ -ln(e) + ln(2) =
+\\ -1 + ln(2) + C, \ C \in \mathbb{R} $
+
+#
+
+$ \int_3^0 |x| \ dx =
+\\ \int_{-3}^0 |x| \ dx + \int_0^4 |x| \ dx =
+\\ \int_{-3}^0 -x \ dx + \int_0^4 x \ dx =
+\\ -[\frac{x^2}{2}]_{-3}^0 + [\frac{x^2}{2}]_0^4 =
+\\ \frac{9}{2} + \frac{16}{2} =
+\\ \frac{25}{2} + C, \ C \in \mathbb{R} $

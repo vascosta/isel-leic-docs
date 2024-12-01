@@ -212,16 +212,15 @@ $ \int \frac{x^2}{(1+x^2)^2} \ dx =
 \\ x.(-\frac{1}{2(1+x^2)}) + \int 1.(\frac{1}{2(1+x^2)}) \ dx = -\frac{x}{2(1+x^2)} + 2arctg(x) $
 
 ### __Primitivação por Substituição__
+* $ \int f(x) \ dx = \int f(\phi(t)) \frac{dx}{dt} \ dt $
 
-$ \int f(x) \ dx = \int f(\phi(t)) \frac{dx}{dt} \ dt $
+    * Se $ f(x) $ contêm o fator $\sqrt{a^2 - x^2}$, então $ x = a.sen(t) \vee x = a.cos(t) $
 
-* Se $ f(x) $ contêm o fator $\sqrt{a^2 - x^2}$, então $ x = a.sen(t) \vee x = a.cos(t) $
+    * Se $ f(x) $ contêm o fator $\sqrt{x^2 + a^2}$, então $ x = a.tg(t) $
 
-* Se $ f(x) $ contêm o fator $\sqrt{x^2 + a^2}$, então $ x = a.tg(t) $
+    * Se $ f(x) = A.sen(x).cos(x), A \in \mathbb{R} \Rightarrow x = arcsen(t) \wedge t = sen(x) $
 
-* Se $ f(x) = A.sen(x).cos(x), A \in \mathbb{R} \Rightarrow x = arcsen(t) \wedge t = sen(x) $
-
-* Se $ f(x) = A.cos(x).sen(x), A \in \mathbb{R} \Rightarrow x = arccos(t) \wedge t = cos(x) $
+    * Se $ f(x) = A.cos(x).sen(x), A \in \mathbb{R} \Rightarrow x = arccos(t) \wedge t = cos(x) $
 
 #### __Exemplos__
 
@@ -548,7 +547,15 @@ $$ \int_a^b f(x) \ dx $$
 
 * $ | \int_a^b v(x) \ dx | \leq \int_a^b |v(x)| \ dx $
 
-* Se $ v(x) \leq w(x) \ \forall x \in [a, \ b] \Rightarrow \int_a^b v(x) \ dx \leq \int_a^b w(x) \ dx $
+* Se $ v(x) \leq w(x) \ \forall \ x \in [a, \ b] \Rightarrow \int_a^b v(x) \ dx \leq \int_a^b w(x) \ dx $
+
+### __Paridade__
+
+> $ f(x) $ integrável em $ [a, \ b] $
+
+* Se $ f(x) $ é __par__ em $ [a, \ b] \Rightarrow \int_{-a}^a f(x) \ dx = 0 $
+
+* Se $ f(x) $ é __ímpar__ em $ [a, \ b] \Rightarrow \int_{-a}^a f(x) \ dx = 2.\int_0^a f(x) \ dx $
 
 ## __Integral Indefinido__
 
@@ -590,7 +597,7 @@ $ \int_0^2 \sqrt{x} \ dx =
 
 $ \int_2^e -\frac{1}{x} \ dx =
 \\ -\int_2^e \frac{1}{x} \ dx =
-\\ -[(ln x )]_2^e =
+\\ -[ln (x)]_2^e =
 \\ -ln(e) + ln(2) =
 \\ -1 + ln(2) + C, \ C \in \mathbb{R} $
 
@@ -602,3 +609,73 @@ $ \int_3^0 |x| \ dx =
 \\ -[\frac{x^2}{2}]_{-3}^0 + [\frac{x^2}{2}]_0^4 =
 \\ \frac{9}{2} + \frac{16}{2} =
 \\ \frac{25}{2} + C, \ C \in \mathbb{R} $
+
+#
+
+$ \int_{-3}^{3} x^3 \ dx =
+\\ [\frac{x^4}{4}]_{-3}^{3} =
+\\ \frac{3^4}{4} - \frac{(-3)^4}{4} =
+\\ 0 + C, \ C \in \mathbb{R} $
+
+#
+#
+
+## __Regras de Integração__
+
+> $ u $ e $ v $ primitiváveis em $ [a, \ b] $.
+
+### __Integração por Partes__
+
+* $ \int_a^b u'(x) = [u(x).v(x)]_a^b - \int_a^b u(x).v'(x) \ dx $
+
+#### __Exemplos__
+
+$ \int_0^\pi x.sen(2x) \ dx $
+
+* $ u = x \Rightarrow u' = 1 $
+
+* $ v' = sen(2x) (=) v' = \frac{1}{2}.2.sen(2x) \Rightarrow v = -\frac{1}{2}.cos(2x) $
+
+$ \Rightarrow \int_0^\pi x.sen(2x) \ dx = [x.(-\frac{1}{2}.cos(2x))]_0^\pi - \int_0^\pi -\frac{1}{2}.cos(2x) \ dx =
+\\ - \frac{\pi}{2}.cos(2\pi) - 0 + \frac{1}{2}.\int_0^\pi cos(2x) \ dx $
+
+* $ P[cos(2x)] = \frac{1}{2}.sen(2x) $
+
+$ \Rightarrow - \frac{\pi}{2}.cos(2\pi) + [sen(2x)]_0^\pi =
+\\ - \frac{\pi}{2}.1 + 0 - 0 + 0 =
+\\ - \frac{\pi}{2} + C, \ C \in \mathbb{R} $
+
+#
+
+### __Integração por Substituição__
+
+* $ \int_a^b v(x) \ dx = \int_{t_a}^{t_b} v(x(t)) \frac{dx}{dt} \ dt $
+
+    * $ x(t_a) = a $
+    
+    * $ x(t_b) = b $
+
+#### __Exemplos__
+
+$ \int_{-1}^1 \sqrt{1 - x^2} \ dx $
+
+* $ x = sen(t) \Rightarrow t = arcsen(x) $
+
+    * $ x = 1 \Rightarrow sen(t) = 1 \Rightarrow t_b = \frac{\pi}{2} $
+
+    * $ x = -1 \Rightarrow sen(t) = -1 \Rightarrow t_a = -\frac{\pi}{2} $
+
+* $ \frac{dx}{dt} = cos(t) $
+
+$ \Rightarrow \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{1 - sen^2(t)} \ \ .cos(t) \ dt =
+\\ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{cos^2(t)} \ \ .cos(t) \ dt =
+\\ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} cos(t) \ \ .cos(t) \ dt =
+\\ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} cos^2(t) \ dt =
+\\ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{1 + cos(2t)}{2} \ dt $
+
+* $ P[\frac{1}{2} + \frac{cos(2t)}{2}] = \frac{t}{2} + P[\frac{1}{2}.\frac{1}{2}.2.cos(2t)] = \frac{t}{2} + \frac{1}{4}.sen(2t) $
+
+$ \Rightarrow [\frac{t}{2} + \frac{1}{4}.sen(2t)]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} =
+\\ \frac{\frac{\pi}{2}}{2} + \frac{1}{4}.sen(\pi) - \frac{-\frac{\pi}{2}}{2} - \frac{1}{4}.sen(-\pi) =
+\\ \frac{\pi}{4} + 0 + \frac{\pi}{4} + 0 =
+\\ \frac{\pi}{2} + C, \ C \in \mathbb{R} $

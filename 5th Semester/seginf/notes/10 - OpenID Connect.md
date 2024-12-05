@@ -73,7 +73,7 @@
 
 * O registo de novos ___RP___ e obtenção das credenciais pelo ___RP___ (```client_id``` e ```client_secret```) depende do fornecedor de identidade.
 
-* No caso da ___Google___ o processo é feito através do _Google Cloud Platform_.~
+* No caso da ___Google___ o processo é feito através do _Google Cloud Platform_.
 
 <div align=center>
 

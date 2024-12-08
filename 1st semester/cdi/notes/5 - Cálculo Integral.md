@@ -679,3 +679,141 @@ $ \Rightarrow [\frac{t}{2} + \frac{1}{4}.sen(2t)]_{-\frac{\pi}{2}}^{\frac{\pi}{2
 \\ \frac{\frac{\pi}{2}}{2} + \frac{1}{4}.sen(\pi) - \frac{-\frac{\pi}{2}}{2} - \frac{1}{4}.sen(-\pi) =
 \\ \frac{\pi}{4} + 0 + \frac{\pi}{4} + 0 =
 \\ \frac{\pi}{2} + C, \ C \in \mathbb{R} $
+
+#
+#
+
+## __Valor Médio de uma Função__
+
+> $ f(x) $ integrável em $ [a, \ b] $
+
+O valor médio de $ f(x) $ em $ [a, \ b] $ é dado por:
+
+$$ \frac{\int_a^b f(x) \ dx}{b - a} $$
+
+#
+#
+
+## __Cálculo de Áreas__
+
+> $ f(x) $ e $ g(x) $ integráveis em $ [a, \ b] $ e $ f(x) \geq g(x) \ \forall \ x \in [a, \ b] $
+
+> $ A = {(x, \ y) \in O_{xy} \ | \ a \leq x \leq b \ \wedge \ g(x) \leq y \leq f(x)} $
+
+O __área__ da __região plana__ $ A $ é dada por:
+
+$$ A = \int_a^b [f(x) - g(x)] \ dx $$
+
+#
+#
+
+## __Integrais Impróprios__
+
+### __1ª Espécie__
+
+> $ f(x): [a, \ +\infty[ \ \rightarrow \mathbb{R} $ e integrável em $ [a, \ b] \ \forall \ b > a $
+
+$$ lim_{b \rightarrow +\infty} \int_a^b f(x) \ dx = \int_a^{+\infty} f(x) \ dx $$
+
+> $ f(x): ]-\infty, \ b] \ \rightarrow \mathbb{R} $ e integrável em $ [a, \ b] \ \forall \ a < b $
+
+$$ lim_{a \rightarrow -\infty} \int_a^b f(x) \ dx = \int_{-\infty}^b f(x) \ dx $$
+
+* Se este limite existir e for finito, então o integral é __convergente__ caso contrário é __divergente__.
+
+#
+
+### __2ª Espécie__
+
+> $ f(x): [a, \ b] \ \rightarrow \mathbb{R} $ e integrável em $ [a, \ c], \ a \leq c < b $
+
+$$ lim_{c \rightarrow b^-} \int_a^c f(x) \ dx = \int_a^b f(x) \ dx $$
+
+> $ f(x): [a, \ b] \ \rightarrow \mathbb{R} $ e integrável em $ [c, \ b], \ a < c \leq b $
+
+$$ lim_{c \rightarrow a^+} \int_c^b f(x) \ dx = \int_a^b f(x) \ dx $$
+
+* Se este limite existir e for finito, então o integral é __convergente__ caso contrário é __divergente__.
+
+#
+
+### __Exemplos__
+
+$ \int_1^{+\infty} \frac{1}{x^2} \ dx $
+
+* $ P[\frac{1}{x^2}] = P[x^{-2}] = -\frac{1}{x} $
+
+$ \Rightarrow lim_{b \rightarrow +\infty} \int_1^b \frac{1}{x^2} \ dx =
+\\ lim_{b \rightarrow +\infty} [-\frac{1}{x}]_1^b =
+\\ lim_{b \rightarrow +\infty} (-\frac{1}{b} + 1) =
+\\ -0 + 1 = 1 $
+
+$ \Rightarrow \int_1^{+\infty} \frac{1}{x^2} \ dx $ é __convergente__ e igual a __1__.
+
+#
+
+$ \int_1^{+\infty} \frac{1}{x} \ dx $
+
+* $ P[\frac{1}{x}] = ln|x| $
+
+$ \Rightarrow lim_{b \rightarrow +\infty} \int_1^b \frac{1}{x} \ dx =
+\\ lim_{b \rightarrow +\infty} [ln|x|]_1^b =
+\\ lim_{b \rightarrow +\infty} (ln|b| - ln|1|) =
+\\ lim_{b \rightarrow +\infty} ln|b| = +\infty $
+
+$ \Rightarrow \int_1^{+\infty} \frac{1}{x} \ dx $ é __divergente__.
+
+#
+
+$ \int_1^{+\infty} \frac{1}{\sqrt{x}} \ dx $
+
+* $ P[\frac{1}{\sqrt{x}}] = P[x^{-\frac{1}{2}}] = P[\frac{x^{\frac{1}{2}}}{\frac{1}{2}}] = 2\sqrt{x} $
+
+$ \Rightarrow lim_{b \rightarrow +\infty} \int_1^b \frac{1}{\sqrt{x}} \ dx =
+\\ lim_{b \rightarrow +\infty} [2\sqrt{x}]_1^b =
+\\ lim_{b \rightarrow +\infty} (2\sqrt{b} - 2\sqrt{1}) =
+\\ lim_{b \rightarrow +\infty} 2\sqrt{b} - 2 =
+\\ +\infty - 2 = +\infty $
+
+$ \Rightarrow \int_1^{+\infty} \frac{1}{\sqrt{x}} \ dx $ é __divergente__.
+
+#
+
+$ \int_0^1 \frac{1}{x} \ dx $
+
+* $ P[\frac{1}{x}] = ln|x| $
+
+$ \Rightarrow lim_{c \rightarrow 0^+} \int_a^1 \frac{1}{x} \ dx =
+\\ lim_{c \rightarrow 0^+} [ln|x|]_c^1 =
+\\ lim_{c \rightarrow 0^+} (ln|1| - ln|c|) =
+\\ lim_{c \rightarrow 0^+} 0 - ln|c| =
+\\ -ln|0| = - -\infty = +\infty $
+
+$ \Rightarrow \int_0^1 \frac{1}{x} \ dx $ é __divergente__.
+
+#
+#
+
+## __Integrais Impróprios Mistos__
+
+### __1ª Espécie__
+
+> $ f(x): [-\infty, \ +\infty] \ \rightarrow \mathbb{R} $
+
+> $ \forall \ c \in \mathbb{R}: \int_{-\infty}^c f(x) \ dx $ e $ \int_c^{+\infty} f(x) \ dx $
+
+$$ \int_{-\infty}^{+\infty} f(x) \ dx = \int_{-\infty}^c f(x) \ dx + \int_c^{+\infty} f(x) \ dx $$
+
+* Se ambos os integrais forem convergentes, então o integral é __convergente__ caso contrário é __divergente__.
+
+#
+
+### __2ª Espécie__
+
+> $ f(x): ]a, \ b[ \ \rightarrow \mathbb{R} $
+
+> $ \forall \ d \in \ ]a, \ b[: \int_a^d f(x) \ dx = lim_{c \rightarrow a^+} \int_c^d f(x) \ dx $ e $ \int_d^b f(x) \ dx = lim_{c \rightarrow b^-} \int_d^c f(x) \ dx $
+
+$$ \int_a^b f(x) \ dx = \int_a^d f(x) \ dx + \int_d^b f(x) \ dx $$
+
+* Se ambos os integrais forem convergentes, então o integral é __convergente__ caso contrário é __divergente__.

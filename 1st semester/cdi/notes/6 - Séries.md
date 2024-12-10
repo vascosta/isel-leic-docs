@@ -109,7 +109,7 @@ $ U_n = \frac{n}{n + 1} $
 
     * $ lim_{n \to \infty} \frac{n}{n(1 + \frac{1}{n})} = $
     
-    * $ lim_{n \to \infty} \frac{1}{1 + \frac{1}{n}} = 1 $
+    * $ lim_{n \to \infty} \frac{1}{1 + \frac{1}{n}} = 1 \Rightarrow $ divergente
 
 #
 #

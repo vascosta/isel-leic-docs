@@ -634,7 +634,7 @@ $ \int_0^\pi x.sen(2x) \ dx $
 
 * $ u = x \Rightarrow u' = 1 $
 
-* $ v' = sen(2x) (=) v' = \frac{1}{2}.2.sen(2x) \Rightarrow v = -\frac{1}{2}.cos(2x) $
+* $ v' = sen(2x) \ (=) \ v' = \frac{1}{2}.2.sen(2x) \Rightarrow v = -\frac{1}{2}.cos(2x) $
 
 $ \Rightarrow \int_0^\pi x.sen(2x) \ dx = [x.(-\frac{1}{2}.cos(2x))]_0^\pi - \int_0^\pi -\frac{1}{2}.cos(2x) \ dx =
 \\ - \frac{\pi}{2}.cos(2\pi) - 0 + \frac{1}{2}.\int_0^\pi cos(2x) \ dx $
@@ -703,6 +703,25 @@ $$ \frac{\int_a^b f(x) \ dx}{b - a} $$
 O __área__ da __região plana__ $ A $ é dada por:
 
 $$ A = \int_a^b [f(x) - g(x)] \ dx $$
+
+#
+#
+
+## __Cálculo de Volumes__
+
+### __Volume do Sólido de Revolução__
+
+> $ f(x) $ e $ g(x) $ integráveis em $ [a, \ b] $ e $ f(x) \geq g(x) \ \forall \ x \in [a, \ b] $
+
+O __volume__ do __sólido de revolução__ em torno do eixo $ x $ é dado por:
+
+$$ V = \pi \int_a^b [f(x)^2 - g(x)^2] \ dx $$
+
+> $ f(y) $ e $ g(y) $ integráveis em $ [c, \ d] $ e $ f(y) \geq g(y) \ \forall \ y \in [c, \ d] $
+
+O __volume__ do __sólido de revolução__ em torno do eixo $ y $ é dado por:
+
+$$ V = \pi \int_c^d [f(y)^2 - g(y)^2] \ dy $$
 
 #
 #

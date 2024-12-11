@@ -134,7 +134,7 @@ $ U_n \leq V_n $ para qualquer ordem
 
 > $ L = lim_{n \to \infty} \frac{U_n}{V_n} $
 
-* Se $ 0 < L < + \infty $ e $ \sum_{n=0}^{\infty} U_n $ e $ \sum_{n=0}^{\infty} V_n $ têm a mesma natureza.
+* Se $ 0 < L < + \infty \Rightarrow \sum_{n=0}^{\infty} U_n $ e $ \sum_{n=0}^{\infty} V_n $ têm a mesma natureza.
 
 * Se $ L = 0 $ e $ \sum_{n=0}^{\infty} V_n $ é __convergente__ $ \Rightarrow $ $ \sum_{n=0}^{\infty} U_n $ também é __convergente__.
 

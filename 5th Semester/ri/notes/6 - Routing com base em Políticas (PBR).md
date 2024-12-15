@@ -1,5 +1,11 @@
 # __Routing com base em Políticas (PBR)__
 
+<div align=center>
+
+![](imgs/102.png)
+
+</div>
+
 ## __Uso de ___Access Control Lists___ (ACLs)__
 
 ### __Filtragem__
@@ -8,7 +14,7 @@
 
 <div align=center>
 
-![](imgs/??.png)
+![](imgs/97.png)
 
 </div>
 
@@ -30,7 +36,7 @@
 
 <div align=center>
 
-![](imgs/??.png)
+![](imgs/98.png)
 
 </div>
 
@@ -46,7 +52,7 @@
 
 <div align=center>
 
-![](imgs/??.png)
+![](imgs/99.png)
 
 </div>
 
@@ -98,7 +104,7 @@ ip access-list 1 permit host 193.136.3.10
 
 <div align=center>
 
-![](imgs/??.png)
+![](imgs/100.png)
 
 </div>
 
@@ -116,7 +122,7 @@ ip access-list 1 permit host 193.136.3.10
 
 <div align=center>
 
-![](imgs/??.png)
+![](imgs/101.png)
 
 </div>
 
@@ -141,3 +147,22 @@ ip access-list 1 permit host 193.136.3.10
 #
 
 ## __Diretrizes de uma ACL__
+
+* Uma ACL _standard_ ou extendida indica o que pode ser filtrado.
+
+* Apenas uma ACL por interface, protocolo e direção é permitida.
+
+* Declarações específicas devem estar no topo da ACL enquanto que declarações gerais, no final.
+
+Devido ao "negar tudo" implícito, uma ACL necessita de pelo menos uma instrução _permit_.
+
+### __Recomendações de Localização__
+
+* Coloque ACLs extendidas perto da origem.
+
+* Coloque ACLs _standard_ perto do destino.
+
+#
+#
+## __Exemplo PBR__
+

@@ -6,6 +6,8 @@
 
 * __Autenticidade__: Garantir a identidade de __quem envia__ a informação.
 
+* __Não Repúdio__: Garantir que __faz uma ação__ não pode negar a sua autoria.	
+
 ## __Cifra Simétrica__
 
 * __Cifra e Decifra__ com a mesma chave simétrica.
@@ -62,6 +64,8 @@
 
 * Apenas garante __autenticidade__.
 
+* __Não garante__ o não repúdio.
+
 * __Marca__ com dimensão __fixa__.
 
 * Códigos detetores e corretores de erros não servem.
@@ -117,6 +121,8 @@
 * __Assinatura__ com dimensão fixa.
 
 * __Mensagem__ com dimensão variável.
+
+* __Garante__ o não repúdio.
 
 #
 #

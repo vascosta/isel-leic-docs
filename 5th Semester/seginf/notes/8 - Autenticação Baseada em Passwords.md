@@ -135,7 +135,7 @@
 
 ### __Bloqueamento__
 
-> Bloqueamento de $ g # após um número de tentativas erradas.
+> Bloqueamento de $ g $ após um número de tentativas erradas.
 
 ### ___Jailing___
 
@@ -184,7 +184,7 @@
 
 > Algoritmo de _hash_ criptográfico para guardar passwords de forma segura.
 
-* Algoritmo__ mais lento e intensivo__ em termos computacionais o que __dificulta ataques de dicionário__.
+* Algoritmo __mais lento e intensivo__ em termos computacionais o que __dificulta ataques de dicionário__.
 
 ### __Estrutura do _Hash___
 

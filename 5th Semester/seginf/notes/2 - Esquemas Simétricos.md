@@ -93,7 +93,7 @@ E.g.: TLS, TLS-RSA-WITH-DES-CBC-SHA.
 
 #### __Características gerais__
 
-* A dimensão $ n $ do bloco deve ser __suficientemente elevada__ para __impossibilitar ataques baseados na estaística do texto em claro__.
+* A dimensão $ n $ do bloco deve ser __suficientemente elevada__ para __impossibilitar ataques baseados na estatística do texto em claro__.
 
 * A dimensão $ l $ da chave deve ser suficientemente elevada para __impossibilitar ataques de pesquisa exaustiva__.
 
@@ -141,7 +141,7 @@ E.g.: TLS, TLS-RSA-WITH-DES-CBC-SHA.
 
 * A ocorrência de erros num bloco de texto $ c_j $ cifrado afeta a decifra do próprio bloco e a do bloco seguinte $ c_{j+1} $, assim como a decifra do bloco $ c_{j+1} $ terá erros nas mesmas posições que o bloco $ c_j $.
 
-* A reordenação dos blocos de texto ecifrado __afeta a decifra__.
+* A reordenação dos blocos de texto decifrado __afeta a decifra__.
 
 * É relativamente fácil __manipular um determinado bloco de texto em claro__.
 

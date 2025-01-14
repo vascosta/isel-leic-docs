@@ -37,7 +37,7 @@
 
 * __Plaintexts__ e __CiphersTexts__ são sequências de bits com dimensão variável e menor do que o limite definido pelo esquema.
 
-* Apenas garante a __confidencialidade__.
+* Não garante a __integridade__.
 
 ### __Utilização__
 

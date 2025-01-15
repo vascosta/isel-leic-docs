@@ -6,7 +6,7 @@
 
 * __Autenticidade__: Garantir a identidade de __quem envia__ a informação.
 
-* __Não Repúdio__: Garantir que __faz uma ação__ não pode negar a sua autoria.	
+* __Não Repúdio__: Garantir que quem __faz uma ação__ não pode negar a sua autoria.	
 
 ## __Cifra Simétrica__
 
@@ -194,7 +194,11 @@
 
     * __Emissor__: Autoridade de Certificação (CA).
 
-    * __Assinatura Digital__: Assinada pela __Chave Privada do Emissor__.
+    * __Assinatura Digital__
+    
+        * Assinada pela __Chave Privada do Emissor__.
+
+        * Verificada pela __Chave Pública do Emissor__.
 
 * __Raíz de Confiança__
 

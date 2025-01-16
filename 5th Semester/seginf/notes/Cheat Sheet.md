@@ -62,7 +62,7 @@
 
 * __Autentica e Verifica__ a mensagem com a mesma chave simétrica.
 
-* Apenas garante __autenticidade__.
+* Não garante __confidencialidade__.
 
 * __Não garante__ o não repúdio.
 
@@ -121,6 +121,8 @@
 * __Assinatura__ com dimensão fixa.
 
 * __Mensagem__ com dimensão variável.
+
+* Não garante __confidencialidade__.
 
 * __Garante__ o não repúdio.
 

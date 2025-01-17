@@ -268,7 +268,7 @@ Resolve ataques relacionados a:
 #
 #
 
-## __Autenticação em Apliações Web__
+## __Autenticação em Aplicações Web__
 
 ### __Cookies__
 

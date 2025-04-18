@@ -34,7 +34,7 @@ O servidor só está ativo e a consumir recursos durante o processamento de even
 
 </div>
 
-``É importante que o código a executar seja ___stateless___ porque o número de instâncias disponíveis e o seu tempo de vida é gerido pela infraestrutura.``
+``É importante que o código a executar seja stateless porque o número de instâncias disponíveis e o seu tempo de vida é gerido pela infraestrutura.``
 
 ## ___Cloud Functions___
 
